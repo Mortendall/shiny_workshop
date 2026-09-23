@@ -1,0 +1,8 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.14.0
+_src_path: gh:rostools/template-workshop
+for_rostools: false
+github_repo: shiny_workshop
+github_user: mortendall
+hosting_provider: gh-pages
+workshop_type: r

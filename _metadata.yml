@@ -1,0 +1,23 @@
+gh:
+  org: "mortendall"
+  repo: "shiny_workshop"
+
+# TODO: Fill in the project description
+tagline: ""
+
+# TODO: Confirm these URLs
+links:
+  site: ""
+  github: "https://github.com/mortendall/shiny_workshop"
+
+# TODO: Add the URLs to the surveys.
+surveys:
+  pre-workshop: "TODO"
+  feedback: "TODO"
+
+# TODO: Update these versions
+# Use `samwise::get_allowed_r_versions()` and `samwise::get_allowed_rstudio_versions()`
+# to get a list of the allowed R and RStudio versions.
+versions:
+  r: ""
+  rstudio: ""

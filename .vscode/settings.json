@@ -1,0 +1,28 @@
+{
+  "editor.formatOnSave": true,
+  "editor.snippetSuggestions": "inline",
+  "conventional-branch.type": [
+    "build",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "refactor",
+    "style",
+    "test",
+    "chore",
+    "perf",
+    "revert"
+  ],
+  "conventional-branch.format": "{Type}/{Branch}",
+  "[r]": {
+    "editor.defaultFormatter": "Posit.air-vscode"
+  },
+  "[quarto][qmd][md]": {
+    "editor.defaultFormatter": "jolars.panache"
+  },
+  "files.insertFinalNewline": true,
+  "typos.config": ".config/typos.toml",
+  "conventionalCommits.emojiFormat": "emoji",
+  "conventionalCommits.promptScopes": false
+}
