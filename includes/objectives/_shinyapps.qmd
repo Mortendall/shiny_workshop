@@ -1,0 +1,2 @@
+1.  Understand how a shinyapp works
+2.  Introduce the ui and server terms

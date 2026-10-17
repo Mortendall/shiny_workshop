@@ -1,0 +1,116 @@
+# Shiny apps
+
+To build a shiny app we must first understand how it works. A shiny app
+consists of two core components: a server and a user interface (UI). In
+this section, we will explain how they are connected and work together
+to create the shiny app.
+
+## Learning objectives
+
+The learning objectives for this session are:
+
+{{< include /includes/objectives/_session.qmd >}}
+
+## The server and the UI
+
+A shiny app can take a static dataset and make it available for the user
+to explore. Depending on how you build the app, you can allow the user
+to search for specific search terms, compare expression levels, or
+explore interactive figures to find new genes affected in your dataset.
+
+## :speech_balloon: Discussion activity: Title
+
+**Time: \\3 minutes.**
+
+Discuss with the person next to you - what kind of data do you have that
+could benefit from being interactive? Do you have an idea for an app you
+want to make?
+
+## Reading task: \~4 minutes
+
+A shiny app can get incredibly complex and consist of many
+interconnected scripts. But at it's simplest, a shiny app consists of
+two elements that work together.
+
+At it's most simple, a shiny app can be one simple function. The
+following code will create a shiny app (although an empty one):
+
+```{r}
+#| eval: false
+app <- shiny::shinyApp(
+  ui = shiny::fluidPage(),
+  server = function(input, output){}
+)
+shiny::runApp(app)
+```
+
+The UI (short for user interface) is what we see on the screen. The code
+contains information about what is shown on the page (such as plots,
+buttons and images) and in what layout (organized in columns, with a
+navigation bar, etc.).
+
+The server contains information about the objects in the UI, and how the
+app should respond to user input. It contains information about what
+data is displayed in the plot, what happens when you press a button, and
+how the app should update when specific events happen.
+
+A major part of building a shiny app is understanding the interplay
+between the UI and the server.
+
+![A graphical representation of the interplay between the UI and the
+server. From [introduction to data
+science](https://bookdown.org/hneth/i2ds/shiny.html)](/images/Shiny_ui_server.png){#fig-left-join
+width="90%"}
+
+## :book: Adding elements to our UI
+
+**Time: \\6 minutes.**
+
+Shiny comes with a lot of options for building a user interface. Often
+you can add plots directly into a Shiny interface. lets say we want to
+make a graph from the classical `iris` data set and add it into our
+empty app above.
+
+```{r}
+#| label: fig-iris
+#| fig-cap: "Our classical iris plot"
+iris_plot <- ggplot2::ggplot(iris,
+                             ggplot2::aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+  ggplot2::geom_point()
+
+iris_plot
+    
+```
+
+To add this to our app, we need to tell Shiny two things: that we want a
+page in our page layout, and what we want the plot to contain.
+
+```{r}
+#| eval: false
+app <- shiny::shinyApp(
+  ui = shiny::fluidPage(
+    shiny::plotOutput(outputId = "iris_plot"
+    )
+  ),
+  server = function(input, output){
+    output$iris_plot <- shiny::renderPlot(
+      iris_plot
+    )
+  }
+)
+shiny::runApp(app)
+
+```
+
+If we take the code above and paste it into the console, we should get
+an app with the plot. We have now created content for our app!
+
+## BSlib
+
+## Summary
+
+- TODO: List of summary items
+
+## Survey
+
+{{< include /includes/_survey.qmd >}}

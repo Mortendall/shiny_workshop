@@ -2,8 +2,9 @@
 
 TODO: Include description and overall introduction of workshop
 
-This workshop lasts TODO: Time and is split into the following sessions, listed
-in the [schedule](/overview/schedule.qmd), which will be covered in order:
+This workshop lasts TODO: Time and is split into the following sessions,
+listed in the [schedule](/overview/schedule.qmd), which will be covered
+in order:
 
 - [Introduction to the workshop](/sessions/introduction.qmd)
 - [TODO: Session title](/sessions/session.qmd)
@@ -13,10 +14,10 @@ in the [schedule](/overview/schedule.qmd), which will be covered in order:
 
 The overall aim of this workshop is to enable you to:
 
-1. Aim one
+1.  Aim one
 
-Broken down into specific objectives for each session, we've designed the
-workshop to enable you to do the following:
+Broken down into specific objectives for each session, we've designed
+the workshop to enable you to do the following:
 
 [**TODO: Session title**](/sessions/session.qmd)
 
@@ -24,4 +25,8 @@ workshop to enable you to do the following:
 
 Tangibly, during the workshop you will:
 
-- TODO: List concrete tasks and steps
+- Learn what a Shiny app is
+- Create one with the golem package
+- Build a dashboard using the `palmerpenguins` dataset
+- Store files as parquet
+- Make graphs interactive using plotly

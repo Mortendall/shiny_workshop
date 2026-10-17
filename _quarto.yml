@@ -1,5 +1,6 @@
 project:
   type: book
+
   # TODO: Uncomment if you want to use slides.
   # pre-render:
     # - quarto render slides/*.qmd
@@ -18,7 +19,7 @@ book:
   repo-url: "https://github.com/mortendall/shiny_workshop"
   # TODO: Fill in the URL
   site-url: ""
-  
+
   downloads: [pdf]
   chapters:
     - index.qmd
@@ -38,17 +39,17 @@ book:
     - part: "Sessions"
       chapters:
         - sessions/introduction.qmd
-        - sessions/session.qmd
+        - sessions/shinyapps.qmd
         - sessions/conclusion.qmd
   appendices:
     - appendix/for-teachers.qmd
     - appendix/references.qmd
-    
+
     - CONTRIBUTING.md
     - LICENSE.md
   page-footer:
     center:
-    - text: "License: CC BY 4.0"
+      - text: "License: CC BY 4.0"
         href: LICENSE.md
       - text: "Code of Conduct"
         href: "pre-workshop/code-of-conduct.qmd"
