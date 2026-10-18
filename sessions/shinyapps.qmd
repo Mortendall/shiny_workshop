@@ -107,10 +107,195 @@ an app with the plot. We have now created content for our app!
 
 ## BSlib
 
+It is entirely possible to build a shiny app out of components from the
+shiny package itself. However, the "modern" shiny design focuses on a
+different package called "bslib" which provides access to the highly
+flexible [bootstrap framework](https://getbootstrap.com/). Bslib allows
+a number of UI components with a high degree of customization, and which
+renders nicely, even on a small screen such as a phone.
+
+Bslib features both pages (used to define the overall rules for our app
+page) and the components of the pages (especially as units of UI
+elements called "cards"). We can take our previous code and modify it to
+become a navbar page.
+
+```{r}
+#| eval: false
+app <- shiny::shinyApp(
+  ui = bslib::page_sidebar(
+    title = "Our Iris plot",
+    sidebar = "here is our sidebar",
+    shiny::plotOutput(outputId = "iris_plot"
+    )
+  ),
+  server = function(input, output){
+    output$iris_plot <- shiny::renderPlot(
+      iris_plot
+    )
+  }
+)
+shiny::runApp(app)
+
+```
+
+If we paste this code into our console and runs it (rerunning the code
+for the iris plot if necessary), we will see we now have a sidebar where
+we can put something in. Let's leave it empty for now, and instead focus
+on the other functionality of bslib we teased before - the cards.
+
+Cards are an effective way to organize plots and other UI components.
+They are easy to implement - we simply wrap our UI content (in this case
+the Iris plot) in `bslib::card()`
+
+```{r}
+#| eval: false
+app <- shiny::shinyApp(
+  ui = bslib::page_sidebar(
+    title = "Our Iris plot",
+    sidebar = "here is our sidebar",
+    bslib::c(shiny::plotOutput(outputId = "iris_plot")
+    )
+  ),
+  server = function(input, output){
+    output$iris_plot <- shiny::renderPlot(
+      iris_plot
+    )
+  }
+)
+shiny::runApp(app)
+```
+
+In itself this does not do much. However, cards have some attributes
+such as headers that can be modified if we for example want to give our
+plot a header.
+
+```{r}
+#| eval: false
+app <- shiny::shinyApp(
+  ui = bslib::page_sidebar(
+    title = "Our Iris plot",
+    sidebar = "here is our sidebar",
+    bslib::card(
+      bslib::card_header("A beautiful plot about flowers"),
+      shiny::plotOutput(outputId = "iris_plot")
+    )
+  ),
+  server = function(input, output){
+    output$iris_plot <- shiny::renderPlot(
+      iris_plot
+    )
+  }
+)
+shiny::runApp(app)
+```
+
+The true power of cards becomes evident once we start having several of
+them. Let's make a few more plots so we can see how bslib behaves once
+we have multiple:
+
+```{r}
+iris_plot_2 <- ggplot2::ggplot(iris,
+                               ggplot2::aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  ggplot2::geom_point()
+
+
+iris_plot_3 <- ggplot2::ggplot(iris,
+                               ggplot2::aes(x = Petal.Length, y = Petal.Width, color = Species)) +
+  ggplot2::geom_point()
+
+iris_plot_2
+iris_plot_3
+```
+
+Lets add our two new plots to our layout, copy it to the console, and
+run it:
+
+```{r}
+#| eval: false
+app <- shiny::shinyApp(
+  ui = bslib::page_sidebar(
+    title = "Our Iris plot",
+    sidebar = "here is our sidebar",
+    bslib::card(
+      bslib::card_header("A beautiful plot about flowers"),
+      shiny::plotOutput(outputId = "iris_plot")
+    ),
+    bslib::card(
+      bslib::card_header("Another beautiful plot about flowers"),
+      shiny::plotOutput(outputId = "iris_plot_2")
+    ),
+    bslib::card(
+      bslib::card_header("OKay I think I've had enough flower plots for now"),
+      shiny::plotOutput(outputId = "iris_plot_3")
+    )
+  ),
+  server = function(input, output){
+    output$iris_plot <- shiny::renderPlot(
+      iris_plot
+    )
+    output$iris_plot_2 <- shiny::renderPlot(
+      iris_plot_2
+    )
+    output$iris_plot_3 <- shiny::renderPlot(
+      iris_plot_3
+    )
+  }
+)
+shiny::runApp(app)
+
+```
+
+It looks nice! if we want to change the order of our cards, we can add
+another layer from bslib, and define how many columns we want. We wrap
+all our cards in a function called `bslib::layout_column_wrap()` and add
+the argument `width  = 1/2` to get 2 columns (if this is indeed what we
+want). If we instead had written `width = 1/3` we would get 3 columns
+and so forth.
+
+```{r}
+#| eval: false
+
+app <- shiny::shinyApp(
+  ui = bslib::page_sidebar(
+    title = "Our Iris plot",
+    sidebar = "here is our sidebar",
+    bslib::layout_column_wrap(
+      width = 1/2,
+      bslib::card(
+        bslib::card_header("A beautiful plot about flowers"),
+        shiny::plotOutput(outputId = "iris_plot")
+      ),
+      bslib::card(
+        bslib::card_header("A beautiful plot about flowers"),
+        shiny::plotOutput(outputId = "iris_plot_2")
+      ),
+      bslib::card(
+        bslib::card_header("A beautiful plot about flowers"),
+        shiny::plotOutput(outputId = "iris_plot_3")
+      )
+    )
+  ),
+  server = function(input, output) {
+    output$iris_plot <- shiny::renderPlot(iris_plot)
+    output$iris_plot_2 <- shiny::renderPlot(iris_plot_2)
+    output$iris_plot_3 <- shiny::renderPlot(iris_plot_3)
+  }
+)
+shiny::runApp(app)
+```
+
+There is much more functionality to building a good user interface and
+there are many resources on bslib. But for now we know how to build a
+Shiny interface
+
 ## Summary
 
-- TODO: List of summary items
+In this session we:
 
-## Survey
+- Learned about UI and server
+- Explored the relationship between outputs and render functions
+- Introduced bslib and showed how it can be used to make pages and UI
+  elements
 
-{{< include /includes/_survey.qmd >}}
+Next session, we will show how we can build a shiny app so we have a
+place for our UI

@@ -21,7 +21,8 @@ In addition to the assumptions above, the workshop also has a fairly
 focused scope, which may also help you decide if this workshop is for
 you:
 
+- Get a basic introduction to making apps in R
+- Learn how to make interfaces with bslib
 - Build a modularized app in Shiny
 - Learn about the parquet file format
-- Learn how to make interfaces with bslib
 - Make your graphs interactive with plotly
