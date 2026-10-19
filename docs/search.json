@@ -1,471 +1,492 @@
 [
   {
-    "objectID": "TODO.html",
-    "href": "TODO.html",
-    "title": "",
-    "section": "",
-    "text": "Review the template guide for more information on how to use the template and the next steps after copying the project.\nNext, run these commands in the terminal while inside of the project’s directory. Either use your system’s terminal or use the built-in terminal in VS Code, Positron, or RStudio:\n\ngit init -b main to create the project as a Git repository.\njust install-dev-deps to install development tools.\njust list-todos and complete all the TODO items.\njust build-readme to build the Markdown version of the README.\n\nAfter going through all the TODO items and doing these tasks, add and commit the files into the Git history.To get the repository up on GitHub use the gh CLI to create the GitHub repository from the terminal with:\ngh repo create mortendall/shiny_workshop --source=. --public --push\nIf you will be using GitHub pages, run quarto publish gh-pages to setup and start publishing the website to GitHub Pages.\nFinally, some optional tasks:\n\njust install-precommit to install the pre-commit hooks.\nIf relevant, connect GoatCounter.\nIf relevant, connect pre-commit.ci to the repository and enable the pre-commit hooks."
-  },
-  {
-    "objectID": "sessions/session.html",
-    "href": "sessions/session.html",
-    "title": "TODO: Lesson title here",
-    "section": "",
-    "text": "The learning objectives for this session are:\n\nObjective one\n\n\n\n\n\n\n\n\n\n\nNoteReading task: ~4 minutes\n\n\n\nTODO: Reading text\n\n\n\n\n\nTime: ~NUM minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}\n\n\n\nTime: ~Num minutes.\nText\n\n\n\nTime: ~Num minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}\n\n\n\n\nTODO: List of summary items\n\n\n\n\nFeedback survey! :tada:"
-  },
-  {
-    "objectID": "sessions/session.html#learning-objectives",
-    "href": "sessions/session.html#learning-objectives",
-    "title": "TODO: Lesson title here",
-    "section": "",
-    "text": "The learning objectives for this session are:\n\nObjective one"
-  },
-  {
-    "objectID": "sessions/session.html#todo-section",
-    "href": "sessions/session.html#todo-section",
-    "title": "TODO: Lesson title here",
-    "section": "",
-    "text": "NoteReading task: ~4 minutes\n\n\n\nTODO: Reading text"
-  },
-  {
-    "objectID": "sessions/session.html#technologist-exercise-title",
-    "href": "sessions/session.html#technologist-exercise-title",
-    "title": "TODO: Lesson title here",
-    "section": "",
-    "text": "Time: ~NUM minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}"
-  },
-  {
-    "objectID": "sessions/session.html#speech_balloon-discussion-activity-title",
-    "href": "sessions/session.html#speech_balloon-discussion-activity-title",
-    "title": "TODO: Lesson title here",
-    "section": "",
-    "text": "Time: ~Num minutes.\nText"
-  },
-  {
-    "objectID": "sessions/session.html#book-reading-task-title",
-    "href": "sessions/session.html#book-reading-task-title",
-    "title": "TODO: Lesson title here",
-    "section": "",
-    "text": "Time: ~Num minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}"
-  },
-  {
-    "objectID": "sessions/session.html#summary",
-    "href": "sessions/session.html#summary",
-    "title": "TODO: Lesson title here",
-    "section": "",
-    "text": "TODO: List of summary items"
-  },
-  {
-    "objectID": "sessions/session.html#survey",
-    "href": "sessions/session.html#survey",
-    "title": "TODO: Lesson title here",
-    "section": "",
-    "text": "Feedback survey! :tada:"
-  },
-  {
-    "objectID": "sessions/golem.html",
-    "href": "sessions/golem.html",
-    "title": "Golem: a structured way to build and modularize your app",
-    "section": "",
-    "text": "The learning objectives for this session are:\n\nintroduce users to the golem module\n\n\n\n\n\n\n\n\n\n\nNoteReading task: ~4 minutes\n\n\n\nTODO: Reading text\n\n\n\n\n\nTime: ~NUM minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}\n\n\n\nTime: ~Num minutes.\nText\n\n\n\nTime: ~Num minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}\n\n\n\n\nTODO: List of summary items\n\n\n\n\nFeedback survey! :tada:"
-  },
-  {
-    "objectID": "sessions/golem.html#learning-objectives",
-    "href": "sessions/golem.html#learning-objectives",
-    "title": "Golem: a structured way to build and modularize your app",
-    "section": "",
-    "text": "The learning objectives for this session are:\n\nintroduce users to the golem module"
-  },
-  {
-    "objectID": "sessions/golem.html#todo-section",
-    "href": "sessions/golem.html#todo-section",
-    "title": "Golem: a structured way to build and modularize your app",
-    "section": "",
-    "text": "NoteReading task: ~4 minutes\n\n\n\nTODO: Reading text"
-  },
-  {
-    "objectID": "sessions/golem.html#technologist-exercise-title",
-    "href": "sessions/golem.html#technologist-exercise-title",
-    "title": "Golem: a structured way to build and modularize your app",
-    "section": "",
-    "text": "Time: ~NUM minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}"
-  },
-  {
-    "objectID": "sessions/golem.html#speech_balloon-discussion-activity-title",
-    "href": "sessions/golem.html#speech_balloon-discussion-activity-title",
-    "title": "Golem: a structured way to build and modularize your app",
-    "section": "",
-    "text": "Time: ~Num minutes.\nText"
-  },
-  {
-    "objectID": "sessions/golem.html#book-reading-task-title",
-    "href": "sessions/golem.html#book-reading-task-title",
-    "title": "Golem: a structured way to build and modularize your app",
-    "section": "",
-    "text": "Time: ~Num minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}"
-  },
-  {
-    "objectID": "sessions/golem.html#summary",
-    "href": "sessions/golem.html#summary",
-    "title": "Golem: a structured way to build and modularize your app",
-    "section": "",
-    "text": "TODO: List of summary items"
-  },
-  {
-    "objectID": "sessions/golem.html#survey",
-    "href": "sessions/golem.html#survey",
-    "title": "Golem: a structured way to build and modularize your app",
-    "section": "",
-    "text": "Feedback survey! :tada:"
-  },
-  {
-    "objectID": "pre-workshop/survey.html",
-    "href": "pre-workshop/survey.html",
-    "title": "Survey",
-    "section": "",
-    "text": "Survey\nWe have a Code of Conduct. If you haven’t read it, read it now. The survey involves a question about Conduct. We want to make sure this workshop is a supportive and safe environment for learning, so this Code of Conduct is quite important.\nIf you haven’t read the sections under “Workshop overview” and “Pre-workshop tasks”, please read them now.\nYou’re almost done. Please fill out the pre-workshop survey to finish this section:\nPre-workshop survey :tada:\nSee you at the workshop! :wave:"
-  },
-  {
-    "objectID": "pre-workshop/installing-r-packages.html",
-    "href": "pre-workshop/installing-r-packages.html",
-    "title": "Installing R Packages",
-    "section": "",
-    "text": "Installing R Packages\nWe will be using specific R packages for the workshop, so you will need to install them. To make it easier, we’ve created a custom R package called r3 that will install all the necessary packages for you for this workshop. Run these two functions in the Console by copying and pasting them to install our custom r3 package as well as the {tidyverse} package.\n\n\nConsole\n\ninstall.packages(\"r3\", repos = c(\"https://rostools.r-universe.dev\", \"https://cloud.r-project.org\"))\ninstall.packages(\"tidyverse\")\n\n\n\n\n\n\n\nTip\n\n\n\nInstalling packages is tricky, especially on some work laptops, and doesn’t always work as expected. Here are some other methods to try if you have trouble installing the packages with the code above.\nFor Windows users, you may have to install RTools to use either the {pak} or {remotes} method. The version of RTools you install must match the version of R that you have installed. For example, if you have R version 4.4, you need to install RTools 4.4.\nFirst, try installing the r3 package directly from GitHub with {pak}:\n\n\nConsole\n\ninstall.packages(\"pak\")\npak::pak(\"rostools/r3\")\n\nIf that doesn’t work, try with {remotes}:\n\n\nConsole\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"rostools/r3\")\n\nIf you encounter any errors with either of these functions, try to restart R by going to “Sessions -&gt; Restart R” and re-run them again. If that also doesn’t work, try to complete the other tasks as best you can, complete the survey, and let us know you have a problem in the survey. We’ll email you at least a week before the workshop starts to try to help you get it working.\n\n\n\n\n\n\n\n\nTip\n\n\n\nWhen you see a command like something::something(), for example with pak::pak(), you would “read” this as:\n\nR, can you please use the pak() function from the {pak} package.\n\nThe normal way of doing this would be to load the package with library(pak) and then running the command (pak()). But by using the ::, we tell R to directly use a function from a package, without needing to load the package and all of its other functions too. We use this trick because we only want to use the pak() command from the {pak} package and not have to load all the other functions as well. In this workshop we will be using :: often."
-  },
-  {
-    "objectID": "pre-workshop/code-of-conduct.html",
-    "href": "pre-workshop/code-of-conduct.html",
-    "title": "Code of conduct",
-    "section": "",
-    "text": "Learning happens when we feel safe and supported. Since we want you to learn during this workshop, we want you to feel safe and supported. We also want all learners to have an enjoyable and fulfilling experience while participating in this workshop. So we expect all learners to show respect, kindness, and courtesy to other learners throughout the whole workshop and to help create a positive and safe learning environment.\nWhile most people and (sub-)cultures have an implicit, assumed set of practices and expectations for behaviour, we believe strongly in effective and clear communication. This includes making what is normally implicit expectations to instead be explicit expectations.\nTeachers and helpers will uphold and embody this code in all spaces and activities of the workshop, and we expect you as the learner to do the same. In fact, by participating in this workshop, you indicate that you agree to follow these explicit expectations. We have this code of conduct to communicate to you that we really value and want to nurture a space that encourages and enhances learning. Otherwise, why would we have a workshop if you can’t or aren’t able to effectively learn anything from it! :zany_face:\n\n\nWe want a welcoming, supportive, safe, and fun environment not only for ourselves as teachers and helpers, but also for all learners, regardless of background and identity. This means that we do not tolerate behaviour that is disrespectful to any of our teachers, helpers, or learners (see below for unacceptable behaviour).\nWe encourage the following kinds of behaviours in all interactions during this workshop that will foster a positive and professional learning environment:\n\nShow kindness, courtesy, and respect towards other workshop members.\nAll interactions should be professional regardless of platform: either online or in-person.\nBe aware of your words by using welcoming and inclusive language. Words matter, a lot!\nBe respectful to different viewpoints and experiences.\nGracefully accept constructive criticism.\nFocus on what is best for everyone in the workshop.\n\n\n\n\nWhile we assume you will not do these behaviours, we want to clearly communicate what unacceptable behaviour is. It is any behaviour, as actions or words, that excludes, intimidates, or causes discomfort to others. We do not tolerate discrimination or harassment based on characteristics that include, though are not limited to, gender identity and expression, sexual orientation, disability, physical appearance, body size, citizenship, nationality, ethnic or social origin, pregnancy, familial status, veteran status, genetic information, religion or belief (or lack thereof), membership of a national minority, property, age, education, socio-economic status, technical choices, and experience level. We of course also don’t tolerate verbally or physically violent behaviour towards others.\nExamples of unacceptable behavior includes:\n\nWritten or verbal comments that exclude people on the basis of membership of any specific group.\nThe display of sexual or violent images.\nUnwelcome sexual attention, advances, and/or physical contact.\nSustained disruption of workshop sessions or communications.\nInsults or put downs.\nSexist, racist, homophobic, transphobic, ableist, or exclusionary jokes.\n\n\n\n\nLearners who are asked, either in person or online, to stop any inappropriate behavior are expected to comply immediately. If a learners engages in behaviour that violates this code of conduct, the organizers, teachers, or helpers may take any action they deem appropriate, including warning the offender or removing them from the workshop.\nIf you feel in any way unsafe or mistreated, you may contact us privately—all communication is confidential.\nThank you for helping make this a welcoming, friendly workshop for all :smile:\n\n\n\n\n\n\nNote\n\n\n\nAcknowledgements: Large portions of this code of conduct were taken and modified from other codes of conduct, specifically Software Carpentry and UofTCoders."
-  },
-  {
-    "objectID": "pre-workshop/code-of-conduct.html#expected-behavior",
-    "href": "pre-workshop/code-of-conduct.html#expected-behavior",
-    "title": "Code of conduct",
-    "section": "",
-    "text": "We want a welcoming, supportive, safe, and fun environment not only for ourselves as teachers and helpers, but also for all learners, regardless of background and identity. This means that we do not tolerate behaviour that is disrespectful to any of our teachers, helpers, or learners (see below for unacceptable behaviour).\nWe encourage the following kinds of behaviours in all interactions during this workshop that will foster a positive and professional learning environment:\n\nShow kindness, courtesy, and respect towards other workshop members.\nAll interactions should be professional regardless of platform: either online or in-person.\nBe aware of your words by using welcoming and inclusive language. Words matter, a lot!\nBe respectful to different viewpoints and experiences.\nGracefully accept constructive criticism.\nFocus on what is best for everyone in the workshop."
-  },
-  {
-    "objectID": "pre-workshop/code-of-conduct.html#unacceptable-behavior",
-    "href": "pre-workshop/code-of-conduct.html#unacceptable-behavior",
-    "title": "Code of conduct",
-    "section": "",
-    "text": "While we assume you will not do these behaviours, we want to clearly communicate what unacceptable behaviour is. It is any behaviour, as actions or words, that excludes, intimidates, or causes discomfort to others. We do not tolerate discrimination or harassment based on characteristics that include, though are not limited to, gender identity and expression, sexual orientation, disability, physical appearance, body size, citizenship, nationality, ethnic or social origin, pregnancy, familial status, veteran status, genetic information, religion or belief (or lack thereof), membership of a national minority, property, age, education, socio-economic status, technical choices, and experience level. We of course also don’t tolerate verbally or physically violent behaviour towards others.\nExamples of unacceptable behavior includes:\n\nWritten or verbal comments that exclude people on the basis of membership of any specific group.\nThe display of sexual or violent images.\nUnwelcome sexual attention, advances, and/or physical contact.\nSustained disruption of workshop sessions or communications.\nInsults or put downs.\nSexist, racist, homophobic, transphobic, ableist, or exclusionary jokes."
-  },
-  {
-    "objectID": "pre-workshop/code-of-conduct.html#consequences-of-unacceptable-behavior",
-    "href": "pre-workshop/code-of-conduct.html#consequences-of-unacceptable-behavior",
-    "title": "Code of conduct",
-    "section": "",
-    "text": "Learners who are asked, either in person or online, to stop any inappropriate behavior are expected to comply immediately. If a learners engages in behaviour that violates this code of conduct, the organizers, teachers, or helpers may take any action they deem appropriate, including warning the offender or removing them from the workshop.\nIf you feel in any way unsafe or mistreated, you may contact us privately—all communication is confidential.\nThank you for helping make this a welcoming, friendly workshop for all :smile:\n\n\n\n\n\n\nNote\n\n\n\nAcknowledgements: Large portions of this code of conduct were taken and modified from other codes of conduct, specifically Software Carpentry and UofTCoders."
-  },
-  {
-    "objectID": "overview/schedule.html",
-    "href": "overview/schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Schedule\nThe workshop is structured as a series of participatory live-coding sessions interspersed with hands-on exercises and group work, using either a practice dataset or some other real-world dataset. There are some lectures given, mainly at the start and end of the workshop. The general schedule outline is shown in the below table. This is not a fixed schedule of the timings of each session—some may be shorter and others may be longer. Instead, it is meant to be an approximate guide and overview.\n\nDay 1\n\n\n\n\n\nTime\nSession topic"
-  },
-  {
-    "objectID": "overview/is-this-for-you.html",
-    "href": "overview/is-this-for-you.html",
-    "title": "Is this for you?",
-    "section": "",
-    "text": "Is this for you?\nTo help manage expectations and develop the material for this workshop, we make a few assumptions about who you are as a participant in the workshop.\nWe assume you can relate to one or more of the following:\n\nHave intermediate R coding skills\nAre familiar with the tidyverse framework\nKnow ggplot2 syntax\nare interested in sharing your data or analysis methods through interactive application\n\nWhile we have these assumptions to help focus the content of the workshop, if you have an interest in the workshop but don’t fit any of the assumptions, you are still welcome to attend! We welcome everyone until capacity has been reached.\nIn addition to the assumptions above, the workshop also has a fairly focused scope, which may also help you decide if this workshop is for you:\n\nGet a basic introduction to making apps in R\nLearn how to make interfaces with bslib\nBuild a modularized app in Shiny\nLearn about the parquet file format\nMake your graphs interactive with plotly"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome",
     "section": "",
-    "text": "This shiny workshop is meant as a brief introduction to shiny, arrow, bslib, golem, and plotly. It is designed for doing participatory live-typing, where the teacher demonstrates the tasks on their computer connected to a projector while learners type along on their own computer. The workshop also includes reading tasks, discussion activities, and hands-on exercises.\nThis website contains all of the material for the workshop, including readings, exercises, presentations, live-typing material, and images. It is structured as a book, with “chapters” as sessions, in order of appearance. We make heavy use of the website throughout the workshop where “type-along” sessions almost identically follow the material on the website (with slight modifications for time or more detailed explanations).\nCheck out the overview section of the workshop, starting with the Syllabus.\nIf you plan on attending the workshop, please make sure to complete the Pre-workshop tasks to get set up and ready for the workshop. The pre-workshop tasks include a survey that you need to fill out before the workshop starts.\n\n\n\n\n\n\nTipDo you find this workshop material useful?\n\n\n\nIf yes, please consider “starring” our GitHub repository. Starring the repository will save it to your list of saved repositories, so it’s easy for you to find again later. As a plus, it helps give our project more visibility :star2:\n\n\n\n\nThis website and its content are targeted to three groups:\n\nFor the learners to use during the workshop, both to follow along and also to use as a reference after the workshop ends. A more detailed description of who the learner is can be found in Is this for you?\nFor the teachers to use as a guide for when they do the type-along sessions.\nFor those who are interested in teaching, who may not have much experience or may not know where to start, to use this website as a guide to running and teaching their own workshops.\n\n\n\n\nThe workshop material is licensed under the Creative Commons Attribution 4.0 License, so the material can be used, re-used, and modified, as long as there is attribution to this source. Check out the For teachers section for more details and tips on using this material for teaching.\n\n\n\nWant to contribute to this workshop? Look through our CONTRIBUTING page for contribution guidelines on how to get started.\n\n\n\n\nThe workshop material is created using Quarto to write the material and create the book format, GitHub to host the Git repository of the material, and GitHub Actions with Netlify to build and host the website. The original source material for this workshop is found on the shiny_workshop GitHub repository."
+    "text": "Welcome\nThis shiny workshop is meant as a brief introduction to shiny, arrow, bslib, golem, and plotly. It is designed for doing participatory live-typing, where the teacher demonstrates the tasks on their computer connected to a projector while learners type along on their own computer. The workshop also includes reading tasks, discussion activities, and hands-on exercises.\nThis website contains all of the material for the workshop, including readings, exercises, presentations, live-typing material, and images. It is structured as a book, with “chapters” as sessions, in order of appearance. We make heavy use of the website throughout the workshop where “type-along” sessions almost identically follow the material on the website (with slight modifications for time or more detailed explanations).\nCheck out the overview section of the workshop, starting with the Syllabus.\nIf you plan on attending the workshop, please make sure to complete the Pre-workshop tasks to get set up and ready for the workshop. The pre-workshop tasks include a survey that you need to fill out before the workshop starts.",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "index.html#target-audiences",
     "href": "index.html#target-audiences",
     "title": "Welcome",
-    "section": "",
-    "text": "This website and its content are targeted to three groups:\n\nFor the learners to use during the workshop, both to follow along and also to use as a reference after the workshop ends. A more detailed description of who the learner is can be found in Is this for you?\nFor the teachers to use as a guide for when they do the type-along sessions.\nFor those who are interested in teaching, who may not have much experience or may not know where to start, to use this website as a guide to running and teaching their own workshops."
+    "section": "Target audiences",
+    "text": "Target audiences\nThis website and its content are targeted to three groups:\n\nFor the learners to use during the workshop, both to follow along and also to use as a reference after the workshop ends. A more detailed description of who the learner is can be found in Is this for you?\nFor the teachers to use as a guide for when they do the type-along sessions.\nFor those who are interested in teaching, who may not have much experience or may not know where to start, to use this website as a guide to running and teaching their own workshops.",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "index.html#re-use-and-licensing",
     "href": "index.html#re-use-and-licensing",
     "title": "Welcome",
-    "section": "",
-    "text": "The workshop material is licensed under the Creative Commons Attribution 4.0 License, so the material can be used, re-used, and modified, as long as there is attribution to this source. Check out the For teachers section for more details and tips on using this material for teaching."
+    "section": "Re-use and licensing",
+    "text": "Re-use and licensing\nThe workshop material is licensed under the Creative Commons Attribution 4.0 License, so the material can be used, re-used, and modified, as long as there is attribution to this source. Check out the For teachers section for more details and tips on using this material for teaching.",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "index.html#contributing",
     "href": "index.html#contributing",
     "title": "Welcome",
-    "section": "",
-    "text": "Want to contribute to this workshop? Look through our CONTRIBUTING page for contribution guidelines on how to get started."
+    "section": "Contributing",
+    "text": "Contributing\nWant to contribute to this workshop? Look through our CONTRIBUTING page for contribution guidelines on how to get started.",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "index.html#how-the-website-is-made",
     "href": "index.html#how-the-website-is-made",
     "title": "Welcome",
-    "section": "",
-    "text": "The workshop material is created using Quarto to write the material and create the book format, GitHub to host the Git repository of the material, and GitHub Actions with Netlify to build and host the website. The original source material for this workshop is found on the shiny_workshop GitHub repository."
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html",
-    "href": "CODE_OF_CONDUCT.html",
-    "title": "Contributor Code of Conduct",
-    "section": "",
-    "text": "Contributor Code of Conduct\nAs contributors and maintainers of this project, we pledge to respect all people who contribute through reporting issues, posting suggestions, updating any material, submitting pull requests, and other activities.\nWe are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion.\nExamples of unacceptable behavior by participants include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.\nProject maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct. Project maintainers who do not follow the Code of Conduct may be removed from the project team.\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more of the project maintainers.\nThis Code of Conduct is adapted from the Contributor Covenant (https://www.contributor-covenant.org), version 1.0.0, available at https://www.contributor-covenant.org/version/1/0/0/"
-  },
-  {
-    "objectID": "appendix/references.html",
-    "href": "appendix/references.html",
-    "title": "References",
-    "section": "",
-    "text": "References"
-  },
-  {
-    "objectID": "appendix/for-teachers.html",
-    "href": "appendix/for-teachers.html",
-    "title": "For teachers",
-    "section": "",
-    "text": "For teachers\nA more general guide to teaching or helping is found on the Guides website. This page has information relevant specifically to this workshop.\n\nFor created teams, assign one teacher or helper to each group to help them specifically during the final group project."
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing",
-    "section": "",
-    "text": "Check out the Contributing Guide for more details on how to contribute. For guidelines on how to be a helper or teacher, check out the For teachers page. As always, make sure to adhere to the Code of Conduct.\n\n\nThe easiest way to contribute is to report issues or bugs that you might find while using or reading the workshop material. You can do this by creating a new issue on our GitHub repository.\n\n\n\nTo contribute to the workshop, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and build the workshop website. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to install uv first and then install justfile using uv. Then, to install justfile, run:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our checks by opening a terminal so that the working directory is the root of this workshop’s parent/root folder and running:\njust run-all\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit.\n\n\n\n\n.copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\n\n.zenodo.json: Structured citation metadata for your project when archived on Zenodo. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCONTRIBUTING.md: Guidelines for contributing to the project.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#bug-issues-and-bugs",
-    "href": "CONTRIBUTING.html#bug-issues-and-bugs",
-    "title": "Contributing",
-    "section": "",
-    "text": "The easiest way to contribute is to report issues or bugs that you might find while using or reading the workshop material. You can do this by creating a new issue on our GitHub repository."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#pencil2-adding-or-modifying-content",
-    "href": "CONTRIBUTING.html#pencil2-adding-or-modifying-content",
-    "title": "Contributing",
-    "section": "",
-    "text": "To contribute to the workshop, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and build the workshop website. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to install uv first and then install justfile using uv. Then, to install justfile, run:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our checks by opening a terminal so that the working directory is the root of this workshop’s parent/root folder and running:\njust run-all\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#file_folder-support-and-infrastructure-files",
-    "href": "CONTRIBUTING.html#file_folder-support-and-infrastructure-files",
-    "title": "Contributing",
-    "section": "",
-    "text": ".copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\n\n.zenodo.json: Structured citation metadata for your project when archived on Zenodo. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCONTRIBUTING.md: Guidelines for contributing to the project.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file."
-  },
-  {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "Creative Commons Attribution 4.0 International",
-    "section": "",
-    "text": "Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\n\nConsiderations for licensors: Our public licenses are intended for use by those authorized to give the public permission to use material in ways otherwise restricted by copyright and certain other rights. Our licenses are irrevocable. Licensors should read and understand the terms and conditions of the license they choose before applying it. Licensors should also secure all rights necessary before applying our licenses so that the public can reuse the material as expected. Licensors should clearly mark any material not subject to the license. This includes other CC-licensed material, or material used under an exception or limitation to copyright. More considerations for licensors.\nConsiderations for the public: By using one of our public licenses, a licensor grants the public permission to use the licensed material under specified terms and conditions. If the licensor’s permission is not necessary for any reason–for example, because of any applicable exception or limitation to copyright–then that use is not regulated by the license. Our licenses grant only permissions under copyright and certain other rights that a licensor has authority to grant. Use of the licensed material may still be restricted for other reasons, including because others have copyright or other rights in the material. A licensor may make special requests, such as asking that all changes be marked or described. Although not required by our licenses, you are encouraged to respect those requests where reasonable. More considerations for the public.\n\n\n\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\n\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\n\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\n\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\nIf You Share Adapted Material You produce, the Adapter’s License You apply must not prevent recipients of the Adapted Material from complying with this Public License.\n\n\n\n\n\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\n\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\n\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\n\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\n\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
-  },
-  {
-    "objectID": "LICENSE.html#creative-commons-attribution-4.0-international-public-license",
-    "href": "LICENSE.html#creative-commons-attribution-4.0-international-public-license",
-    "title": "Creative Commons Attribution 4.0 International",
-    "section": "",
-    "text": "By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\n\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\n\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\n\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\nIf You Share Adapted Material You produce, the Adapter’s License You apply must not prevent recipients of the Adapted Material from complying with this Public License.\n\n\n\n\n\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\n\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\n\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\n\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\n\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
-  },
-  {
-    "objectID": "overview/learning-design.html",
-    "href": "overview/learning-design.html",
-    "title": "Learning design",
-    "section": "",
-    "text": "This workshop is designed using the science of learning. Learning is when new content gets incorporated into long-term storage in the brain in a way that it can be later retrieved. Some of the best ways to enable learning is to do “active learning” by engaging with the material, practicing retrieving what was just covered, repeatedly being exposed to the content, linking the new information with what you already know, and explaining it to someone else.\nWe use a variety of activities to target the different “pathways” of learning. A big part of learning is being engaged in the process of learning, not just learning the content itself. So to help you be engaged in your own learning, we want to involve you in the reasons why we do the things we do during this workshop.\nThroughout the workshop, we use these practices to support learning.\n\n\nThe learning goals and the narrative are tightly connected in this workshop. Learning is easier when you have a better idea of where you are going, where you are relative to the end goal, and what to expect along the way.\n\n\n\n“Code-alongs” is when the teacher types on their computer that is on the projector and explains what it means as you also type along with them. The connection between using the hands and doing something tangible helps reinforce learning. It also helps the teachers to go slower as we have to both explain and type things out. This helps you learn better. “Less is more” works very well with learning.\n\n\n\nHands-on exercises reinforce what was just taught through retrieval practice and repetition. It gives you a chance to engage with the material and the space to try it out on your own. This helps you form a better sense of how to do it yourself.\n\n\n\nDiscussion activities encourage linking what you already know and do in your work with the new information. Because humans are social beings, we also tend to learn better when there is some social aspect to it. For example, explaining something to someone else is one of the best ways to learn, as nicely expressed in the quote “while we teach, we learn” from the Roman philosopher Seneca.\n\n\n\nLectures, while extremely common, are forms of information sharing with the lowest rates of learning. In this workshop, we use reading tasks instead, so you can go at your pace, re-read things you may not understand, and take notes, all of which support learning. To help reinforce what you just read, the teacher will briefly summarise and emphasise key points after reading tasks, to repeat the main points and target another part of the brain (the auditory pathway).\n\n\n\nBreaks are how your brain can recharge and refocus. The brain is only able to effectively focus on one thing at a time in 30-50 minute blocks of time. That’s why we mix together code-alongs, exercises, discussions, and reading to give your brain some variation. Having an explicit break, even 5 minutes, is enough for the brain to better process and store what was covered.\n\n\n\nAll the material is online on this website, so that it is easy for you to go back to after the workshop. This builds the repetition and retrieval practice part of learning. Our brains also get easily distracted, which is completely normal. So if you get distracted during the workshop, you can simply go to the material and get caught up with where we are. We also make sure to follow the material on the website closely, so that it is easier for you to follow along.\n\n\n\nMental safety in a supportive environment is critical for effective learning. It puts the brain into a more relaxed state that allows for optimal processing and ultimately learning. That’s why we try to explicitly create that space, for example with the use of our Code of Conduct.\n\n\n\nAsking for help can feel difficult, especially when you are learning and are unsure about something. To make it easier and feel safer, we use origami hats (or stickies) to show how everyone is doing. If you need help, you put up the “help” hat (usually orange) and a helper will come to you as soon as possible. If not, you can put up a “all good” hat (usually blue) to let us know you are following along. Since we often have several helpers, you usually won’t wait long. This simple system lets you ask for help without interrupting the teacher or drawing attention, so you can keep following along while you wait. Our goal is to make getting help easier and more comfortable.\n\n\n\nNow you know a bit more about the thoughts behind how we’ve designed this workshop to really try to support and enable your own learning! :tada: :grin:"
-  },
-  {
-    "objectID": "overview/learning-design.html#clear-learning-goals-and-a-strong-narrative",
-    "href": "overview/learning-design.html#clear-learning-goals-and-a-strong-narrative",
-    "title": "Learning design",
-    "section": "",
-    "text": "The learning goals and the narrative are tightly connected in this workshop. Learning is easier when you have a better idea of where you are going, where you are relative to the end goal, and what to expect along the way."
-  },
-  {
-    "objectID": "overview/learning-design.html#code-alongs-as-the-main-activity",
-    "href": "overview/learning-design.html#code-alongs-as-the-main-activity",
-    "title": "Learning design",
-    "section": "",
-    "text": "“Code-alongs” is when the teacher types on their computer that is on the projector and explains what it means as you also type along with them. The connection between using the hands and doing something tangible helps reinforce learning. It also helps the teachers to go slower as we have to both explain and type things out. This helps you learn better. “Less is more” works very well with learning."
-  },
-  {
-    "objectID": "overview/learning-design.html#retrieval-practice-with-hands-on-exercises",
-    "href": "overview/learning-design.html#retrieval-practice-with-hands-on-exercises",
-    "title": "Learning design",
-    "section": "",
-    "text": "Hands-on exercises reinforce what was just taught through retrieval practice and repetition. It gives you a chance to engage with the material and the space to try it out on your own. This helps you form a better sense of how to do it yourself."
-  },
-  {
-    "objectID": "overview/learning-design.html#linking-new-information-with-existing-knowledge-with-discussion-activities",
-    "href": "overview/learning-design.html#linking-new-information-with-existing-knowledge-with-discussion-activities",
-    "title": "Learning design",
-    "section": "",
-    "text": "Discussion activities encourage linking what you already know and do in your work with the new information. Because humans are social beings, we also tend to learn better when there is some social aspect to it. For example, explaining something to someone else is one of the best ways to learn, as nicely expressed in the quote “while we teach, we learn” from the Roman philosopher Seneca."
-  },
-  {
-    "objectID": "overview/learning-design.html#minimal-use-of-lectures",
-    "href": "overview/learning-design.html#minimal-use-of-lectures",
-    "title": "Learning design",
-    "section": "",
-    "text": "Lectures, while extremely common, are forms of information sharing with the lowest rates of learning. In this workshop, we use reading tasks instead, so you can go at your pace, re-read things you may not understand, and take notes, all of which support learning. To help reinforce what you just read, the teacher will briefly summarise and emphasise key points after reading tasks, to repeat the main points and target another part of the brain (the auditory pathway)."
-  },
-  {
-    "objectID": "overview/learning-design.html#frequent-breaks-and-variation-in-activities",
-    "href": "overview/learning-design.html#frequent-breaks-and-variation-in-activities",
-    "title": "Learning design",
-    "section": "",
-    "text": "Breaks are how your brain can recharge and refocus. The brain is only able to effectively focus on one thing at a time in 30-50 minute blocks of time. That’s why we mix together code-alongs, exercises, discussions, and reading to give your brain some variation. Having an explicit break, even 5 minutes, is enough for the brain to better process and store what was covered."
-  },
-  {
-    "objectID": "overview/learning-design.html#easily-accessible-material-that-is-online-always",
-    "href": "overview/learning-design.html#easily-accessible-material-that-is-online-always",
-    "title": "Learning design",
-    "section": "",
-    "text": "All the material is online on this website, so that it is easy for you to go back to after the workshop. This builds the repetition and retrieval practice part of learning. Our brains also get easily distracted, which is completely normal. So if you get distracted during the workshop, you can simply go to the material and get caught up with where we are. We also make sure to follow the material on the website closely, so that it is easier for you to follow along."
-  },
-  {
-    "objectID": "overview/learning-design.html#a-safe-and-supportive-environment",
-    "href": "overview/learning-design.html#a-safe-and-supportive-environment",
-    "title": "Learning design",
-    "section": "",
-    "text": "Mental safety in a supportive environment is critical for effective learning. It puts the brain into a more relaxed state that allows for optimal processing and ultimately learning. That’s why we try to explicitly create that space, for example with the use of our Code of Conduct."
-  },
-  {
-    "objectID": "overview/learning-design.html#using-origami-hats-to-ask-for-help",
-    "href": "overview/learning-design.html#using-origami-hats-to-ask-for-help",
-    "title": "Learning design",
-    "section": "",
-    "text": "Asking for help can feel difficult, especially when you are learning and are unsure about something. To make it easier and feel safer, we use origami hats (or stickies) to show how everyone is doing. If you need help, you put up the “help” hat (usually orange) and a helper will come to you as soon as possible. If not, you can put up a “all good” hat (usually blue) to let us know you are following along. Since we often have several helpers, you usually won’t wait long. This simple system lets you ask for help without interrupting the teacher or drawing attention, so you can keep following along while you wait. Our goal is to make getting help easier and more comfortable."
-  },
-  {
-    "objectID": "overview/learning-design.html#being-involved-in-the-learning-process",
-    "href": "overview/learning-design.html#being-involved-in-the-learning-process",
-    "title": "Learning design",
-    "section": "",
-    "text": "Now you know a bit more about the thoughts behind how we’ve designed this workshop to really try to support and enable your own learning! :tada: :grin:"
+    "section": "How the website is made",
+    "text": "How the website is made\nThe workshop material is created using Quarto to write the material and create the book format, GitHub to host the Git repository of the material, and GitHub Actions with Netlify to build and host the website. The original source material for this workshop is found on the shiny_workshop GitHub repository.",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "overview/syllabus.html",
     "href": "overview/syllabus.html",
-    "title": "Syllabus",
+    "title": "1  Syllabus",
     "section": "",
-    "text": "TODO: Include description and overall introduction of workshop\nThis workshop lasts TODO: Time and is split into the following sessions, listed in the schedule, which will be covered in order:\n\nIntroduction to the workshop\nTODO: Session title\nConcluding remarks\n\n\n\nThe overall aim of this workshop is to enable you to:\n\nAim one\n\nBroken down into specific objectives for each session, we’ve designed the workshop to enable you to do the following:\nTODO: Session title\n\nObjective one\n\nTangibly, during the workshop you will:\n\nLearn what a Shiny app is\nCreate one with the golem package\nBuild a dashboard using the palmerpenguins dataset\nStore files as parquet\nMake graphs interactive using plotly"
+    "text": "1.1 Learning outcome and objectives\nTODO: Include description and overall introduction of workshop\nThis workshop lasts TODO: Time and is split into the following sessions, listed in the schedule, which will be covered in order:\nThe overall aim of this workshop is to enable you to:\nBroken down into specific objectives for each session, we’ve designed the workshop to enable you to do the following:\nTODO: Session title\nTangibly, during the workshop you will:",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Syllabus</span>"
+    ]
   },
   {
     "objectID": "overview/syllabus.html#learning-outcome-and-objectives",
     "href": "overview/syllabus.html#learning-outcome-and-objectives",
-    "title": "Syllabus",
+    "title": "1  Syllabus",
     "section": "",
-    "text": "The overall aim of this workshop is to enable you to:\n\nAim one\n\nBroken down into specific objectives for each session, we’ve designed the workshop to enable you to do the following:\nTODO: Session title\n\nObjective one\n\nTangibly, during the workshop you will:\n\nLearn what a Shiny app is\nCreate one with the golem package\nBuild a dashboard using the palmerpenguins dataset\nStore files as parquet\nMake graphs interactive using plotly"
+    "text": "Aim one\n\n\n\n\nObjective one\n\n\n\nLearn what a Shiny app is\nCreate one with the golem package\nBuild a dashboard using the palmerpenguins dataset\nStore files as parquet\nMake graphs interactive using plotly",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Syllabus</span>"
+    ]
   },
   {
-    "objectID": "pre-workshop/installing-programs-r.html",
-    "href": "pre-workshop/installing-programs-r.html",
-    "title": "Installing the programs",
+    "objectID": "overview/is-this-for-you.html",
+    "href": "overview/is-this-for-you.html",
+    "title": "2  Is this for you?",
     "section": "",
-    "text": "Installing the programs\nIn order to participate in the workshop, you’ll need to install these programs. You may already have some of them installed and if you did, please make sure that they are at least the minimum versions listed below. If not, you will need to update them.\n\nWindowsMacOSLinux (Ubuntu)\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console.\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”.\nGit: Select the “Click here to download” link. Git is used throughout many sessions in the workshop. When installing, it will ask for a selecting a “Text Editor” and while we won’t be using this in the workshop, Git needs to know this information so choose Notepad.\n\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console. If you use Homebrew (which we strongly recommend installing and using), installing R is as easy as opening a Terminal and running:\nbrew install --cask r\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”. With Homebrew:\nbrew install --cask rstudio\nGit: Git is used throughout many sessions in the workshop. With Homebrew:\nbrew install git\n\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console.\nsudo apt -y install r-base\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”.\nGit: Git is used throughout many sessions in the workshop.\nsudo apt install git\n\n\n\n\nAll these programs are required for the workshop, even Git. Git, which is a software program to formally manage versions of files, is used because of it’s popularity and the amount of documentation available for it. Check out the online book Happy Git with R, especially the “Why Git” section, for an understanding on why we are teaching Git. Windows users tend to have more trouble with installing Git than macOS or Linux users. See the section on Installing Git for Windows for help.\n\n\n\n\n\n\nNote\n\n\n\nSome pictures may show a Git pane in RStudio, but you may not see it. If you haven’t created or opened an RStudio R Project (which is taught in the introductory workshop), the Git pane does not show up. It only shows up in R Projects that use Git to track file changes.\n\n\n\n\n\n\n\n\nNote\n\n\n\nA note to those who have or use work laptops with restrictive administrative privileges: You may encounter problems installing software due to administrative reasons (e.g. you don’t have permission to install things). Even if you have issues installing or updating the latest version of R or RStudio, you will likely be able to continue with the workshop as long as you have the minimum version listed above for R and for RStudio. If you have versions of R and RStudio that are older than that, you may need to ask your IT department to update your software if you can’t do this yourself. Unfortunately, Git is not a commonly used software for some organizations, so you may not have it installed and you will need to ask IT to install it. We require it for the workshop, so please make sure to give IT enough time to be able to install it for you prior to the workshop.\n\n\nOnce R, RStudio, and Git have been installed, open RStudio. If you encounter any troubles during these pre-workshop tasks, try as best as you can to complete the task and then let us know about the issues in the pre-workshop survey. If you continue having problems, indicate on the survey that you need help and we can try to book a quick video call to fix the problem. Otherwise, you can come to the workshop 15-20 minutes earlier to get help.\nIf you’re unable to complete the setup procedure due to unfixable technical issues, you can use Posit Cloud (to use RStudio on the cloud) as a final solution in order to participate in the workshop. For help setting up Posit Cloud for this workshop, refer to the Posit Cloud setup guide."
+    "text": "To help manage expectations and develop the material for this workshop, we make a few assumptions about who you are as a participant in the workshop.\nWe assume you can relate to one or more of the following:\n\nHave intermediate R coding skills\nAre familiar with the tidyverse framework\nKnow ggplot2 syntax\nare interested in sharing your data or analysis methods through interactive application\n\nWhile we have these assumptions to help focus the content of the workshop, if you have an interest in the workshop but don’t fit any of the assumptions, you are still welcome to attend! We welcome everyone until capacity has been reached.\nIn addition to the assumptions above, the workshop also has a fairly focused scope, which may also help you decide if this workshop is for you:\n\nGet a basic introduction to making apps in R\nLearn how to make interfaces with bslib\nBuild a modularized app in Shiny\nLearn about the parquet file format\nMake your graphs interactive with plotly",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Is this for you?</span>"
+    ]
+  },
+  {
+    "objectID": "overview/schedule.html",
+    "href": "overview/schedule.html",
+    "title": "3  Schedule",
+    "section": "",
+    "text": "The workshop is structured as a series of participatory live-coding sessions interspersed with hands-on exercises and group work, using either a practice dataset or some other real-world dataset. There are some lectures given, mainly at the start and end of the workshop. The general schedule outline is shown in the below table. This is not a fixed schedule of the timings of each session—some may be shorter and others may be longer. Instead, it is meant to be an approximate guide and overview.\n\nDay 1\n\n\n\n\n\nTime\nSession topic",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html",
+    "href": "overview/learning-design.html",
+    "title": "4  Learning design",
+    "section": "",
+    "text": "4.1 Clear learning goals and a strong narrative\nThis workshop is designed using the science of learning. Learning is when new content gets incorporated into long-term storage in the brain in a way that it can be later retrieved. Some of the best ways to enable learning is to do “active learning” by engaging with the material, practicing retrieving what was just covered, repeatedly being exposed to the content, linking the new information with what you already know, and explaining it to someone else.\nWe use a variety of activities to target the different “pathways” of learning. A big part of learning is being engaged in the process of learning, not just learning the content itself. So to help you be engaged in your own learning, we want to involve you in the reasons why we do the things we do during this workshop.\nThroughout the workshop, we use these practices to support learning.\nThe learning goals and the narrative are tightly connected in this workshop. Learning is easier when you have a better idea of where you are going, where you are relative to the end goal, and what to expect along the way.",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#code-alongs-as-the-main-activity",
+    "href": "overview/learning-design.html#code-alongs-as-the-main-activity",
+    "title": "4  Learning design",
+    "section": "4.2 “Code-alongs” as the main activity",
+    "text": "4.2 “Code-alongs” as the main activity\n“Code-alongs” is when the teacher types on their computer that is on the projector and explains what it means as you also type along with them. The connection between using the hands and doing something tangible helps reinforce learning. It also helps the teachers to go slower as we have to both explain and type things out. This helps you learn better. “Less is more” works very well with learning.",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#retrieval-practice-with-hands-on-exercises",
+    "href": "overview/learning-design.html#retrieval-practice-with-hands-on-exercises",
+    "title": "4  Learning design",
+    "section": "4.3 Retrieval practice with hands-on exercises",
+    "text": "4.3 Retrieval practice with hands-on exercises\nHands-on exercises reinforce what was just taught through retrieval practice and repetition. It gives you a chance to engage with the material and the space to try it out on your own. This helps you form a better sense of how to do it yourself.",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#linking-new-information-with-existing-knowledge-with-discussion-activities",
+    "href": "overview/learning-design.html#linking-new-information-with-existing-knowledge-with-discussion-activities",
+    "title": "4  Learning design",
+    "section": "4.4 Linking new information with existing knowledge with discussion activities",
+    "text": "4.4 Linking new information with existing knowledge with discussion activities\nDiscussion activities encourage linking what you already know and do in your work with the new information. Because humans are social beings, we also tend to learn better when there is some social aspect to it. For example, explaining something to someone else is one of the best ways to learn, as nicely expressed in the quote “while we teach, we learn” from the Roman philosopher Seneca.",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#minimal-use-of-lectures",
+    "href": "overview/learning-design.html#minimal-use-of-lectures",
+    "title": "4  Learning design",
+    "section": "4.5 Minimal use of lectures",
+    "text": "4.5 Minimal use of lectures\nLectures, while extremely common, are forms of information sharing with the lowest rates of learning. In this workshop, we use reading tasks instead, so you can go at your pace, re-read things you may not understand, and take notes, all of which support learning. To help reinforce what you just read, the teacher will briefly summarise and emphasise key points after reading tasks, to repeat the main points and target another part of the brain (the auditory pathway).",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#frequent-breaks-and-variation-in-activities",
+    "href": "overview/learning-design.html#frequent-breaks-and-variation-in-activities",
+    "title": "4  Learning design",
+    "section": "4.6 Frequent breaks and variation in activities",
+    "text": "4.6 Frequent breaks and variation in activities\nBreaks are how your brain can recharge and refocus. The brain is only able to effectively focus on one thing at a time in 30-50 minute blocks of time. That’s why we mix together code-alongs, exercises, discussions, and reading to give your brain some variation. Having an explicit break, even 5 minutes, is enough for the brain to better process and store what was covered.",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#easily-accessible-material-that-is-online-always",
+    "href": "overview/learning-design.html#easily-accessible-material-that-is-online-always",
+    "title": "4  Learning design",
+    "section": "4.7 Easily accessible material that is online, always",
+    "text": "4.7 Easily accessible material that is online, always\nAll the material is online on this website, so that it is easy for you to go back to after the workshop. This builds the repetition and retrieval practice part of learning. Our brains also get easily distracted, which is completely normal. So if you get distracted during the workshop, you can simply go to the material and get caught up with where we are. We also make sure to follow the material on the website closely, so that it is easier for you to follow along.",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#a-safe-and-supportive-environment",
+    "href": "overview/learning-design.html#a-safe-and-supportive-environment",
+    "title": "4  Learning design",
+    "section": "4.8 A safe and supportive environment",
+    "text": "4.8 A safe and supportive environment\nMental safety in a supportive environment is critical for effective learning. It puts the brain into a more relaxed state that allows for optimal processing and ultimately learning. That’s why we try to explicitly create that space, for example with the use of our Code of Conduct.",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#using-origami-hats-to-ask-for-help",
+    "href": "overview/learning-design.html#using-origami-hats-to-ask-for-help",
+    "title": "4  Learning design",
+    "section": "4.9 Using origami hats to ask for help",
+    "text": "4.9 Using origami hats to ask for help\nAsking for help can feel difficult, especially when you are learning and are unsure about something. To make it easier and feel safer, we use origami hats (or stickies) to show how everyone is doing. If you need help, you put up the “help” hat (usually orange) and a helper will come to you as soon as possible. If not, you can put up a “all good” hat (usually blue) to let us know you are following along. Since we often have several helpers, you usually won’t wait long. This simple system lets you ask for help without interrupting the teacher or drawing attention, so you can keep following along while you wait. Our goal is to make getting help easier and more comfortable.",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
+  },
+  {
+    "objectID": "overview/learning-design.html#being-involved-in-the-learning-process",
+    "href": "overview/learning-design.html#being-involved-in-the-learning-process",
+    "title": "4  Learning design",
+    "section": "4.10 Being involved in the learning process",
+    "text": "4.10 Being involved in the learning process\nNow you know a bit more about the thoughts behind how we’ve designed this workshop to really try to support and enable your own learning! :tada: :grin:",
+    "crumbs": [
+      "Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+    ]
   },
   {
     "objectID": "pre-workshop/overview.html",
     "href": "pre-workshop/overview.html",
-    "title": "Overview",
+    "title": "5  Overview",
     "section": "",
-    "text": "In order to participate in this workshop, you must complete everything in this section and finish with completing the survey (?@sec-survey) at the end. These tasks are meant to provide everyone with the necessary setup and a shared foundation for the workshop.\nDepending on your prior knowledge and skills, these tasks could take between TIME hrs to finish, so we suggest planning some time to complete them. While many of the tasks are mostly readings, they are important in making sure you get the most out of the workshop.\n\n\nWe try to be consistent with the way to present certain information in this website. Specifically, we follow some conventions that you should be aware of:\n\nFolder names always end with /, for example data/ means the data folder.\nFile names always end with their file extension, for example content.md means the file is a Markdown file.\nR variables are always shown as is. For instance, for the code x &lt;- 10, x is a variable because it was assigned with 10.\nFunctions always end with (), for instance mean() or read_csv().\nSometimes functions have their package name appended with :: so that you run the code from the specific package, since we likely haven’t loaded the package with library(). For instance, to install packages from GitHub using the {pak} package we use pak::pak(\"user/package_name\"). You’ll learn about this more later.\n\n\n\n\nHere’s a quick overview of the tasks you need to do. Specific details about them are found as you work through the tasks.\nIf you haven’t already, go through the workshop overview section, including the Syllabus, Is this for you?, and Learning design to get an overview of what this workshop contains and the learning design behind the workshop material.\nAfter that, please go through the the pre-workshop tasks designed to establish a shared foundation for the start of the workshop. This includes:\n\nInstall a version of R, RStudio, Quarto, and Git that is as updated as possible in ?@sec-installing-programs. For some people, depending on their institution, this task can take the longest amount of time because you have to contact your IT to install these packages.\nInstall necessary R packages.\nTODO: Add more tasks\nRead the syllabus (?@sec-syllabus).\nRead the Code of Conduct (?@sec-code-of-conduct).\nComplete the pre-workshop survey (?@sec-survey): This survey is pretty quick, maybe ~10 minutes. There will be some bits from the tasks that you will need to paste into this survey.\n\nCheck each section for exact details on completing these tasks.\n\n\n\n\n\n\nTip\n\n\n\nYou will be taken through the pre-workshop tasks in order by clicking the arrow at the bottom of each page :arrow_right:"
+    "text": "5.1 How to read this website\nIn order to participate in this workshop, you must complete everything in this section and finish with completing the survey (Chapter 9) at the end. These tasks are meant to provide everyone with the necessary setup and a shared foundation for the workshop.\nDepending on your prior knowledge and skills, these tasks could take between TIME hrs to finish, so we suggest planning some time to complete them. While many of the tasks are mostly readings, they are important in making sure you get the most out of the workshop.\nWe try to be consistent with the way to present certain information in this website. Specifically, we follow some conventions that you should be aware of:",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Overview</span>"
+    ]
   },
   {
     "objectID": "pre-workshop/overview.html#how-to-read-this-website",
     "href": "pre-workshop/overview.html#how-to-read-this-website",
-    "title": "Overview",
+    "title": "5  Overview",
     "section": "",
-    "text": "We try to be consistent with the way to present certain information in this website. Specifically, we follow some conventions that you should be aware of:\n\nFolder names always end with /, for example data/ means the data folder.\nFile names always end with their file extension, for example content.md means the file is a Markdown file.\nR variables are always shown as is. For instance, for the code x &lt;- 10, x is a variable because it was assigned with 10.\nFunctions always end with (), for instance mean() or read_csv().\nSometimes functions have their package name appended with :: so that you run the code from the specific package, since we likely haven’t loaded the package with library(). For instance, to install packages from GitHub using the {pak} package we use pak::pak(\"user/package_name\"). You’ll learn about this more later."
+    "text": "Folder names always end with /, for example data/ means the data folder.\nFile names always end with their file extension, for example content.md means the file is a Markdown file.\nR variables are always shown as is. For instance, for the code x &lt;- 10, x is a variable because it was assigned with 10.\nFunctions always end with (), for instance mean() or read_csv().\nSometimes functions have their package name appended with :: so that you run the code from the specific package, since we likely haven’t loaded the package with library(). For instance, to install packages from GitHub using the {pak} package we use pak::pak(\"user/package_name\"). You’ll learn about this more later.",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Overview</span>"
+    ]
   },
   {
     "objectID": "pre-workshop/overview.html#summary-of-tasks",
     "href": "pre-workshop/overview.html#summary-of-tasks",
-    "title": "Overview",
-    "section": "",
-    "text": "Here’s a quick overview of the tasks you need to do. Specific details about them are found as you work through the tasks.\nIf you haven’t already, go through the workshop overview section, including the Syllabus, Is this for you?, and Learning design to get an overview of what this workshop contains and the learning design behind the workshop material.\nAfter that, please go through the the pre-workshop tasks designed to establish a shared foundation for the start of the workshop. This includes:\n\nInstall a version of R, RStudio, Quarto, and Git that is as updated as possible in ?@sec-installing-programs. For some people, depending on their institution, this task can take the longest amount of time because you have to contact your IT to install these packages.\nInstall necessary R packages.\nTODO: Add more tasks\nRead the syllabus (?@sec-syllabus).\nRead the Code of Conduct (?@sec-code-of-conduct).\nComplete the pre-workshop survey (?@sec-survey): This survey is pretty quick, maybe ~10 minutes. There will be some bits from the tasks that you will need to paste into this survey.\n\nCheck each section for exact details on completing these tasks.\n\n\n\n\n\n\nTip\n\n\n\nYou will be taken through the pre-workshop tasks in order by clicking the arrow at the bottom of each page :arrow_right:"
+    "title": "5  Overview",
+    "section": "5.2 Summary of tasks",
+    "text": "5.2 Summary of tasks\nHere’s a quick overview of the tasks you need to do. Specific details about them are found as you work through the tasks.\nIf you haven’t already, go through the workshop overview section, including the Syllabus, Is this for you?, and Learning design to get an overview of what this workshop contains and the learning design behind the workshop material.\nAfter that, please go through the the pre-workshop tasks designed to establish a shared foundation for the start of the workshop. This includes:\n\nInstall a version of R, RStudio, Quarto, and Git that is as updated as possible in Chapter 6. For some people, depending on their institution, this task can take the longest amount of time because you have to contact your IT to install these packages.\nInstall necessary R packages.\nTODO: Add more tasks\nRead the syllabus (Chapter 1).\nRead the Code of Conduct (Chapter 8).\nComplete the pre-workshop survey (Chapter 9): This survey is pretty quick, maybe ~10 minutes. There will be some bits from the tasks that you will need to paste into this survey.\n\nCheck each section for exact details on completing these tasks.\n\n\n\n\n\n\nTip\n\n\n\nYou will be taken through the pre-workshop tasks in order by clicking the arrow at the bottom of each page :arrow_right:",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Overview</span>"
+    ]
   },
   {
-    "objectID": "sessions/conclusion.html",
-    "href": "sessions/conclusion.html",
-    "title": "What next",
+    "objectID": "pre-workshop/installing-programs-r.html",
+    "href": "pre-workshop/installing-programs-r.html",
+    "title": "6  Installing the programs",
     "section": "",
-    "text": "What next\n\nSlides\n\n\n\n\n\n\n\n\n\n\nNoteTeacher note\n\n\n\n\n\nThe slides contain speaking notes that you can view by pressing ‘S’ on the keyboard."
+    "text": "In order to participate in the workshop, you’ll need to install these programs. You may already have some of them installed and if you did, please make sure that they are at least the minimum versions listed below. If not, you will need to update them.\n\nWindowsMacOSLinux (Ubuntu)\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console.\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”.\nGit: Select the “Click here to download” link. Git is used throughout many sessions in the workshop. When installing, it will ask for a selecting a “Text Editor” and while we won’t be using this in the workshop, Git needs to know this information so choose Notepad.\n\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console. If you use Homebrew (which we strongly recommend installing and using), installing R is as easy as opening a Terminal and running:\nbrew install --cask r\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”. With Homebrew:\nbrew install --cask rstudio\nGit: Git is used throughout many sessions in the workshop. With Homebrew:\nbrew install git\n\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console.\nsudo apt -y install r-base\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”.\nGit: Git is used throughout many sessions in the workshop.\nsudo apt install git\n\n\n\n\nAll these programs are required for the workshop, even Git. Git, which is a software program to formally manage versions of files, is used because of it’s popularity and the amount of documentation available for it. Check out the online book Happy Git with R, especially the “Why Git” section, for an understanding on why we are teaching Git. Windows users tend to have more trouble with installing Git than macOS or Linux users. See the section on Installing Git for Windows for help.\n\n\n\n\n\n\nNote\n\n\n\nSome pictures may show a Git pane in RStudio, but you may not see it. If you haven’t created or opened an RStudio R Project (which is taught in the introductory workshop), the Git pane does not show up. It only shows up in R Projects that use Git to track file changes.\n\n\n\n\n\n\n\n\nNote\n\n\n\nA note to those who have or use work laptops with restrictive administrative privileges: You may encounter problems installing software due to administrative reasons (e.g. you don’t have permission to install things). Even if you have issues installing or updating the latest version of R or RStudio, you will likely be able to continue with the workshop as long as you have the minimum version listed above for R and for RStudio. If you have versions of R and RStudio that are older than that, you may need to ask your IT department to update your software if you can’t do this yourself. Unfortunately, Git is not a commonly used software for some organizations, so you may not have it installed and you will need to ask IT to install it. We require it for the workshop, so please make sure to give IT enough time to be able to install it for you prior to the workshop.\n\n\nOnce R, RStudio, and Git have been installed, open RStudio. If you encounter any troubles during these pre-workshop tasks, try as best as you can to complete the task and then let us know about the issues in the pre-workshop survey. If you continue having problems, indicate on the survey that you need help and we can try to book a quick video call to fix the problem. Otherwise, you can come to the workshop 15-20 minutes earlier to get help.\nIf you’re unable to complete the setup procedure due to unfixable technical issues, you can use Posit Cloud (to use RStudio on the cloud) as a final solution in order to participate in the workshop. For help setting up Posit Cloud for this workshop, refer to the Posit Cloud setup guide.",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Installing the programs</span>"
+    ]
+  },
+  {
+    "objectID": "pre-workshop/installing-r-packages.html",
+    "href": "pre-workshop/installing-r-packages.html",
+    "title": "7  Installing R Packages",
+    "section": "",
+    "text": "We will be using specific R packages for the workshop, so you will need to install them. To make it easier, we’ve created a custom R package called r3 that will install all the necessary packages for you for this workshop. Run these two functions in the Console by copying and pasting them to install our custom r3 package as well as the {tidyverse} package.\n\n\nConsole\n\ninstall.packages(\"r3\", repos = c(\"https://rostools.r-universe.dev\", \"https://cloud.r-project.org\"))\ninstall.packages(\"tidyverse\")\n\n\n\n\n\n\n\nTip\n\n\n\nInstalling packages is tricky, especially on some work laptops, and doesn’t always work as expected. Here are some other methods to try if you have trouble installing the packages with the code above.\nFor Windows users, you may have to install RTools to use either the {pak} or {remotes} method. The version of RTools you install must match the version of R that you have installed. For example, if you have R version 4.4, you need to install RTools 4.4.\nFirst, try installing the r3 package directly from GitHub with {pak}:\n\n\nConsole\n\ninstall.packages(\"pak\")\npak::pak(\"rostools/r3\")\n\nIf that doesn’t work, try with {remotes}:\n\n\nConsole\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"rostools/r3\")\n\nIf you encounter any errors with either of these functions, try to restart R by going to “Sessions -&gt; Restart R” and re-run them again. If that also doesn’t work, try to complete the other tasks as best you can, complete the survey, and let us know you have a problem in the survey. We’ll email you at least a week before the workshop starts to try to help you get it working.\n\n\n\n\n\n\n\n\nTip\n\n\n\nWhen you see a command like something::something(), for example with pak::pak(), you would “read” this as:\n\nR, can you please use the pak() function from the {pak} package.\n\nThe normal way of doing this would be to load the package with library(pak) and then running the command (pak()). But by using the ::, we tell R to directly use a function from a package, without needing to load the package and all of its other functions too. We use this trick because we only want to use the pak() command from the {pak} package and not have to load all the other functions as well. In this workshop we will be using :: often.",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Installing R Packages</span>"
+    ]
+  },
+  {
+    "objectID": "pre-workshop/code-of-conduct.html",
+    "href": "pre-workshop/code-of-conduct.html",
+    "title": "8  Code of conduct",
+    "section": "",
+    "text": "8.1 Expected behavior\nLearning happens when we feel safe and supported. Since we want you to learn during this workshop, we want you to feel safe and supported. We also want all learners to have an enjoyable and fulfilling experience while participating in this workshop. So we expect all learners to show respect, kindness, and courtesy to other learners throughout the whole workshop and to help create a positive and safe learning environment.\nWhile most people and (sub-)cultures have an implicit, assumed set of practices and expectations for behaviour, we believe strongly in effective and clear communication. This includes making what is normally implicit expectations to instead be explicit expectations.\nTeachers and helpers will uphold and embody this code in all spaces and activities of the workshop, and we expect you as the learner to do the same. In fact, by participating in this workshop, you indicate that you agree to follow these explicit expectations. We have this code of conduct to communicate to you that we really value and want to nurture a space that encourages and enhances learning. Otherwise, why would we have a workshop if you can’t or aren’t able to effectively learn anything from it! :zany_face:\nWe want a welcoming, supportive, safe, and fun environment not only for ourselves as teachers and helpers, but also for all learners, regardless of background and identity. This means that we do not tolerate behaviour that is disrespectful to any of our teachers, helpers, or learners (see below for unacceptable behaviour).\nWe encourage the following kinds of behaviours in all interactions during this workshop that will foster a positive and professional learning environment:",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code of conduct</span>"
+    ]
+  },
+  {
+    "objectID": "pre-workshop/code-of-conduct.html#expected-behavior",
+    "href": "pre-workshop/code-of-conduct.html#expected-behavior",
+    "title": "8  Code of conduct",
+    "section": "",
+    "text": "Show kindness, courtesy, and respect towards other workshop members.\nAll interactions should be professional regardless of platform: either online or in-person.\nBe aware of your words by using welcoming and inclusive language. Words matter, a lot!\nBe respectful to different viewpoints and experiences.\nGracefully accept constructive criticism.\nFocus on what is best for everyone in the workshop.",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code of conduct</span>"
+    ]
+  },
+  {
+    "objectID": "pre-workshop/code-of-conduct.html#unacceptable-behavior",
+    "href": "pre-workshop/code-of-conduct.html#unacceptable-behavior",
+    "title": "8  Code of conduct",
+    "section": "8.2 Unacceptable behavior",
+    "text": "8.2 Unacceptable behavior\nWhile we assume you will not do these behaviours, we want to clearly communicate what unacceptable behaviour is. It is any behaviour, as actions or words, that excludes, intimidates, or causes discomfort to others. We do not tolerate discrimination or harassment based on characteristics that include, though are not limited to, gender identity and expression, sexual orientation, disability, physical appearance, body size, citizenship, nationality, ethnic or social origin, pregnancy, familial status, veteran status, genetic information, religion or belief (or lack thereof), membership of a national minority, property, age, education, socio-economic status, technical choices, and experience level. We of course also don’t tolerate verbally or physically violent behaviour towards others.\nExamples of unacceptable behavior includes:\n\nWritten or verbal comments that exclude people on the basis of membership of any specific group.\nThe display of sexual or violent images.\nUnwelcome sexual attention, advances, and/or physical contact.\nSustained disruption of workshop sessions or communications.\nInsults or put downs.\nSexist, racist, homophobic, transphobic, ableist, or exclusionary jokes.",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code of conduct</span>"
+    ]
+  },
+  {
+    "objectID": "pre-workshop/code-of-conduct.html#consequences-of-unacceptable-behavior",
+    "href": "pre-workshop/code-of-conduct.html#consequences-of-unacceptable-behavior",
+    "title": "8  Code of conduct",
+    "section": "8.3 Consequences of unacceptable behavior",
+    "text": "8.3 Consequences of unacceptable behavior\nLearners who are asked, either in person or online, to stop any inappropriate behavior are expected to comply immediately. If a learners engages in behaviour that violates this code of conduct, the organizers, teachers, or helpers may take any action they deem appropriate, including warning the offender or removing them from the workshop.\nIf you feel in any way unsafe or mistreated, you may contact us privately—all communication is confidential.\nThank you for helping make this a welcoming, friendly workshop for all :smile:\n\n\n\n\n\n\nNote\n\n\n\nAcknowledgements: Large portions of this code of conduct were taken and modified from other codes of conduct, specifically Software Carpentry and UofTCoders.",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code of conduct</span>"
+    ]
+  },
+  {
+    "objectID": "pre-workshop/survey.html",
+    "href": "pre-workshop/survey.html",
+    "title": "9  Survey",
+    "section": "",
+    "text": "We have a Code of Conduct. If you haven’t read it, read it now. The survey involves a question about Conduct. We want to make sure this workshop is a supportive and safe environment for learning, so this Code of Conduct is quite important.\nIf you haven’t read the sections under “Workshop overview” and “Pre-workshop tasks”, please read them now.\nYou’re almost done. Please fill out the pre-workshop survey to finish this section:\nPre-workshop survey :tada:\nSee you at the workshop! :wave:",
+    "crumbs": [
+      "Pre-workshop",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Survey</span>"
+    ]
   },
   {
     "objectID": "sessions/introduction.html",
     "href": "sessions/introduction.html",
-    "title": "Introduction to workshop",
+    "title": "10  Introduction to workshop",
     "section": "",
-    "text": "Introduction slides\n\n\n\n\n\n\n\n\n\n\nNoteTeacher note\n\n\n\n\n\nThe slides contain speaking notes that you can view by pressing ‘S’ on the keyboard.\n\n\n\n\n\nTODO: Add text highlighting the bigger picture of why we teach this."
-  },
-  {
-    "objectID": "sessions/introduction.html#the-big-picture",
-    "href": "sessions/introduction.html#the-big-picture",
-    "title": "Introduction to workshop",
-    "section": "",
-    "text": "TODO: Add text highlighting the bigger picture of why we teach this."
+    "text": "10.1 The Big Picture\nTODO: Add text highlighting the bigger picture of why we teach this.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Introduction to workshop</span>"
+    ]
   },
   {
     "objectID": "sessions/shinyapps.html",
     "href": "sessions/shinyapps.html",
-    "title": "Shiny apps",
+    "title": "11  Shiny apps",
     "section": "",
-    "text": "To build a shiny app we must first understand how it works. A shiny app consists of two core components: a server and a user interface (UI). In this section, we will explain how they are connected and work together to create the shiny app.\n\n\nThe learning objectives for this session are:\n\nObjective one\n\n\n\n\nA shiny app can take a static dataset and make it available for the user to explore. Depending on how you build the app, you can allow the user to search for specific search terms, compare expression levels, or explore interactive figures to find new genes affected in your dataset.\n\n\n\nTime: \\3 minutes.\nDiscuss with the person next to you - what kind of data do you have that could benefit from being interactive? Do you have an idea for an app you want to make?\n\n\n\nA shiny app can get incredibly complex and consist of many interconnected scripts. But at it’s simplest, a shiny app consists of two elements that work together.\nAt it’s most simple, a shiny app can be one simple function. The following code will create a shiny app (although an empty one):\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(),\n  server = function(input, output){}\n)\nshiny::runApp(app)\n\nThe UI (short for user interface) is what we see on the screen. The code contains information about what is shown on the page (such as plots, buttons and images) and in what layout (organized in columns, with a navigation bar, etc.).\nThe server contains information about the objects in the UI, and how the app should respond to user input. It contains information about what data is displayed in the plot, what happens when you press a button, and how the app should update when specific events happen.\nA major part of building a shiny app is understanding the interplay between the UI and the server.\n\n\n\n\n\n\nFigure 1: A graphical representation of the interplay between the UI and the server. From introduction to data science\n\n\n\n\n\n\nTime: \\6 minutes.\nShiny comes with a lot of options for building a user interface. Often you can add plots directly into a Shiny interface. lets say we want to make a graph from the classical iris data set and add it into our empty app above.\n\niris_plot &lt;- ggplot2::ggplot(iris,\n                             ggplot2::aes(x = Sepal.Length, y = Petal.Length, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot\n\n\n\n\n\n\n\nFigure 2: Our classical iris plot\n\n\n\n\n\nTo add this to our app, we need to tell Shiny two things: that we want a page in our page layout, and what we want the plot to contain.\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we take the code above and paste it into the console, we should get an app with the plot. We have now created content for our app!\n\n\n\nIt is entirely possible to build a shiny app out of components from the shiny package itself. However, the “modern” shiny design focuses on a different package called “bslib” which provides access to the highly flexible bootstrap framework. Bslib allows a number of UI components with a high degree of customization, and which renders nicely, even on a small screen such as a phone.\nBslib features both pages (used to define the overall rules for our app page) and the components of the pages (especially as units of UI elements called “cards”). We can take our previous code and modify it to become a navbar page.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we paste this code into our console and runs it (rerunning the code for the iris plot if necessary), we will see we now have a sidebar where we can put something in. Let’s leave it empty for now, and instead focus on the other functionality of bslib we teased before - the cards.\nCards are an effective way to organize plots and other UI components. They are easy to implement - we simply wrap our UI content (in this case the Iris plot) in bslib::card()\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::c(shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIn itself this does not do much. However, cards have some attributes such as headers that can be modified if we for example want to give our plot a header.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nThe true power of cards becomes evident once we start having several of them. Let’s make a few more plots so we can see how bslib behaves once we have multiple:\n\niris_plot_2 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n  ggplot2::geom_point()\n\n\niris_plot_3 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Petal.Length, y = Petal.Width, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot_2\n\n\n\n\n\n\n\niris_plot_3\n\n\n\n\n\n\n\n\nLets add our two new plots to our layout, copy it to the console, and run it:\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    ),\n    bslib::card(\n      bslib::card_header(\"Another beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot_2\")\n    ),\n    bslib::card(\n      bslib::card_header(\"OKay I think I've had enough flower plots for now\"),\n      shiny::plotOutput(outputId = \"iris_plot_3\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n    output$iris_plot_2 &lt;- shiny::renderPlot(\n      iris_plot_2\n    )\n    output$iris_plot_3 &lt;- shiny::renderPlot(\n      iris_plot_3\n    )\n  }\n)\nshiny::runApp(app)\n\nIt looks nice! if we want to change the order of our cards, we can add another layer from bslib, and define how many columns we want. We wrap all our cards in a function called bslib::layout_column_wrap() and add the argument width  = 1/2 to get 2 columns (if this is indeed what we want). If we instead had written width = 1/3 we would get 3 columns and so forth.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::layout_column_wrap(\n      width = 1/2,\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_2\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_3\")\n      )\n    )\n  ),\n  server = function(input, output) {\n    output$iris_plot &lt;- shiny::renderPlot(iris_plot)\n    output$iris_plot_2 &lt;- shiny::renderPlot(iris_plot_2)\n    output$iris_plot_3 &lt;- shiny::renderPlot(iris_plot_3)\n  }\n)\nshiny::runApp(app)\n\nThere is much more functionality to building a good user interface and there are many resources on bslib. But for now we know how to build a Shiny interface\n\n\n\nIn this session we:\n\nLearned about UI and server\nExplored the relationship between outputs and render functions\nIntroduced bslib and showed how it can be used to make pages and UI elements\n\nNext session, we will show how we can build a shiny app so we have a place for our UI"
+    "text": "11.1 Learning objectives\nTo build a shiny app we must first understand how it works. A shiny app consists of two core components: a server and a user interface (UI). In this section, we will explain how they are connected and work together to create the shiny app.\nThe learning objectives for this session are:",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+    ]
   },
   {
     "objectID": "sessions/shinyapps.html#learning-objectives",
     "href": "sessions/shinyapps.html#learning-objectives",
-    "title": "Shiny apps",
+    "title": "11  Shiny apps",
     "section": "",
-    "text": "The learning objectives for this session are:\n\nObjective one"
+    "text": "Objective one",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+    ]
   },
   {
     "objectID": "sessions/shinyapps.html#the-server-and-the-ui",
     "href": "sessions/shinyapps.html#the-server-and-the-ui",
-    "title": "Shiny apps",
-    "section": "",
-    "text": "A shiny app can take a static dataset and make it available for the user to explore. Depending on how you build the app, you can allow the user to search for specific search terms, compare expression levels, or explore interactive figures to find new genes affected in your dataset."
+    "title": "11  Shiny apps",
+    "section": "11.2 The server and the UI",
+    "text": "11.2 The server and the UI\nA shiny app can take a static dataset and make it available for the user to explore. Depending on how you build the app, you can allow the user to search for specific search terms, compare expression levels, or explore interactive figures to find new genes affected in your dataset.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+    ]
   },
   {
     "objectID": "sessions/shinyapps.html#speech_balloon-discussion-activity-title",
     "href": "sessions/shinyapps.html#speech_balloon-discussion-activity-title",
-    "title": "Shiny apps",
-    "section": "",
-    "text": "Time: \\3 minutes.\nDiscuss with the person next to you - what kind of data do you have that could benefit from being interactive? Do you have an idea for an app you want to make?"
+    "title": "11  Shiny apps",
+    "section": "11.3 :speech_balloon: Discussion activity: Title",
+    "text": "11.3 :speech_balloon: Discussion activity: Title\nTime: \\3 minutes.\nDiscuss with the person next to you - what kind of data do you have that could benefit from being interactive? Do you have an idea for an app you want to make?",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+    ]
   },
   {
     "objectID": "sessions/shinyapps.html#reading-task-4-minutes",
     "href": "sessions/shinyapps.html#reading-task-4-minutes",
-    "title": "Shiny apps",
-    "section": "",
-    "text": "A shiny app can get incredibly complex and consist of many interconnected scripts. But at it’s simplest, a shiny app consists of two elements that work together.\nAt it’s most simple, a shiny app can be one simple function. The following code will create a shiny app (although an empty one):\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(),\n  server = function(input, output){}\n)\nshiny::runApp(app)\n\nThe UI (short for user interface) is what we see on the screen. The code contains information about what is shown on the page (such as plots, buttons and images) and in what layout (organized in columns, with a navigation bar, etc.).\nThe server contains information about the objects in the UI, and how the app should respond to user input. It contains information about what data is displayed in the plot, what happens when you press a button, and how the app should update when specific events happen.\nA major part of building a shiny app is understanding the interplay between the UI and the server.\n\n\n\n\n\n\nFigure 1: A graphical representation of the interplay between the UI and the server. From introduction to data science"
+    "title": "11  Shiny apps",
+    "section": "11.4 Reading task: ~4 minutes",
+    "text": "11.4 Reading task: ~4 minutes\nA shiny app can get incredibly complex and consist of many interconnected scripts. But at it’s simplest, a shiny app consists of two elements that work together.\nAt it’s most simple, a shiny app can be one simple function. The following code will create a shiny app (although an empty one):\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(),\n  server = function(input, output){}\n)\nshiny::runApp(app)\n\nThe UI (short for user interface) is what we see on the screen. The code contains information about what is shown on the page (such as plots, buttons and images) and in what layout (organized in columns, with a navigation bar, etc.).\nThe server contains information about the objects in the UI, and how the app should respond to user input. It contains information about what data is displayed in the plot, what happens when you press a button, and how the app should update when specific events happen.\nA major part of building a shiny app is understanding the interplay between the UI and the server.\n\n\n\n\n\n\nFigure 11.1: A graphical representation of the interplay between the UI and the server. From introduction to data science",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+    ]
   },
   {
     "objectID": "sessions/shinyapps.html#book-adding-elements-to-our-ui",
     "href": "sessions/shinyapps.html#book-adding-elements-to-our-ui",
-    "title": "Shiny apps",
-    "section": "",
-    "text": "Time: \\6 minutes.\nShiny comes with a lot of options for building a user interface. Often you can add plots directly into a Shiny interface. lets say we want to make a graph from the classical iris data set and add it into our empty app above.\n\niris_plot &lt;- ggplot2::ggplot(iris,\n                             ggplot2::aes(x = Sepal.Length, y = Petal.Length, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot\n\n\n\n\n\n\n\nFigure 2: Our classical iris plot\n\n\n\n\n\nTo add this to our app, we need to tell Shiny two things: that we want a page in our page layout, and what we want the plot to contain.\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we take the code above and paste it into the console, we should get an app with the plot. We have now created content for our app!"
+    "title": "11  Shiny apps",
+    "section": "11.5 :book: Adding elements to our UI",
+    "text": "11.5 :book: Adding elements to our UI\nTime: \\6 minutes.\nShiny comes with a lot of options for building a user interface. Often you can add plots directly into a Shiny interface. lets say we want to make a graph from the classical iris data set and add it into our empty app above.\n\niris_plot &lt;- ggplot2::ggplot(iris,\n                             ggplot2::aes(x = Sepal.Length, y = Petal.Length, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot\n\n\n\n\n\n\n\nFigure 11.2: Our classical iris plot\n\n\n\n\n\nTo add this to our app, we need to tell Shiny two things: that we want a page in our page layout, and what we want the plot to contain.\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we take the code above and paste it into the console, we should get an app with the plot. We have now created content for our app!",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+    ]
   },
   {
     "objectID": "sessions/shinyapps.html#bslib",
     "href": "sessions/shinyapps.html#bslib",
-    "title": "Shiny apps",
-    "section": "",
-    "text": "It is entirely possible to build a shiny app out of components from the shiny package itself. However, the “modern” shiny design focuses on a different package called “bslib” which provides access to the highly flexible bootstrap framework. Bslib allows a number of UI components with a high degree of customization, and which renders nicely, even on a small screen such as a phone.\nBslib features both pages (used to define the overall rules for our app page) and the components of the pages (especially as units of UI elements called “cards”). We can take our previous code and modify it to become a navbar page.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we paste this code into our console and runs it (rerunning the code for the iris plot if necessary), we will see we now have a sidebar where we can put something in. Let’s leave it empty for now, and instead focus on the other functionality of bslib we teased before - the cards.\nCards are an effective way to organize plots and other UI components. They are easy to implement - we simply wrap our UI content (in this case the Iris plot) in bslib::card()\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::c(shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIn itself this does not do much. However, cards have some attributes such as headers that can be modified if we for example want to give our plot a header.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nThe true power of cards becomes evident once we start having several of them. Let’s make a few more plots so we can see how bslib behaves once we have multiple:\n\niris_plot_2 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n  ggplot2::geom_point()\n\n\niris_plot_3 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Petal.Length, y = Petal.Width, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot_2\n\n\n\n\n\n\n\niris_plot_3\n\n\n\n\n\n\n\n\nLets add our two new plots to our layout, copy it to the console, and run it:\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    ),\n    bslib::card(\n      bslib::card_header(\"Another beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot_2\")\n    ),\n    bslib::card(\n      bslib::card_header(\"OKay I think I've had enough flower plots for now\"),\n      shiny::plotOutput(outputId = \"iris_plot_3\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n    output$iris_plot_2 &lt;- shiny::renderPlot(\n      iris_plot_2\n    )\n    output$iris_plot_3 &lt;- shiny::renderPlot(\n      iris_plot_3\n    )\n  }\n)\nshiny::runApp(app)\n\nIt looks nice! if we want to change the order of our cards, we can add another layer from bslib, and define how many columns we want. We wrap all our cards in a function called bslib::layout_column_wrap() and add the argument width  = 1/2 to get 2 columns (if this is indeed what we want). If we instead had written width = 1/3 we would get 3 columns and so forth.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::layout_column_wrap(\n      width = 1/2,\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_2\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_3\")\n      )\n    )\n  ),\n  server = function(input, output) {\n    output$iris_plot &lt;- shiny::renderPlot(iris_plot)\n    output$iris_plot_2 &lt;- shiny::renderPlot(iris_plot_2)\n    output$iris_plot_3 &lt;- shiny::renderPlot(iris_plot_3)\n  }\n)\nshiny::runApp(app)\n\nThere is much more functionality to building a good user interface and there are many resources on bslib. But for now we know how to build a Shiny interface"
+    "title": "11  Shiny apps",
+    "section": "11.6 BSlib",
+    "text": "11.6 BSlib\nIt is entirely possible to build a shiny app out of components from the shiny package itself. However, the “modern” shiny design focuses on a different package called “bslib” which provides access to the highly flexible bootstrap framework. Bslib allows a number of UI components with a high degree of customization, and which renders nicely, even on a small screen such as a phone.\nBslib features both pages (used to define the overall rules for our app page) and the components of the pages (especially as units of UI elements called “cards”). We can take our previous code and modify it to become a navbar page.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we paste this code into our console and runs it (rerunning the code for the iris plot if necessary), we will see we now have a sidebar where we can put something in. Let’s leave it empty for now, and instead focus on the other functionality of bslib we teased before - the cards.\nCards are an effective way to organize plots and other UI components. They are easy to implement - we simply wrap our UI content (in this case the Iris plot) in bslib::card()\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::c(shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIn itself this does not do much. However, cards have some attributes such as headers that can be modified if we for example want to give our plot a header.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nThe true power of cards becomes evident once we start having several of them. Let’s make a few more plots so we can see how bslib behaves once we have multiple:\n\niris_plot_2 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n  ggplot2::geom_point()\n\n\niris_plot_3 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Petal.Length, y = Petal.Width, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot_2\n\n\n\n\n\n\n\niris_plot_3\n\n\n\n\n\n\n\n\nLets add our two new plots to our layout, copy it to the console, and run it:\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    ),\n    bslib::card(\n      bslib::card_header(\"Another beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot_2\")\n    ),\n    bslib::card(\n      bslib::card_header(\"OKay I think I've had enough flower plots for now\"),\n      shiny::plotOutput(outputId = \"iris_plot_3\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n    output$iris_plot_2 &lt;- shiny::renderPlot(\n      iris_plot_2\n    )\n    output$iris_plot_3 &lt;- shiny::renderPlot(\n      iris_plot_3\n    )\n  }\n)\nshiny::runApp(app)\n\nIt looks nice! if we want to change the order of our cards, we can add another layer from bslib, and define how many columns we want. We wrap all our cards in a function called bslib::layout_column_wrap() and add the argument width  = 1/2 to get 2 columns (if this is indeed what we want). If we instead had written width = 1/3 we would get 3 columns and so forth.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::layout_column_wrap(\n      width = 1/2,\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_2\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_3\")\n      )\n    )\n  ),\n  server = function(input, output) {\n    output$iris_plot &lt;- shiny::renderPlot(iris_plot)\n    output$iris_plot_2 &lt;- shiny::renderPlot(iris_plot_2)\n    output$iris_plot_3 &lt;- shiny::renderPlot(iris_plot_3)\n  }\n)\nshiny::runApp(app)\n\nThere is much more functionality to building a good user interface and there are many resources on bslib. But for now we know how to build a Shiny interface",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+    ]
   },
   {
     "objectID": "sessions/shinyapps.html#summary",
     "href": "sessions/shinyapps.html#summary",
-    "title": "Shiny apps",
+    "title": "11  Shiny apps",
+    "section": "11.7 Summary",
+    "text": "11.7 Summary\nIn this session we:\n\nLearned about UI and server\nExplored the relationship between outputs and render functions\nIntroduced bslib and showed how it can be used to make pages and UI elements\n\nNext session, we will show how we can build a shiny app so we have a place for our UI",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/conclusion.html",
+    "href": "sessions/conclusion.html",
+    "title": "12  What next",
     "section": "",
-    "text": "In this session we:\n\nLearned about UI and server\nExplored the relationship between outputs and render functions\nIntroduced bslib and showed how it can be used to make pages and UI elements\n\nNext session, we will show how we can build a shiny app so we have a place for our UI"
+    "text": "Slides\n\n\n\n\n\n\n\n\n\n\nNoteTeacher note\n\n\n\n\n\nThe slides contain speaking notes that you can view by pressing ‘S’ on the keyboard.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>What next</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/for-teachers.html",
+    "href": "appendix/for-teachers.html",
+    "title": "Appendix A — For teachers",
+    "section": "",
+    "text": "A more general guide to teaching or helping is found on the Guides website. This page has information relevant specifically to this workshop.\n\nFor created teams, assign one teacher or helper to each group to help them specifically during the final group project.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>For teachers</span>"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Appendix B — Contributing",
+    "section": "",
+    "text": "B.1 :bug: Issues and bugs\nCheck out the Contributing Guide for more details on how to contribute. For guidelines on how to be a helper or teacher, check out the For teachers page. As always, make sure to adhere to the Code of Conduct.\nThe easiest way to contribute is to report issues or bugs that you might find while using or reading the workshop material. You can do this by creating a new issue on our GitHub repository.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Contributing</span>"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html#pencil2-adding-or-modifying-content",
+    "href": "CONTRIBUTING.html#pencil2-adding-or-modifying-content",
+    "title": "Appendix B — Contributing",
+    "section": "B.2 :pencil2: Adding or modifying content",
+    "text": "B.2 :pencil2: Adding or modifying content\nTo contribute to the workshop, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and build the workshop website. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to install uv first and then install justfile using uv. Then, to install justfile, run:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our checks by opening a terminal so that the working directory is the root of this workshop’s parent/root folder and running:\njust run-all\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Contributing</span>"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html#file_folder-support-and-infrastructure-files",
+    "href": "CONTRIBUTING.html#file_folder-support-and-infrastructure-files",
+    "title": "Appendix B — Contributing",
+    "section": "B.3 :file_folder: Support and infrastructure files",
+    "text": "B.3 :file_folder: Support and infrastructure files\n\n.copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\n\n.zenodo.json: Structured citation metadata for your project when archived on Zenodo. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCONTRIBUTING.md: Guidelines for contributing to the project.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Contributing</span>"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "Appendix C — Creative Commons Attribution 4.0 International",
+    "section": "",
+    "text": "C.1 Creative Commons Attribution 4.0 International Public License\nCreative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Creative Commons Attribution 4.0 International</span>"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html#creative-commons-attribution-4.0-international-public-license",
+    "href": "LICENSE.html#creative-commons-attribution-4.0-international-public-license",
+    "title": "Appendix C — Creative Commons Attribution 4.0 International",
+    "section": "",
+    "text": "C.1.1 Section 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nC.1.2 Section 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nC.1.3 Section 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\nIf You Share Adapted Material You produce, the Adapter’s License You apply must not prevent recipients of the Adapted Material from complying with this Public License.\n\n\n\n\nC.1.4 Section 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nC.1.5 Section 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nC.1.6 Section 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nC.1.7 Section 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nC.1.8 Section 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Creative Commons Attribution 4.0 International</span>"
+    ]
   }
 ]
