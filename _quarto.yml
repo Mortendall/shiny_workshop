@@ -1,5 +1,5 @@
 project:
-  type: website
+  type: book
   output-dir: docs
 
   # TODO: Uncomment if you want to use slides.
@@ -13,13 +13,13 @@ book:
   title: ""
   # TODO: Add more authors if needed.
   author:
-    - name: ""
-      affiliation: ""
-      orcid: ""
+    - name: "Morten Dall"
+      affiliation: "University of Copenhagen"
+      orcid: "0000-0002-8577-3162"
   date: last-modified
   repo-url: "https://github.com/mortendall/shiny_workshop"
   # TODO: Fill in the URL
-  site-url: ""
+  site-url: "https://mortendall.github.io/shiny_workshop/"
 
   downloads: [pdf]
   chapters:
