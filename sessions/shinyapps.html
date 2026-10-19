@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>shinyapps</title>
+<title>11&nbsp; Shiny apps</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -65,11 +65,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../sessions/conclusion.html" rel="next">
+<link href="../sessions/introduction.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -79,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d0cfe7a3482e0d49a74229a8f3b76718.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c574c73dd0d0ff61020859ffc61752ee.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -111,43 +114,246 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/introduction.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/shinyapps.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Shiny apps</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+        <div class="sidebar-tools-collapse">
+    <a href="https://github.com/mortendall/shiny_workshop" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="../shiny_workshop.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Overview</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../overview/syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Syllabus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../overview/is-this-for-you.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Is this for you?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../overview/schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Schedule</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../overview/learning-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Learning design</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Pre-workshop</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pre-workshop/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pre-workshop/installing-programs-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Installing the programs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pre-workshop/installing-r-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Installing R Packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pre-workshop/code-of-conduct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code of conduct</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pre-workshop/survey.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Survey</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Sessions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to workshop</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/shinyapps.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Shiny apps</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">What next</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/for-teachers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">For teachers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../CONTRIBUTING.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Contributing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../LICENSE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Creative Commons Attribution 4.0 International</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="shinyapps.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">11.1</span> Learning objectives</a></li>
+  <li><a href="#the-server-and-the-ui" id="toc-the-server-and-the-ui" class="nav-link" data-scroll-target="#the-server-and-the-ui"><span class="header-section-number">11.2</span> The server and the UI</a></li>
+  <li><a href="#speech_balloon-discussion-activity-title" id="toc-speech_balloon-discussion-activity-title" class="nav-link" data-scroll-target="#speech_balloon-discussion-activity-title"><span class="header-section-number">11.3</span> :speech_balloon: Discussion activity: Title</a></li>
+  <li><a href="#reading-task-4-minutes" id="toc-reading-task-4-minutes" class="nav-link" data-scroll-target="#reading-task-4-minutes"><span class="header-section-number">11.4</span> Reading task: ~4 minutes</a></li>
+  <li><a href="#book-adding-elements-to-our-ui" id="toc-book-adding-elements-to-our-ui" class="nav-link" data-scroll-target="#book-adding-elements-to-our-ui"><span class="header-section-number">11.5</span> :book: Adding elements to our UI</a></li>
+  <li><a href="#bslib" id="toc-bslib" class="nav-link" data-scroll-target="#bslib"><span class="header-section-number">11.6</span> BSlib</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">11.7</span> Summary</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/introduction.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/shinyapps.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Shiny apps</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Shiny apps</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="shiny-apps" class="level1">
-<h1>Shiny apps</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>To build a shiny app we must first understand how it works. A shiny app consists of two core components: a server and a user interface (UI). In this section, we will explain how they are connected and work together to create the shiny app.</p>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<section id="learning-objectives" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">11.1</span> Learning objectives</h2>
 <p>The learning objectives for this session are:</p>
 <ol type="1">
 <li>Objective one</li>
 </ol>
 </section>
-<section id="the-server-and-the-ui" class="level2">
-<h2 class="anchored" data-anchor-id="the-server-and-the-ui">The server and the UI</h2>
+<section id="the-server-and-the-ui" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="the-server-and-the-ui"><span class="header-section-number">11.2</span> The server and the UI</h2>
 <p>A shiny app can take a static dataset and make it available for the user to explore. Depending on how you build the app, you can allow the user to search for specific search terms, compare expression levels, or explore interactive figures to find new genes affected in your dataset.</p>
 </section>
-<section id="speech_balloon-discussion-activity-title" class="level2">
-<h2 class="anchored" data-anchor-id="speech_balloon-discussion-activity-title">:speech_balloon: Discussion activity: Title</h2>
+<section id="speech_balloon-discussion-activity-title" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="speech_balloon-discussion-activity-title"><span class="header-section-number">11.3</span> :speech_balloon: Discussion activity: Title</h2>
 <p><strong>Time: \3 minutes.</strong></p>
 <p>Discuss with the person next to you - what kind of data do you have that could benefit from being interactive? Do you have an idea for an app you want to make?</p>
 </section>
-<section id="reading-task-4-minutes" class="level2">
-<h2 class="anchored" data-anchor-id="reading-task-4-minutes">Reading task: ~4 minutes</h2>
+<section id="reading-task-4-minutes" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="reading-task-4-minutes"><span class="header-section-number">11.4</span> Reading task: ~4 minutes</h2>
 <p>A shiny app can get incredibly complex and consist of many interconnected scripts. But at it’s simplest, a shiny app consists of two elements that work together.</p>
 <p>At it’s most simple, a shiny app can be one simple function. The following code will create a shiny app (although an empty one):</p>
 <div class="cell">
@@ -166,13 +372,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <img src="../images/Shiny_ui_server.png" class="img-fluid figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-left-join-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: A graphical representation of the interplay between the UI and the server. From <a href="https://bookdown.org/hneth/i2ds/shiny.html">introduction to data science</a>
+Figure&nbsp;11.1: A graphical representation of the interplay between the UI and the server. From <a href="https://bookdown.org/hneth/i2ds/shiny.html">introduction to data science</a>
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="book-adding-elements-to-our-ui" class="level2">
-<h2 class="anchored" data-anchor-id="book-adding-elements-to-our-ui">:book: Adding elements to our UI</h2>
+<section id="book-adding-elements-to-our-ui" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="book-adding-elements-to-our-ui"><span class="header-section-number">11.5</span> :book: Adding elements to our UI</h2>
 <p><strong>Time: \6 minutes.</strong></p>
 <p>Shiny comes with a lot of options for building a user interface. Often you can add plots directly into a Shiny interface. lets say we want to make a graph from the classical <code>iris</code> data set and add it into our empty app above.</p>
 <div class="cell">
@@ -188,7 +394,7 @@ Figure&nbsp;1: A graphical representation of the interplay between the UI and th
 <img src="shinyapps_files/figure-html/fig-iris-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-iris-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Our classical iris plot
+Figure&nbsp;11.2: Our classical iris plot
 </figcaption>
 </figure>
 </div>
@@ -211,8 +417,8 @@ Figure&nbsp;2: Our classical iris plot
 </div>
 <p>If we take the code above and paste it into the console, we should get an app with the plot. We have now created content for our app!</p>
 </section>
-<section id="bslib" class="level2">
-<h2 class="anchored" data-anchor-id="bslib">BSlib</h2>
+<section id="bslib" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="bslib"><span class="header-section-number">11.6</span> BSlib</h2>
 <p>It is entirely possible to build a shiny app out of components from the shiny package itself. However, the “modern” shiny design focuses on a different package called “bslib” which provides access to the highly flexible <a href="https://getbootstrap.com/">bootstrap framework</a>. Bslib allows a number of UI components with a high degree of customization, and which renders nicely, even on a small screen such as a phone.</p>
 <p>Bslib features both pages (used to define the overall rules for our app page) and the components of the pages (especially as units of UI elements called “cards”). We can take our previous code and modify it to become a navbar page.</p>
 <div class="cell">
@@ -361,8 +567,8 @@ Figure&nbsp;2: Our classical iris plot
 </div>
 <p>There is much more functionality to building a good user interface and there are many resources on bslib. But for now we know how to build a Shiny interface</p>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<section id="summary" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">11.7</span> Summary</h2>
 <p>In this session we:</p>
 <ul>
 <li>Learned about UI and server</li>
@@ -372,7 +578,6 @@ Figure&nbsp;2: Our classical iris plot
 <p>Next session, we will show how we can build a shiny app so we have a place for our UI</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -449,7 +654,7 @@ Figure&nbsp;2: Our classical iris plot
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/Mortendall\.github\.io\/shiny_workshop\/");
+        var filterRegex = new RegExp("https:\/\/mortendall\.github\.io\/shiny_workshop\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -776,7 +981,43 @@ Figure&nbsp;2: Our classical iris plot
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sessions/introduction.html" class="pagination-link" aria-label="Introduction to workshop">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to workshop</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../sessions/conclusion.html" class="pagination-link" aria-label="What next">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">What next</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link active" href="../LICENSE.html" aria-current="page">
+<p>License: CC BY 4.0</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../pre-workshop/code-of-conduct.html">
+<p>Code of Conduct</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

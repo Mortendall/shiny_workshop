@@ -1,1 +1,1 @@
-Sitemap: https://Mortendall.github.io/shiny_workshop/sitemap.xml
+Sitemap: https://mortendall.github.io/shiny_workshop/sitemap.xml

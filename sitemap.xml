@@ -1,99 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/TODO.html</loc>
-    <lastmod>2026-10-18T22:43:47.301Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/slides/conclusion.html</loc>
-    <lastmod>2026-10-18T22:43:48.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/sessions/session.html</loc>
-    <lastmod>2026-10-18T22:43:48.039Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/sessions/golem.html</loc>
-    <lastmod>2026-10-18T22:43:47.987Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/pre-workshop/survey.html</loc>
-    <lastmod>2026-10-18T22:43:47.968Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/pre-workshop/installing-r-packages.html</loc>
-    <lastmod>2026-10-18T22:43:47.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/pre-workshop/code-of-conduct.html</loc>
-    <lastmod>2026-10-18T22:43:47.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/overview/schedule.html</loc>
-    <lastmod>2026-10-18T22:43:47.817Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/overview/is-this-for-you.html</loc>
-    <lastmod>2026-10-18T22:43:47.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/index.html</loc>
+    <loc>https://mortendall.github.io/shiny_workshop/index.html</loc>
     <lastmod>2026-10-18T22:43:47.721Z</lastmod>
   </url>
   <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/CODE_OF_CONDUCT.html</loc>
-    <lastmod>2026-10-18T22:43:47.137Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/appendix/references.html</loc>
-    <lastmod>2026-10-18T22:43:47.417Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/appendix/for-teachers.html</loc>
-    <lastmod>2026-10-18T22:43:47.400Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/appendix/social.html</loc>
-    <lastmod>2026-10-18T22:43:47.450Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/CONTRIBUTING.html</loc>
-    <lastmod>2026-10-18T22:43:47.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/LICENSE.html</loc>
-    <lastmod>2026-10-18T22:43:47.225Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/overview/learning-design.html</loc>
-    <lastmod>2026-10-18T22:43:47.786Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/overview/syllabus.html</loc>
+    <loc>https://mortendall.github.io/shiny_workshop/overview/syllabus.html</loc>
     <lastmod>2026-10-18T22:43:47.833Z</lastmod>
   </url>
   <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/pre-workshop/installing-programs-r.html</loc>
-    <lastmod>2026-10-18T22:43:47.900Z</lastmod>
+    <loc>https://mortendall.github.io/shiny_workshop/overview/is-this-for-you.html</loc>
+    <lastmod>2026-10-18T22:43:47.767Z</lastmod>
   </url>
   <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/pre-workshop/overview.html</loc>
+    <loc>https://mortendall.github.io/shiny_workshop/overview/schedule.html</loc>
+    <lastmod>2026-10-18T22:43:47.817Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/overview/learning-design.html</loc>
+    <lastmod>2026-10-18T22:43:47.786Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/pre-workshop/overview.html</loc>
     <lastmod>2026-10-18T22:43:47.944Z</lastmod>
   </url>
   <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/sessions/conclusion.html</loc>
-    <lastmod>2026-10-18T22:43:47.976Z</lastmod>
+    <loc>https://mortendall.github.io/shiny_workshop/pre-workshop/installing-programs-r.html</loc>
+    <lastmod>2026-10-18T22:43:47.900Z</lastmod>
   </url>
   <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/sessions/introduction.html</loc>
+    <loc>https://mortendall.github.io/shiny_workshop/pre-workshop/installing-r-packages.html</loc>
+    <lastmod>2026-10-18T22:43:47.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/pre-workshop/code-of-conduct.html</loc>
+    <lastmod>2026-10-18T22:43:47.867Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/pre-workshop/survey.html</loc>
+    <lastmod>2026-10-18T22:43:47.968Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/sessions/introduction.html</loc>
     <lastmod>2026-10-18T22:43:48.000Z</lastmod>
   </url>
   <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/sessions/shinyapps.html</loc>
+    <loc>https://mortendall.github.io/shiny_workshop/sessions/shinyapps.html</loc>
     <lastmod>2026-10-18T22:43:48.065Z</lastmod>
   </url>
   <url>
-    <loc>https://Mortendall.github.io/shiny_workshop/slides/introduction.html</loc>
-    <lastmod>2026-10-18T22:43:48.126Z</lastmod>
+    <loc>https://mortendall.github.io/shiny_workshop/sessions/conclusion.html</loc>
+    <lastmod>2026-10-18T22:43:47.976Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/appendix/for-teachers.html</loc>
+    <lastmod>2026-10-18T22:43:47.400Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/appendix/references.html</loc>
+    <lastmod>2026-10-18T22:43:47.417Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/CONTRIBUTING.html</loc>
+    <lastmod>2026-10-18T22:43:47.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/LICENSE.html</loc>
+    <lastmod>2026-10-18T22:43:47.225Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortendall.github.io/shiny_workshop/shiny_workshop.pdf</loc>
+    <lastmod>2026-10-19T09:27:15.042Z</lastmod>
   </url>
 </urlset>
