@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sessions/conclusion.html" rel="next">
+<link href="../sessions/golem.html" rel="next">
 <link href="../sessions/introduction.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -252,8 +252,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../sessions/golem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../sessions/conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">What next</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">What next</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,7 +346,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="11.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">11.1</span> Learning objectives</h2>
 <p>The learning objectives for this session are:</p>
 <ol type="1">
-<li>Objective one</li>
+<li>Understand how a shinyapp works</li>
+<li>Introduce the ui and server terms</li>
+<li>Introduce the package <code>bslib</code> and show how to use it to build a UI</li>
 </ol>
 </section>
 <section id="the-server-and-the-ui" class="level2" data-number="11.2">
@@ -366,12 +374,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The UI (short for user interface) is what we see on the screen. The code contains information about what is shown on the page (such as plots, buttons and images) and in what layout (organized in columns, with a navigation bar, etc.).</p>
 <p>The server contains information about the objects in the UI, and how the app should respond to user input. It contains information about what data is displayed in the plot, what happens when you press a button, and how the app should update when specific events happen.</p>
 <p>A major part of building a shiny app is understanding the interplay between the UI and the server.</p>
-<div id="fig-left-join" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-shiny_ui" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-left-join-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-shiny_ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/Shiny_ui_server.png" class="img-fluid figure-img" style="width:90.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-left-join-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shiny_ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.1: A graphical representation of the interplay between the UI and the server. From <a href="https://bookdown.org/hneth/i2ds/shiny.html">introduction to data science</a>
 </figcaption>
 </figure>
@@ -988,8 +996,8 @@ Figure&nbsp;11.2: Our classical iris plot
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sessions/conclusion.html" class="pagination-link" aria-label="What next">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">What next</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../sessions/golem.html" class="pagination-link" aria-label="Golem: a structured way to build and modularize your app">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

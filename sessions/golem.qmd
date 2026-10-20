@@ -1,6 +1,8 @@
 # Golem: a structured way to build and modularize your app
 
-<!-- TODO: Add an introduction here -->
+So far we have only run our app locally in the console. It is time to
+build an actual Shiny app! There are multiple ways to do this, but we
+will use the package called golem.
 
 ## Learning objectives
 
@@ -8,27 +10,195 @@ The learning objectives for this session are:
 
 {{< include /includes/objectives/_golem.qmd >}}
 
-## TODO: Section
-
 ::: callout-note
-## Reading task: \~4 minutes
+## Reading task: Why golem? \~4 minutes
 
-TODO: Reading text
+There are many ways we can make a shiny app. If we want to make a very
+simple app and just run it locally, we can just put the code from our
+last exercise in a script, source it, and our shiny app will run. Nice
+and easy. A more structured way to make a one-script app is by making a
+new shiny app project. If we have shiny installed we can go to `file`,
+`new project` and select `shiny application`. This creates a one script
+app, containing the essentials. Running this app is easy, just click the
+`run app` button and you are flying. For many apps, this setup is
+perfectly adequate and you can deploy it to the internet if you have
+somewhere to host it.
+
+What then, if our apps are more complex? This is where a package like
+`golem` becomes handy. `golem` is a package focused on building a
+production-ready, robust shiny app. Once initiated it creates a range of
+files that step by step helps you establishing a lot of groundwork so
+you don't have to do it later. It helps you setup a github repository
+and it can also help you deploy the app to a number of services once you
+are done.
+
+One of the most useful features from `golem` is that it natively helps
+you modularizing your app. When you modularize you split your app into
+smaller components. Suggest you have an app with multiple pages, where
+each page provides a different range of buttons, sliders and plots. How
+do you keep track of which button goes where? Scripts can easily get out
+of hand that way. `golem` makes one script pr. page, containing info for
+the UI and server that goes together. So if your app contains a welcome
+page, a settings page, and a plot page, `golem` will make three files
+for you - a welcome file, a settings file and a plot file. Additionally
+it will make a server file and a ui file, where all your modules are
+tied together.
+
+Is `golem` overkill for what we are doing here? Certainly! But I want to
+introduce it to you already so you know it, and once you start
+developing more complex apps, you know where to go.
 :::
 
-## :technologist: Exercise: Title
+## Starting a golem
 
-**Time: \~NUM minutes.**
+If we want to make a new app and we have golem installed, we can open
+the menu and select `new project` (like we did above) and pick
+`Package for shiny app using golem`. If we want to do this from the
+console.
 
-Text
+Lets make an app about something fun - penguins. We will call it
+"penguin app" (or "penguinapp" in R writing)
+
+```{r}
+#| eval: false
+
+
+golem::create_golem(path = "C:/Your_R_projects_destination/penguinapp"
+                    )
+
+
+```
+
+Running this command (with a package name of your choice) creates a new
+R project called penguinapp. We will see this has quite a few more files
+than our standard Shiny project.
+
+![Overview of the files created by
+golem](/images/golem_files.png){#fig-shiny_ui width="90%"}
+
+To understand what golem really offers, it is beneficial to look at the
+dev folder. In this folder we will see three documents:
+
+- 01_start.R
+- 02_dev.R
+- 03_deploy.R
+
+These three files contains a step by step guide to how you build and
+deploy a shiny app. You don't have to do it all (or in the order you are
+asked to), but `golem` gives a suggested path through the development
+process, starting right after we create our app.
+
+## :speech_balloon: Discussion activity: 01_start.R
+
+**Time: \~5 minutes.**
+
+We don't have time to go too much into detail this session with what you
+do in 01_start - but take a few minutes to open the file, and discuss
+the content with the person next to you. What kind of information does
+`golem` suggest you setup? Do you recognize any terms in this file?
 
 {{< text_snippet sticky_up >}}
 
-## :speech_balloon: Discussion activity: Title
+`golem` helps you with a lot of housekeeping you usually end up doing
+last minutes, including making a DESCRIPTION file (which contains a lot
+of input about required packages, info on the author, and whether you
+have coined a specific license to the usage of your package.) It also
+helps you with a number of other helpful tools for reproducible
+development such as using git and github. By doing this ahead of time,
+you do all the legwork before development begins, and you won't have to
+do it once your app has grown in size.
 
-**Time: \~Num minutes.**
+At this point we will limit ourselves to making a DESCRIPTION file by
+running the following:
 
-Text
+```{r}
+#| eval: false
+
+golem::fill_desc(
+  pkg_name = "penguinapp", # The name of the golem package containing the app (typically lowercase, no underscore or periods)
+  pkg_title = "PKG_TITLE", # What the Package Does (One Line, Title Case, No Period)
+  pkg_description = "PKG_DESC.", # What the package does (one paragraph).
+  authors = person(
+    given = "AUTHOR_FIRST", # Your First Name
+    family = "AUTHOR_LAST", # Your Last Name
+    email = "AUTHOR@MAIL.COM", # Your email
+    role = c("aut", "cre") # Your role (here author/creator)
+  ),
+  repo_url = NULL, # The URL of the GitHub repo (optional),
+  pkg_version = "0.0.0.9000", # The version of the package containing the app
+  set_options = TRUE # Set the global golem options
+)
+```
+
+## :technologist: Exercise activity: DESCRIPTION
+
+**Time: \~5 minutes.**
+
+Fill out the information for the description file and run the code in
+the penguinapp folder.
+
+{{< text_snippet sticky_up >}}
+
+## Development and modularization
+
+We will in this workshop be bad examples and start development on our
+penguin app before doing any of the housekeeping. if we are leading by
+example, this is a poor example indeed! But jokes aside, our second file
+02_dev.R contains the scripts we need to build our app.
+
+There are many different functions in this file and we do not need all
+of them - a lot of these functions are advanced edge cases in case you
+want to implement specific programs or programming languages. It does
+contain some helpful functions:
+
+- usethis::use_github() helps you share your project on github
+- usethis::use_data_raw() is helpful if you want to use data in your app
+- golem::add_utils("helpers", with_test = TRUE) creates a script for
+  making helper functions, in case you develop your own functions to be
+  used in the app
+
+The rest of the functions are beyond the scope of this workshop, except
+one: `golem::add_module()`
+
+## :speech_balloon: Discussion activity: add_module
+
+**Time: \~5 minutes.**
+
+Open the add_module() function. Discuss with the person next to you what
+it does, and why this could be useful
+
+## Making our first module
+
+We want to make an app about the `penguins` dataset. In general, it is
+considered good design form to consider what the app should look like
+before we start coding. Lets take a look at the data and see what we can
+do with it:
+
+```{r}
+dplyr::slice_head(penguins,n = 10)
+```
+
+We see we have eight different columns with data about the penguins -
+species, island, bill length, etc. Lets make a module called "overview"
+where we will make a plot exploring the possible relation between bill
+length and flipper length for different species.
+
+```{r}
+#| eval: false
+
+golem::add_module(name = "overview")
+
+```
+
+you will notice the standard golem output includes an argument stating
+`with_test=TRUE`. This is not necessary for our app, and truth being
+told I have yet to grasp the potential and utility in the tests offered
+by golem. Know they are there, and you can look for information if this
+is of interest to you.
+
+If we run this command, we should now get a new file - we get a console
+output stating `File created at R/mod_overview.R`. Looking in our R
+folder we see this is indeed the case:
 
 ## :book: Reading task: Title
 

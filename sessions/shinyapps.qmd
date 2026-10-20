@@ -9,7 +9,7 @@ to create the shiny app.
 
 The learning objectives for this session are:
 
-{{< include /includes/objectives/_session.qmd >}}
+{{< include /includes/objectives/_shinyapps.qmd >}}
 
 ## The server and the UI
 
@@ -59,7 +59,7 @@ between the UI and the server.
 
 ![A graphical representation of the interplay between the UI and the
 server. From [introduction to data
-science](https://bookdown.org/hneth/i2ds/shiny.html)](/images/Shiny_ui_server.png){#fig-left-join
+science](https://bookdown.org/hneth/i2ds/shiny.html)](/images/Shiny_ui_server.png){#fig-shiny_ui
 width="90%"}
 
 ## :book: Adding elements to our UI
