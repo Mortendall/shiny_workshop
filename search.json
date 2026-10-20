@@ -340,7 +340,7 @@
     "href": "sessions/shinyapps.html#learning-objectives",
     "title": "11  Shiny apps",
     "section": "",
-    "text": "Objective one",
+    "text": "Understand how a shinyapp works\nIntroduce the ui and server terms\nIntroduce the package bslib and show how to use it to build a UI",
     "crumbs": [
       "Sessions",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
@@ -413,14 +413,135 @@
     ]
   },
   {
+    "objectID": "sessions/golem.html",
+    "href": "sessions/golem.html",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "",
+    "text": "12.1 Learning objectives\nSo far we have only run our app locally in the console. It is time to build an actual Shiny app! There are multiple ways to do this, but we will use the package called golem.\nThe learning objectives for this session are:",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#learning-objectives",
+    "href": "sessions/golem.html#learning-objectives",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "",
+    "text": "Introduce participants to the golem module\nBuild our golem app\nLook over golems step-by-step creation process\n\n\n\n\n\n\n\nNoteReading task: Why golem? ~4 minutes\n\n\n\nThere are many ways we can make a shiny app. If we want to make a very simple app and just run it locally, we can just put the code from our last exercise in a script, source it, and our shiny app will run. Nice and easy. A more structured way to make a one-script app is by making a new shiny app project. If we have shiny installed we can go to file, new project and select shiny application. This creates a one script app, containing the essentials. Running this app is easy, just click the run app button and you are flying. For many apps, this setup is perfectly adequate and you can deploy it to the internet if you have somewhere to host it.\nWhat then, if our apps are more complex? This is where a package like golem becomes handy. golem is a package focused on building a production-ready, robust shiny app. Once initiated it creates a range of files that step by step helps you establishing a lot of groundwork so you don’t have to do it later. It helps you setup a github repository and it can also help you deploy the app to a number of services once you are done.\nOne of the most useful features from golem is that it natively helps you modularizing your app. When you modularize you split your app into smaller components. Suggest you have an app with multiple pages, where each page provides a different range of buttons, sliders and plots. How do you keep track of which button goes where? Scripts can easily get out of hand that way. golem makes one script pr. page, containing info for the UI and server that goes together. So if your app contains a welcome page, a settings page, and a plot page, golem will make three files for you - a welcome file, a settings file and a plot file. Additionally it will make a server file and a ui file, where all your modules are tied together.\nIs golem overkill for what we are doing here? Certainly! But I want to introduce it to you already so you know it, and once you start developing more complex apps, you know where to go.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#starting-a-golem",
+    "href": "sessions/golem.html#starting-a-golem",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.2 Starting a golem",
+    "text": "12.2 Starting a golem\nIf we want to make a new app and we have golem installed, we can open the menu and select new project (like we did above) and pick Package for shiny app using golem. If we want to do this from the console.\nLets make an app about something fun - penguins. We will call it “penguin app” (or “penguinapp” in R writing)\n\ngolem::create_golem(path = \"C:/Your_R_projects_destination/penguinapp\"\n                    )\n\nRunning this command (with a package name of your choice) creates a new R project called penguinapp. We will see this has quite a few more files than our standard Shiny project.\n\n\n\n\n\n\nFigure 12.1: Overview of the files created by golem\n\n\n\nTo understand what golem really offers, it is beneficial to look at the dev folder. In this folder we will see three documents:\n\n01_start.R\n02_dev.R\n03_deploy.R\n\nThese three files contains a step by step guide to how you build and deploy a shiny app. You don’t have to do it all (or in the order you are asked to), but golem gives a suggested path through the development process, starting right after we create our app.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#speech_balloon-discussion-activity-01_start.r",
+    "href": "sessions/golem.html#speech_balloon-discussion-activity-01_start.r",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.3 :speech_balloon: Discussion activity: 01_start.R",
+    "text": "12.3 :speech_balloon: Discussion activity: 01_start.R\nTime: ~5 minutes.\nWe don’t have time to go too much into detail this session with what you do in 01_start - but take a few minutes to open the file, and discuss the content with the person next to you. What kind of information does golem suggest you setup? Do you recognize any terms in this file?\n{{&lt; text_snippet sticky_up &gt;}}\ngolem helps you with a lot of housekeeping you usually end up doing last minutes, including making a DESCRIPTION file (which contains a lot of input about required packages, info on the author, and whether you have coined a specific license to the usage of your package.) It also helps you with a number of other helpful tools for reproducible development such as using git and github. By doing this ahead of time, you do all the legwork before development begins, and you won’t have to do it once your app has grown in size.\nAt this point we will limit ourselves to making a DESCRIPTION file by running the following:\n\ngolem::fill_desc(\n  pkg_name = \"penguinapp\", # The name of the golem package containing the app (typically lowercase, no underscore or periods)\n  pkg_title = \"PKG_TITLE\", # What the Package Does (One Line, Title Case, No Period)\n  pkg_description = \"PKG_DESC.\", # What the package does (one paragraph).\n  authors = person(\n    given = \"AUTHOR_FIRST\", # Your First Name\n    family = \"AUTHOR_LAST\", # Your Last Name\n    email = \"AUTHOR@MAIL.COM\", # Your email\n    role = c(\"aut\", \"cre\") # Your role (here author/creator)\n  ),\n  repo_url = NULL, # The URL of the GitHub repo (optional),\n  pkg_version = \"0.0.0.9000\", # The version of the package containing the app\n  set_options = TRUE # Set the global golem options\n)",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#technologist-exercise-activity-description",
+    "href": "sessions/golem.html#technologist-exercise-activity-description",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.4 :technologist: Exercise activity: DESCRIPTION",
+    "text": "12.4 :technologist: Exercise activity: DESCRIPTION\nTime: ~5 minutes.\nFill out the information for the description file and run the code in the penguinapp folder.\n{{&lt; text_snippet sticky_up &gt;}}",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#development-and-modularization",
+    "href": "sessions/golem.html#development-and-modularization",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.5 Development and modularization",
+    "text": "12.5 Development and modularization\nWe will in this workshop be bad examples and start development on our penguin app before doing any of the housekeeping. if we are leading by example, this is a poor example indeed! But jokes aside, our second file 02_dev.R contains the scripts we need to build our app.\nThere are many different functions in this file and we do not need all of them - a lot of these functions are advanced edge cases in case you want to implement specific programs or programming languages. It does contain some helpful functions:\n\nusethis::use_github() helps you share your project on github\nusethis::use_data_raw() is helpful if you want to use data in your app\ngolem::add_utils(“helpers”, with_test = TRUE) creates a script for making helper functions, in case you develop your own functions to be used in the app\n\nThe rest of the functions are beyond the scope of this workshop, except one: golem::add_module()",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#speech_balloon-discussion-activity-add_module",
+    "href": "sessions/golem.html#speech_balloon-discussion-activity-add_module",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.6 :speech_balloon: Discussion activity: add_module",
+    "text": "12.6 :speech_balloon: Discussion activity: add_module\nTime: ~5 minutes.\nOpen the add_module() function. Discuss with the person next to you what it does, and why this could be useful",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#making-our-first-module",
+    "href": "sessions/golem.html#making-our-first-module",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.7 Making our first module",
+    "text": "12.7 Making our first module\nWe want to make an app about the penguins dataset. In general, it is considered good design form to consider what the app should look like before we start coding. Lets take a look at the data and see what we can do with it:\n\ndplyr::slice_head(penguins,n = 10)\n\n   species    island bill_len bill_dep flipper_len body_mass    sex year\n1   Adelie Torgersen     39.1     18.7         181      3750   male 2007\n2   Adelie Torgersen     39.5     17.4         186      3800 female 2007\n3   Adelie Torgersen     40.3     18.0         195      3250 female 2007\n4   Adelie Torgersen       NA       NA          NA        NA   &lt;NA&gt; 2007\n5   Adelie Torgersen     36.7     19.3         193      3450 female 2007\n6   Adelie Torgersen     39.3     20.6         190      3650   male 2007\n7   Adelie Torgersen     38.9     17.8         181      3625 female 2007\n8   Adelie Torgersen     39.2     19.6         195      4675   male 2007\n9   Adelie Torgersen     34.1     18.1         193      3475   &lt;NA&gt; 2007\n10  Adelie Torgersen     42.0     20.2         190      4250   &lt;NA&gt; 2007\n\n\nWe see we have eight different columns with data about the penguins - species, island, bill length, etc. Lets make a module called “overview” where we will make a plot exploring the possible relation between bill length and flipper length for different species.\n\ngolem::add_module(name = \"overview\")\n\nyou will notice the standard golem output includes an argument stating with_test=TRUE. This is not necessary for our app, and truth being told I have yet to grasp the potential and utility in the tests offered by golem. Know they are there, and you can look for information if this is of interest to you.\nIf we run this command, we should now get a new file - we get a console output stating File created at R/mod_overview.R. Looking in our R folder we see this is indeed the case:",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#book-reading-task-title",
+    "href": "sessions/golem.html#book-reading-task-title",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.8 :book: Reading task: Title",
+    "text": "12.8 :book: Reading task: Title\nTime: ~Num minutes.\nText\n{{&lt; text_snippet sticky_up &gt;}}",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#summary",
+    "href": "sessions/golem.html#summary",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.9 Summary",
+    "text": "12.9 Summary\n\nTODO: List of summary items",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/golem.html#survey",
+    "href": "sessions/golem.html#survey",
+    "title": "12  Golem: a structured way to build and modularize your app",
+    "section": "12.10 Survey",
+    "text": "12.10 Survey\nFeedback survey! :tada:",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
     "objectID": "sessions/conclusion.html",
     "href": "sessions/conclusion.html",
-    "title": "12  What next",
+    "title": "13  What next",
     "section": "",
     "text": "Slides\n\n\n\n\n\n\n\n\n\n\nNoteTeacher note\n\n\n\n\n\nThe slides contain speaking notes that you can view by pressing ‘S’ on the keyboard.",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>What next</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>What next</span>"
     ]
   },
   {
