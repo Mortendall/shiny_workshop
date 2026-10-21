@@ -76,6 +76,12 @@ than our standard Shiny project.
 ![Overview of the files created by
 golem](/images/golem_files.png){#fig-shiny_ui width="90%"}
 
+This is actually a functional Shiny app, though at this stage it works a
+bit differently. We can run it with the command `golem::run_dev()`.
+Running this command will take us to a golem welcome page with resources
+and information. This is very similar to the example in our shiny
+project above.
+
 To understand what golem really offers, it is beneficial to look at the
 dev folder. In this folder we will see three documents:
 
@@ -198,20 +204,164 @@ is of interest to you.
 
 If we run this command, we should now get a new file - we get a console
 output stating `File created at R/mod_overview.R`. Looking in our R
-folder we see this is indeed the case:
+folder we see there now is a script called mod_overview.R. The script
+contains several chunks - lets go through them in turn
 
-## :book: Reading task: Title
+```{r}
+#| eval: false
+mod_overview_ui <- function(id) {
+  ns <- NS(id)
+  tagList(
+ 
+  )
+}
 
-**Time: \~Num minutes.**
+```
 
-Text
+This first chunk is the UI component. In the function called `tagList`
+(from shiny) we can add all the UI components we desire - cards, pages,
+you name it.
+
+Next thing we see is the server:
+
+```{r}
+#| eval: false
+mod_overview_server <- function(id){
+  moduleServer(id, function(input, output, session){
+    ns <- session$ns
+ 
+  })
+}
+
+```
+
+In this, we put the server component in. So far, this is very similar to
+our initial example. The next part is commented out (with #) but is
+quite interesting:
+
+```{r}
+#| eval: false
+
+## To be copied in the UI
+# mod_overview_ui("overview_1")
+    
+## To be copied in the server
+# mod_overview_server("overview_1")
+
+```
+
+`golem` gives us to two functions we can paste into our UI and server
+script. These are also found in the /R folder and are called "app_ui"
+and "app_server". If we open app_ui we will see the following in the top
+part:
+
+```{r}
+#| eval: false
+
+app_ui <- function(request) {
+  tagList(
+    # Leave this function for adding external resources
+    golem_add_external_resources(),
+    # Your application UI logic
+    fluidPage(
+      golem::golem_welcome_page() # Remove this line to start building your UI
+    )
+  )
+}
+
+```
+
+Here we see the description of the UI - it describes the `golem` demo
+page we saw before, with all the golem resources. Standard is
+`shiny::fluidPage`, but if you want to use `bslib` as we discussed in
+the previous chapter, it is worth upgrading the page type to a one from
+this package - the equivalent is `bslib::page_fluid()`. Using the
+default `shiny::fluidPage` can cause some unexpected interactions with
+`bslib elements`.
+
+In this case, we like the `golem` page, but we want to make a page of
+our own. We will turn it into a page with a navigation bar, and add our
+new module. We replace `fluidPage` with `bslib::page_navbar()`, and wrap
+the `golem_welcome_page()` in `bslib::nav_panel()`, telling shiny that
+we want it to be displayed as a panel in the navigation bar. We also
+give a title for the tab.
+
+Then we copy the text from the golem module
+(`mod_overview_ui("overview_1")`) into another `nav_panel()` instance,
+and gives it a title.
+
+```{r}
+#| eval: false
+
+app_ui <- function(request) {
+  tagList(
+    # Leave this function for adding external resources
+    golem_add_external_resources(),
+    # Your application UI logic
+    bslib::page_navbar(
+      bslib::nav_panel(
+        title = "golem welcome page",
+        golem::golem_welcome_page()
+      ),
+      bslib::nav_panel(
+        title = "Our awesome penguin app",
+        mod_overview_ui("overview_1")
+      )
+       
+    )
+  )
+}
+
+```
+
+Next, we open the app_server script. We see it is currently empty - the
+welcome page is apparantly all UI and no server. We want to add a server
+of our own, and copy the server script from our module file
+(`mod_overview_server("overview_1")`)
+
+```{r}
+#| eval: false
+app_server <- function(input, output, session) {
+  # Your application server logic
+  mod_overview_server("overview_1")
+}
+
+```
+
+if we run `golem::run_dev()` we will now get an app with two tabs - the
+golem page and an empty page. We have made a modularized app! additional
+modules can be added the same way, and the size of scripts kept to a
+manageable size. Note that the background is purple, which is being hard
+set by golem - if we delete the golem welcome page it will go away.
+
+## Reading activity: 03_deploy.R
+
+**Time: \\5 minutes.**
+
+In our dev folder we had a final file - 03_deploy.R. This one contains
+helper functions for when your app is ready to be shared with the world.
+it helps you build functions from your app into a package (and helps you
+check if it is good enough to be added to CRAN, where we download our
+packages from), and it contains a number of options to help prepare your
+app to be hosted on platforms such as posit connect or other platforms.
+Deploying is beyond the scope of this workshop, but this file will give
+you a number of options you can look up and find a solution that works
+for you. If you want an easy way to share apps, I encourage you to check
+out posit connect - they have free plans if your app is small, and once
+your account is connected, it requires few steps to upload and update
+apps.
 
 {{< text_snippet sticky_up >}}
 
 ## Summary
 
-- TODO: List of summary items
+You have now learned
 
-## Survey
+- How to build an app with golem
 
-{{< include /includes/_survey.qmd >}}
+- How the dev files work
+
+- How modularization works
+
+- Where you can find information about how to share your app with the
+  world
