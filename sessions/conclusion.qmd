@@ -1,18 +1,6 @@
 # What next
 
-> [**Slides**](/slides/conclusion.qmd)
+You have now taken your first step into a much larger world. If you have
+feedback or questions about Shiny, feel free to shoot an
+[email](mailto:dall@sund.ku.dk)
 
-<div>
-
-```{=html}
-<iframe class="slide-deck" src="../slides/conclusion.html"></iframe>
-```
-
-</div>
-
-::: {.callout-note collapse="true"}
-## Teacher note
-
-The slides contain speaking notes that you can view by pressing 'S' on the
-keyboard.
-:::

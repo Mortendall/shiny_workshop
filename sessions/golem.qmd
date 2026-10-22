@@ -136,12 +136,24 @@ golem::fill_desc(
 )
 ```
 
+A DESCRIPTION file is also where you note what packages are required to
+run your app. This can be done by using the function
+`usethis::use_package(PACKAGE NAME)` Normally it is sufficient to call
+the package on it's own, with a notable exception being the `tidyverse`
+package - here you should add the following:
+`usethis::use_package("tidyverse", type = "suggests")` because
+`tidyverse` is a collection. Adding used packages to the DESCRIPTION
+file makes it easier to deploy the app, because it makes it clear what
+packages need to be installed on your remote server.
+
 ## :technologist: Exercise activity: DESCRIPTION
 
 **Time: \~5 minutes.**
 
 Fill out the information for the description file and run the code in
-the penguinapp folder.
+the penguinapp folder. Add relevant packages we have used (or you expect
+we will use) using `usethis`.Think about `tidyverse` packages - what
+tools from that collection do we actually use?
 
 {{< text_snippet sticky_up >}}
 
@@ -186,8 +198,8 @@ dplyr::slice_head(penguins,n = 10)
 
 We see we have eight different columns with data about the penguins -
 species, island, bill length, etc. Lets make a module called "overview"
-where we will make a plot exploring the possible relation between bill
-length and flipper length for different species.
+where we will make a an explorative plot in the next chapter. For now,
+we build the module:
 
 ```{r}
 #| eval: false

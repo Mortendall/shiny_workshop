@@ -1,6 +1,7 @@
-# TODO: Lesson title here
+# Building our app
 
-<!-- TODO: Add an introduction here -->
+We have now learned how to setup our app and modularize it so it is
+easier to navigate the code. Now it's time to put something in it!
 
 ## Learning objectives
 
@@ -8,40 +9,413 @@ The learning objectives for this session are:
 
 {{< include /includes/objectives/_session.qmd >}}
 
-## TODO: Section
+## Speeding up data handling
 
 ::: callout-note
 ## Reading task: \~4 minutes
 
-TODO: Reading text
+Because our app is an example, speed is not really an issue when loading
+in data. But imagine you had a large sequencing dataset with thousands
+of genes from hundreds of samples - suddenly loading speed (and
+performance) can become an issue. If data can be organized as csv files,
+this is usually a good option - csv files can be loaded in rapidly using
+the `vroom()` function from the package of the same name. But if your
+dataset is very large and your app feels clunky, there are a few options
+you can utilize
+
+If file size is the issue, consider converting file format to the
+parquet format. Parquet is similar to csv but structures data in a
+different way. Generally, the form is optimized for machines rather than
+humans, as we cannot open and interact with it the way we can with a
+csv. But for our apps, this does not matter too much.
+
+You can convert data to parquet using the `arrow` package. If you want
+to save our penguin dataset in a folder called "data-raw", you use the
+command
+
+```{r}
+#| eval: false
+
+#create the data-raw folder
+
+usethis::use_data_raw()
+
+#save our data as parquet
+arrow::write_parquet(x = penguins,
+                     sink = here::here("data-raw/penguins.parquet"))
+
+```
+
+Then data can be read in using
+`arrow::read_parquet("data-raw/penguins.parquet")` If you are interested
+in how much more efficient parquet is, this [blog
+post](https://motherduck.com/learn/csv-vs-parquet-benchmark/) provides
+some indication: for a data set with 11 mio rows, parquet files were
+6.8x smaller than csv, and processed 22-60x faster.
+
+If loading is not the issue, but data wrangling is (for example
+filtering steps) then an alternative is to use
+[duckplyr](https://duckplyr.tidyverse.org/). Duckplyr uses the powerful
+duckdb engine to compute results faster. `duckplyr` works as a faster
+drop-in for dplyr. If you call `library(duckplyr)` in a normal R script,
+`duckplyr` will overwrite dplyr methods. In a shiny app (especially
+using golem where we modularize things) it can be a bit more tricky -
+you should explicitely call `duckplyr::methods_overwrite()` in the
+`run_app.R` script just before `with_golem_options()`. I have not
+verified this approach yet - but you should be able to get the speed by
+adding `duckplyr::as_duckplyr_tibble()` in the top of your data
+wrangling steps:
+
+```{r}
+penguins |> 
+  duckplyr::as_duckplyr_tibble() |> 
+  dplyr::filter(sex == "female")
+  
+```
+
+These methods work best if you have data that can be stored as a data
+frame. For some of our omics data (like single cell RNAseq data) this
+can be notoriously difficult, and objects from for example `seurat` can
+take a long time to load into R. This makes it difficult to use the
+tools above. My best advice here is to delete as much as you can from
+the Seurat datasets - they often end up being filled with
+normalizations. Consider checking out he package
+[DietSeurat](https://rdrr.io/cran/Seurat/man/DietSeurat.html) or setting
+aspects of the seurat object (such as count and scale.data) to NULL.
 :::
 
-## :technologist: Exercise: Title
+## Making interactive plots
 
-**Time: \~NUM minutes.**
+After all this reading, it is time to code some plots. We can start by
+making a plot exploring the possible relation between bill length and
+flipper length for different species of penguins.But first, let's go in
+and delete the golem welcome page:
 
-Text
+```{r}
+#| eval: false
+
+app_ui <- function(request) {
+  tagList(
+    # Leave this function for adding external resources
+    golem_add_external_resources(),
+    # Your application UI logic
+    bslib::page_navbar(
+      bslib::nav_panel(
+        title = "Our awesome penguin app",
+        mod_overview_ui("overview_1")
+      )
+
+    )
+  )
+}
+```
+
+We first build the UI code:
+
+```{r}
+#| eval: false
+mod_overview_ui <- function(id) {
+  ns <- NS(id)
+  tagList(
+    bslib::card(
+      bslib::card_header("penguin plot"),
+      shiny::plotOutput(outputId = "penguinplot")
+    )
+  )
+}
+
+```
+
+Then we need to decide what should be rendered on the server side:
+
+```{r}
+#| eval: false
+
+mod_overview_server <- function(id){
+  moduleServer(id, function(input, output, session){
+    ns <- session$ns
+    
+    output$penguinplot <- shiny::renderPlot({
+      ggplot2::ggplot(
+        penguins,
+        ggplot2::aes(
+          x = bill_len,
+          y = flipper_len,
+          color = species
+        )
+      )+
+        ggplot2::geom_point()+
+        ggplot2::theme_bw()
+    })
+  })
+}
+
+```
+
+This should modify our app to render a plot like the following
+
+```{r}
+      ggplot2::ggplot(
+        penguins,
+        ggplot2::aes(
+          x = bill_len,
+          y = flipper_len,
+          color = species
+        )
+      )+
+        ggplot2::geom_point()+
+        ggplot2::theme_bw()
+    
+```
+
+But surprisingly it does not work! Our app is just blank? Where is our
+beautiful plot? To render it properly, we need to add a small wrapper to
+our outputId. It should be changed from `outputId = "penguinplot"` to
+`outputId = ns("penguinplot)"`. You may notice our server code contains
+a reference to ns in the line `ns <- session$ns`. What this does is
+essentially a way for our modularized app to navigate where input and
+output id's belong in our various modules. Always add `ns("")` around
+input and output IDs!
+
+```{r}
+#| eval: false
+mod_overview_ui <- function(id) {
+  ns <- NS(id)
+  tagList(
+    bslib::card(
+      bslib::card_header("penguin plot"),
+      shiny::plotOutput(outputId = ns("penguinplot"))
+    )
+  )
+}
+
+```
+
+If we now run `golem::run_dev()` we see our plot. But right now it is
+static. What if we wanted to make it more interactive? There is a
+powerful alternative to ggplot called `plotly`. In this package
+interactivity is native. But the syntaxt of plotly is different. The
+equivalent of the above would be
+
+```{r}
+#| echo: false
+#| message: false
+
+plotly::plot_ly(
+  data = penguins,
+  x =~bill_len,
+  y = ~flipper_len,
+  color = ~species,
+  type = "scatter" 
+)
+
+```
+
+We see here there are several nice functionalities - we can zoom, we can
+export and there is a native tooltip - if we hover above individual
+points, we can get info about them. We can customise the content of
+these, but it requires some finesse. Luckily there is a way we can
+convert our ggplot to plotly easily, using the `ggplotly` function.
+
+```{r}
+penguin_plotly <- ggplot2::ggplot(
+        penguins,
+        ggplot2::aes(
+          x = bill_len,
+          y = flipper_len,
+          color = species
+        )
+      )+
+        ggplot2::geom_point()+
+        ggplot2::theme_bw()
+
+plotly::ggplotly(penguin_plotly)
+```
+
+We can customize tooltip information in `ggplotly`. We can for example
+add information about the sex of the penguin by adding it as a text info
+in ggplot, and call it in `gglotly`:
+
+```{r}
+penguin_plotly <- ggplot2::ggplot(
+        penguins,
+        ggplot2::aes(
+          x = bill_len,
+          y = flipper_len,
+          color = species
+        )
+      )+
+        ggplot2::geom_point(
+          ggplot2::aes(
+            text = sex
+          )
+        )+
+        ggplot2::theme_bw()
+
+plotly::ggplotly(penguin_plotly,
+                 tooltip = "text")
+```
+
+Before we try to run it in our app, we have one important thing to do in
+the UI - we must change our
+`shiny::plotOutput(outputId = ns("penguinplot"))` to
+`plotly::plotlyOutput(outputId = ns("penguinplot"))` and likewise change
+
+`output$penguinplot <- shiny::renderPlot({` to
+`output$penguinplot <- plotly::renderPlotly({`
+
+Once this is done, we should be good to go.
+
+## :technologist: Exercise: Add the plot to our app
+
+**Time: \~6 minutes.**
+
+Add the plot above to our app and try to run it
 
 {{< text_snippet sticky_up >}}
 
-## :speech_balloon: Discussion activity: Title
+## Filtering and subsetting
 
-**Time: \~Num minutes.**
+So far, most of what we have done could be achieved in a static
+document. But shiny offers a lot more - particularly the ability to
+respond to our inputs. Lets take our plot above - say we want the
+ability to filter our plot based on what island the penguins are from.
 
-Text
+```{r}
+penguins |> 
+  dplyr::distinct(island)
+```
 
-## :book: Reading task: Title
+We see we have three options - Torgersen, Biscoe and Dream. We can make
+an `input` containing these three options in our ui, plus a fourth
+containing all of them.
 
-**Time: \~Num minutes.**
+```{r}
+#| eval: false
 
-Text
+mod_overview_ui <- function(id) {
+  ns <- NS(id)
+  tagList(
+    bslib::card(
+      bslib::card_header("penguin plot"),
+      shiny::radioButtons(inputId = ns("island"),
+                          label = "Select island",
+                          choices = c("all",
+                                      "Torgersen",
+                                      "Biscoe",
+                                      "Dream"),
+                          selected = "all"),
+      plotly::plotlyOutput(outputId = ns("penguinplot"))
+    )
+  )
+}
+```
 
-{{< text_snippet sticky_up >}}
+If we run `golem::run_dev()` we will now see a radiobutton with four
+choices. But they don't do anything yet. To link the choice to our plot,
+we must modify the code for our plot. If we just want to filter the data
+set based on which island has been chosen, we need the name of our
+`input` - in this case "island". we could just do something like the
+following:
+
+```{r}
+#| eval: false
+
+penguin_subset <- penguins |> 
+  dplyr::filter(island == input$island)
+
+penguin_plotly <- ggplot2::ggplot(
+        penguin_subset,
+        ggplot2::aes(
+          x = bill_len,
+          y = flipper_len,
+          color = species
+        )
+      )+
+        ggplot2::geom_point(
+          ggplot2::aes(
+            text = sex
+          )
+        )+
+        ggplot2::theme_bw()
+
+plotly::ggplotly(penguin_plotly,
+                 tooltip = "text")
+
+```
+
+This will work for chosing the island, but how about if we want the
+option to show the whole dataset? We can do it with an if/else
+statement. If we have selected "all" we use the entire penguins
+dataset - else we will filter for the content of input\$island. In R
+code it looks like this:
+
+```{r}
+#| eval: false
+
+if(input$island == "all"){
+  penguin_subset <- penguins
+}
+else {
+  penguin_subset <- penguins |> 
+  dplyr::filter(island == input$island)
+}
+
+penguin_plotly <- ggplot2::ggplot(
+        penguin_subset,
+        ggplot2::aes(
+          x = bill_len,
+          y = flipper_len,
+          color = species
+        )
+      )+
+        ggplot2::geom_point(
+          ggplot2::aes(
+            text = sex
+          )
+        )+
+        ggplot2::theme_bw()
+
+plotly::ggplotly(penguin_plotly,
+                 tooltip = "text")
+```
+
+We can now change our plot based on input! This is just one example of
+reactivity in shiny. There are many ways to change input - for a gallery
+check [this
+resource](https://shiny.posit.co/r/gallery/widgets/widget-gallery/)
+
+## :technologist: Exercise: observeEvent
+
+**Time: \~6 minutes.**
+
+Another helpful function to know is `shiny::observeEvent()`. this
+function is coded into the server part and when the condition is
+triggered, the code is run. Try this out by adding the following:
+
+1.  In the UI, add an action button
+    `shiny::actionButton(inputId = ns("test")`.
+2.  In the server add
+
+```{r}
+#| echo: false
+
+shiny::observeEvent(input$test,{
+    print("testing!") 
+  })
+```
+
+3.  Run the app, press the button and watch the console for the output
+
+## :technologist: Extra Exercise: Develop the app
+
+if you have extra time, you can try making our penguin app nicer.Fix the
+axis lengths through `xlim` and`ylim` on the plot or changing the color
+scheme. Or try adding a different module with a different plot.
 
 ## Summary
 
-- TODO: List of summary items
-
-## Survey
-
-{{< include /includes/_survey.qmd >}}
+- We have now learned how to speed up loading and performance of our app
+- We also know how to make plots interactive
+- Finally we have learned how to make Shiny responsive and change the
+  output based on our input.
