@@ -523,14 +523,113 @@
     ]
   },
   {
+    "objectID": "sessions/build_app.html",
+    "href": "sessions/build_app.html",
+    "title": "13  Building our app",
+    "section": "",
+    "text": "13.1 Learning objectives\nWe have now learned how to setup our app and modularize it so it is easier to navigate the code. Now it’s time to put something in it!\nThe learning objectives for this session are:",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#learning-objectives",
+    "href": "sessions/build_app.html#learning-objectives",
+    "title": "13  Building our app",
+    "section": "",
+    "text": "Objective one",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#speeding-up-data-handling",
+    "href": "sessions/build_app.html#speeding-up-data-handling",
+    "title": "13  Building our app",
+    "section": "13.2 Speeding up data handling",
+    "text": "13.2 Speeding up data handling\n\n\n\n\n\n\nNoteReading task: ~4 minutes\n\n\n\nBecause our app is an example, speed is not really an issue when loading in data. But imagine you had a large sequencing dataset with thousands of genes from hundreds of samples - suddenly loading speed (and performance) can become an issue. If data can be organized as csv files, this is usually a good option - csv files can be loaded in rapidly using the vroom() function from the package of the same name. But if your dataset is very large and your app feels clunky, there are a few options you can utilize\nIf file size is the issue, consider converting file format to the parquet format. Parquet is similar to csv but structures data in a different way. Generally, the form is optimized for machines rather than humans, as we cannot open and interact with it the way we can with a csv. But for our apps, this does not matter too much.\nYou can convert data to parquet using the arrow package. If you want to save our penguin dataset in a folder called “data-raw”, you use the command\n\n#create the data-raw folder\n\nusethis::use_data_raw()\n\n#save our data as parquet\narrow::write_parquet(x = penguins,\n                     sink = here::here(\"data-raw/penguins.parquet\"))\n\nThen data can be read in using arrow::read_parquet(\"data-raw/penguins.parquet\") If you are interested in how much more efficient parquet is, this blog post provides some indication: for a data set with 11 mio rows, parquet files were 6.8x smaller than csv, and processed 22-60x faster.\nIf loading is not the issue, but data wrangling is (for example filtering steps) then an alternative is to use duckplyr. Duckplyr uses the powerful duckdb engine to compute results faster. duckplyr works as a faster drop-in for dplyr. If you call library(duckplyr) in a normal R script, duckplyr will overwrite dplyr methods. In a shiny app (especially using golem where we modularize things) it can be a bit more tricky - you should explicitely call duckplyr::methods_overwrite() in the run_app.R script just before with_golem_options(). I have not verified this approach yet - but you should be able to get the speed by adding duckplyr::as_duckplyr_tibble() in the top of your data wrangling steps:\n\npenguins |&gt; \n  duckplyr::as_duckplyr_tibble() |&gt; \n  dplyr::filter(sex == \"female\")\n\nThe duckplyr package is configured to fall back to dplyr when it encounters an\nincompatibility. Fallback events can be collected and uploaded for analysis to\nguide future development. By default, data will be collected but no data will\nbe uploaded.\nℹ Automatic fallback uploading is not controlled and therefore disabled, see\n  `?duckplyr::fallback()`.\n✔ Number of reports ready for upload: 42.\n→ Review with `duckplyr::fallback_review()`, upload with\n  `duckplyr::fallback_upload()`.\nℹ Configure automatic uploading with `duckplyr::fallback_config()`.\n\n\nWarning: `as_duckplyr_tibble()` was deprecated in duckplyr 1.0.0.\nℹ Please use `as_duckdb_tibble()` instead.\n\n\n# A duckplyr data frame: 8 variables\n   species island    bill_len bill_dep flipper_len body_mass sex     year\n   &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;     &lt;int&gt; &lt;fct&gt;  &lt;int&gt;\n 1 Adelie  Torgersen     39.5     17.4         186      3800 female  2007\n 2 Adelie  Torgersen     40.3     18           195      3250 female  2007\n 3 Adelie  Torgersen     36.7     19.3         193      3450 female  2007\n 4 Adelie  Torgersen     38.9     17.8         181      3625 female  2007\n 5 Adelie  Torgersen     41.1     17.6         182      3200 female  2007\n 6 Adelie  Torgersen     36.6     17.8         185      3700 female  2007\n 7 Adelie  Torgersen     38.7     19           195      3450 female  2007\n 8 Adelie  Torgersen     34.4     18.4         184      3325 female  2007\n 9 Adelie  Biscoe        37.8     18.3         174      3400 female  2007\n10 Adelie  Biscoe        35.9     19.2         189      3800 female  2007\n# ℹ more rows\n\n\nThese methods work best if you have data that can be stored as a data frame. For some of our omics data (like single cell RNAseq data) this can be notoriously difficult, and objects from for example seurat can take a long time to load into R. This makes it difficult to use the tools above. My best advice here is to delete as much as you can from the Seurat datasets - they often end up being filled with normalizations. Consider checking out he package DietSeurat or setting aspects of the seurat object (such as count and scale.data) to NULL.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#making-interactive-plots",
+    "href": "sessions/build_app.html#making-interactive-plots",
+    "title": "13  Building our app",
+    "section": "13.3 Making interactive plots",
+    "text": "13.3 Making interactive plots\nAfter all this reading, it is time to code some plots. We can start by making a plot exploring the possible relation between bill length and flipper length for different species of penguins.But first, let’s go in and delete the golem welcome page:\n\napp_ui &lt;- function(request) {\n  tagList(\n    # Leave this function for adding external resources\n    golem_add_external_resources(),\n    # Your application UI logic\n    bslib::page_navbar(\n      bslib::nav_panel(\n        title = \"Our awesome penguin app\",\n        mod_overview_ui(\"overview_1\")\n      )\n\n    )\n  )\n}\n\nWe first build the UI code:\n\nmod_overview_ui &lt;- function(id) {\n  ns &lt;- NS(id)\n  tagList(\n    bslib::card(\n      bslib::card_header(\"penguin plot\"),\n      shiny::plotOutput(outputId = \"penguinplot\")\n    )\n  )\n}\n\nThen we need to decide what should be rendered on the server side:\n\nmod_overview_server &lt;- function(id){\n  moduleServer(id, function(input, output, session){\n    ns &lt;- session$ns\n    \n    output$penguinplot &lt;- shiny::renderPlot({\n      ggplot2::ggplot(\n        penguins,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point()+\n        ggplot2::theme_bw()\n    })\n  })\n}\n\nThis should modify our app to render a plot like the following\n\n      ggplot2::ggplot(\n        penguins,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point()+\n        ggplot2::theme_bw()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\nBut surprisingly it does not work! Our app is just blank? Where is our beautiful plot? To render it properly, we need to add a small wrapper to our outputId. It should be changed from outputId = \"penguinplot\" to outputId = ns(\"penguinplot)\". You may notice our server code contains a reference to ns in the line ns &lt;- session$ns. What this does is essentially a way for our modularized app to navigate where input and output id’s belong in our various modules. Always add ns(\"\") around input and output IDs!\n\nmod_overview_ui &lt;- function(id) {\n  ns &lt;- NS(id)\n  tagList(\n    bslib::card(\n      bslib::card_header(\"penguin plot\"),\n      shiny::plotOutput(outputId = ns(\"penguinplot\"))\n    )\n  )\n}\n\nIf we now run golem::run_dev() we see our plot. But right now it is static. What if we wanted to make it more interactive? There is a powerful alternative to ggplot called plotly. In this package interactivity is native. But the syntaxt of plotly is different. The equivalent of the above would be\n\n\nWarning: Ignoring 2 observations\n\n\n\n\n\n\nWe see here there are several nice functionalities - we can zoom, we can export and there is a native tooltip - if we hover above individual points, we can get info about them. We can customise the content of these, but it requires some finesse. Luckily there is a way we can convert our ggplot to plotly easily, using the ggplotly function.\n\npenguin_plotly &lt;- ggplot2::ggplot(\n        penguins,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point()+\n        ggplot2::theme_bw()\n\nplotly::ggplotly(penguin_plotly)\n\n\n\n\n\nWe can customize tooltip information in ggplotly. We can for example add information about the sex of the penguin by adding it as a text info in ggplot, and call it in gglotly:\n\npenguin_plotly &lt;- ggplot2::ggplot(\n        penguins,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point(\n          ggplot2::aes(\n            text = sex\n          )\n        )+\n        ggplot2::theme_bw()\n\nWarning in ggplot2::geom_point(ggplot2::aes(text = sex)): Ignoring unknown\naesthetics: text\n\nplotly::ggplotly(penguin_plotly,\n                 tooltip = \"text\")\n\n\n\n\n\nBefore we try to run it in our app, we have one important thing to do in the UI - we must change our shiny::plotOutput(outputId = ns(\"penguinplot\")) to plotly::plotlyOutput(outputId = ns(\"penguinplot\")) and likewise change\noutput$penguinplot &lt;- shiny::renderPlot({ to output$penguinplot &lt;- plotly::renderPlotly({\nOnce this is done, we should be good to go.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#technologist-exercise-add-the-plot-to-our-app",
+    "href": "sessions/build_app.html#technologist-exercise-add-the-plot-to-our-app",
+    "title": "13  Building our app",
+    "section": "13.4 :technologist: Exercise: Add the plot to our app",
+    "text": "13.4 :technologist: Exercise: Add the plot to our app\nTime: ~6 minutes.\nAdd the plot above to our app and try to run it\n{{&lt; text_snippet sticky_up &gt;}}",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#filtering-and-subsetting",
+    "href": "sessions/build_app.html#filtering-and-subsetting",
+    "title": "13  Building our app",
+    "section": "13.5 Filtering and subsetting",
+    "text": "13.5 Filtering and subsetting\nSo far, most of what we have done could be achieved in a static document. But shiny offers a lot more - particularly the ability to respond to our inputs. Lets take our plot above - say we want the ability to filter our plot based on what island the penguins are from.\n\npenguins |&gt; \n  dplyr::distinct(island)\n\n     island\n1 Torgersen\n2    Biscoe\n3     Dream\n\n\nWe see we have three options - Torgersen, Biscoe and Dream. We can make an input containing these three options in our ui, plus a fourth containing all of them.\n\nmod_overview_ui &lt;- function(id) {\n  ns &lt;- NS(id)\n  tagList(\n    bslib::card(\n      bslib::card_header(\"penguin plot\"),\n      shiny::radioButtons(inputId = ns(\"island\"),\n                          label = \"Select island\",\n                          choices = c(\"all\",\n                                      \"Torgersen\",\n                                      \"Biscoe\",\n                                      \"Dream\"),\n                          selected = \"all\"),\n      plotly::plotlyOutput(outputId = ns(\"penguinplot\"))\n    )\n  )\n}\n\nIf we run golem::run_dev() we will now see a radiobutton with four choices. But they don’t do anything yet. To link the choice to our plot, we must modify the code for our plot. If we just want to filter the data set based on which island has been chosen, we need the name of our input - in this case “island”. we could just do something like the following:\n\npenguin_subset &lt;- penguins |&gt; \n  dplyr::filter(island == input$island)\n\npenguin_plotly &lt;- ggplot2::ggplot(\n        penguin_subset,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point(\n          ggplot2::aes(\n            text = sex\n          )\n        )+\n        ggplot2::theme_bw()\n\nplotly::ggplotly(penguin_plotly,\n                 tooltip = \"text\")\n\nThis will work for chosing the island, but how about if we want the option to show the whole dataset? We can do it with an if/else statement. If we have selected “all” we use the entire penguins dataset - else we will filter for the content of input$island. In R code it looks like this:\n\nif(input$island == \"all\"){\n  penguin_subset &lt;- penguins\n}\nelse {\n  penguin_subset &lt;- penguins |&gt; \n  dplyr::filter(island == input$island)\n}\n\npenguin_plotly &lt;- ggplot2::ggplot(\n        penguin_subset,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point(\n          ggplot2::aes(\n            text = sex\n          )\n        )+\n        ggplot2::theme_bw()\n\nplotly::ggplotly(penguin_plotly,\n                 tooltip = \"text\")\n\nWe can now change our plot based on input! This is just one example of reactivity in shiny. There are many ways to change input - for a gallery check this resource",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#technologist-exercise-observeevent",
+    "href": "sessions/build_app.html#technologist-exercise-observeevent",
+    "title": "13  Building our app",
+    "section": "13.6 :technologist: Exercise: observeEvent",
+    "text": "13.6 :technologist: Exercise: observeEvent\nTime: ~6 minutes.\nAnother helpful function to know is shiny::observeEvent(). this function is coded into the server part and when the condition is triggered, the code is run. Try this out by adding the following:\n\nIn the UI, add an action button shiny::actionButton(inputId = ns(\"test\").\nIn the server add\n\n\nRun the app, press the button and watch the console for the output",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#technologist-extra-exercise-develop-the-app",
+    "href": "sessions/build_app.html#technologist-extra-exercise-develop-the-app",
+    "title": "13  Building our app",
+    "section": "13.7 :technologist: Extra Exercise: Develop the app",
+    "text": "13.7 :technologist: Extra Exercise: Develop the app\nif you have extra time, you can try making our penguin app nicer.Fix the axis lengths through xlim andylim on the plot or changing the color scheme. Or try adding a different module with a different plot.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#summary",
+    "href": "sessions/build_app.html#summary",
+    "title": "13  Building our app",
+    "section": "13.8 Summary",
+    "text": "13.8 Summary\n\nWe have now learned how to speed up loading and performance of our app\nWe also know how to make plots interactive\nFinally we have learned how to make Shiny responsive and change the output based on our input.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
     "objectID": "sessions/conclusion.html",
     "href": "sessions/conclusion.html",
-    "title": "13  What next",
+    "title": "14  What next",
     "section": "",
     "text": "You have now taken your first step into a much larger world. If you have feedback or questions about Shiny, feel free to shoot an email",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>What next</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>What next</span>"
     ]
   },
   {
