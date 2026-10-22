@@ -420,11 +420,12 @@ Figure&nbsp;12.1: Overview of the files created by golem
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">set_options =</span> <span class="cn">TRUE</span> <span class="co"># Set the global golem options</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>A DESCRIPTION file is also where you note what packages are required to run your app. This can be done by using the function <code>usethis::use_package(PACKAGE NAME)</code> Normally it is sufficient to call the package on it’s own, with a notable exception being the <code>tidyverse</code> package - here you should add the following: <code>usethis::use_package("tidyverse", type = "suggests")</code> because <code>tidyverse</code> is a collection. Adding used packages to the DESCRIPTION file makes it easier to deploy the app, because it makes it clear what packages need to be installed on your remote server.</p>
 </section>
 <section id="technologist-exercise-activity-description" class="level2" data-number="12.4">
 <h2 data-number="12.4" class="anchored" data-anchor-id="technologist-exercise-activity-description"><span class="header-section-number">12.4</span> :technologist: Exercise activity: DESCRIPTION</h2>
 <p><strong>Time: ~5 minutes.</strong></p>
-<p>Fill out the information for the description file and run the code in the penguinapp folder.</p>
+<p>Fill out the information for the description file and run the code in the penguinapp folder. Add relevant packages we have used (or you expect we will use) using <code>usethis</code>.Think about <code>tidyverse</code> packages - what tools from that collection do we actually use?</p>
 {{&lt; text_snippet sticky_up &gt;}}
 </section>
 <section id="development-and-modularization" class="level2" data-number="12.5">
@@ -462,7 +463,7 @@ Figure&nbsp;12.1: Overview of the files created by golem
 10  Adelie Torgersen     42.0     20.2         190      4250   &lt;NA&gt; 2007</code></pre>
 </div>
 </div>
-<p>We see we have eight different columns with data about the penguins - species, island, bill length, etc. Lets make a module called “overview” where we will make a plot exploring the possible relation between bill length and flipper length for different species.</p>
+<p>We see we have eight different columns with data about the penguins - species, island, bill length, etc. Lets make a module called “overview” where we will make a an explorative plot in the next chapter. For now, we build the module:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">add_module</span>(<span class="at">name =</span> <span class="st">"overview"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -547,7 +548,13 @@ Figure&nbsp;12.1: Overview of the files created by golem
 </section>
 <section id="summary" class="level2" data-number="12.9">
 <h2 data-number="12.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">12.9</span> Summary</h2>
-<p>You have now learned - How to build an app with golem - How the dev files work - How modularization works - Where you can find information about how to share your app with the world</p>
+<p>You have now learned</p>
+<ul>
+<li><p>How to build an app with golem</p></li>
+<li><p>How the dev files work</p></li>
+<li><p>How modularization works</p></li>
+<li><p>Where you can find information about how to share your app with the world</p></li>
+</ul>
 
 
 </section>

@@ -42,6 +42,7 @@ book:
         - sessions/introduction.qmd
         - sessions/shinyapps.qmd
         - sessions/golem.qmd
+        - sessions/build_app.qmd
         - sessions/conclusion.qmd
   appendices:
     - appendix/for-teachers.qmd
