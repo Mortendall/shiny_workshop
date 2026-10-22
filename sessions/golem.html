@@ -316,9 +316,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#development-and-modularization" id="toc-development-and-modularization" class="nav-link" data-scroll-target="#development-and-modularization"><span class="header-section-number">12.5</span> Development and modularization</a></li>
   <li><a href="#speech_balloon-discussion-activity-add_module" id="toc-speech_balloon-discussion-activity-add_module" class="nav-link" data-scroll-target="#speech_balloon-discussion-activity-add_module"><span class="header-section-number">12.6</span> :speech_balloon: Discussion activity: add_module</a></li>
   <li><a href="#making-our-first-module" id="toc-making-our-first-module" class="nav-link" data-scroll-target="#making-our-first-module"><span class="header-section-number">12.7</span> Making our first module</a></li>
-  <li><a href="#book-reading-task-title" id="toc-book-reading-task-title" class="nav-link" data-scroll-target="#book-reading-task-title"><span class="header-section-number">12.8</span> :book: Reading task: Title</a></li>
+  <li><a href="#reading-activity-03_deploy.r" id="toc-reading-activity-03_deploy.r" class="nav-link" data-scroll-target="#reading-activity-03_deploy.r"><span class="header-section-number">12.8</span> Reading activity: 03_deploy.R</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">12.9</span> Summary</a></li>
-  <li><a href="#survey" id="toc-survey" class="nav-link" data-scroll-target="#survey"><span class="header-section-number">12.10</span> Survey</a></li>
   </ul>
 </nav>
     </div>
@@ -389,6 +388,7 @@ Figure&nbsp;12.1: Overview of the files created by golem
 </figcaption>
 </figure>
 </div>
+<p>This is actually a functional Shiny app, though at this stage it works a bit differently. We can run it with the command <code>golem::run_dev()</code>. Running this command will take us to a golem welcome page with resources and information. This is very similar to the example in our shiny project above.</p>
 <p>To understand what golem really offers, it is beneficial to look at the dev folder. In this folder we will see three documents:</p>
 <ul>
 <li>01_start.R</li>
@@ -420,11 +420,12 @@ Figure&nbsp;12.1: Overview of the files created by golem
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">set_options =</span> <span class="cn">TRUE</span> <span class="co"># Set the global golem options</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>A DESCRIPTION file is also where you note what packages are required to run your app. This can be done by using the function <code>usethis::use_package(PACKAGE NAME)</code> Normally it is sufficient to call the package on it’s own, with a notable exception being the <code>tidyverse</code> package - here you should add the following: <code>usethis::use_package("tidyverse", type = "suggests")</code> because <code>tidyverse</code> is a collection. Adding used packages to the DESCRIPTION file makes it easier to deploy the app, because it makes it clear what packages need to be installed on your remote server.</p>
 </section>
 <section id="technologist-exercise-activity-description" class="level2" data-number="12.4">
 <h2 data-number="12.4" class="anchored" data-anchor-id="technologist-exercise-activity-description"><span class="header-section-number">12.4</span> :technologist: Exercise activity: DESCRIPTION</h2>
 <p><strong>Time: ~5 minutes.</strong></p>
-<p>Fill out the information for the description file and run the code in the penguinapp folder.</p>
+<p>Fill out the information for the description file and run the code in the penguinapp folder. Add relevant packages we have used (or you expect we will use) using <code>usethis</code>.Think about <code>tidyverse</code> packages - what tools from that collection do we actually use?</p>
 {{&lt; text_snippet sticky_up &gt;}}
 </section>
 <section id="development-and-modularization" class="level2" data-number="12.5">
@@ -462,28 +463,98 @@ Figure&nbsp;12.1: Overview of the files created by golem
 10  Adelie Torgersen     42.0     20.2         190      4250   &lt;NA&gt; 2007</code></pre>
 </div>
 </div>
-<p>We see we have eight different columns with data about the penguins - species, island, bill length, etc. Lets make a module called “overview” where we will make a plot exploring the possible relation between bill length and flipper length for different species.</p>
+<p>We see we have eight different columns with data about the penguins - species, island, bill length, etc. Lets make a module called “overview” where we will make a an explorative plot in the next chapter. For now, we build the module:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">add_module</span>(<span class="at">name =</span> <span class="st">"overview"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>you will notice the standard golem output includes an argument stating <code>with_test=TRUE</code>. This is not necessary for our app, and truth being told I have yet to grasp the potential and utility in the tests offered by golem. Know they are there, and you can look for information if this is of interest to you.</p>
-<p>If we run this command, we should now get a new file - we get a console output stating <code>File created at R/mod_overview.R</code>. Looking in our R folder we see this is indeed the case:</p>
+<p>If we run this command, we should now get a new file - we get a console output stating <code>File created at R/mod_overview.R</code>. Looking in our R folder we see there now is a script called mod_overview.R. The script contains several chunks - lets go through them in turn</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mod_overview_ui <span class="ot">&lt;-</span> <span class="cf">function</span>(id) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  ns <span class="ot">&lt;-</span> <span class="fu">NS</span>(id)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This first chunk is the UI component. In the function called <code>tagList</code> (from shiny) we can add all the UI components we desire - cards, pages, you name it.</p>
+<p>Next thing we see is the server:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mod_overview_server <span class="ot">&lt;-</span> <span class="cf">function</span>(id){</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">moduleServer</span>(id, <span class="cf">function</span>(input, output, session){</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    ns <span class="ot">&lt;-</span> session<span class="sc">$</span>ns</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>In this, we put the server component in. So far, this is very similar to our initial example. The next part is commented out (with #) but is quite interesting:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## To be copied in the UI</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mod_overview_ui("overview_1")</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="do">## To be copied in the server</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># mod_overview_server("overview_1")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><code>golem</code> gives us to two functions we can paste into our UI and server script. These are also found in the /R folder and are called “app_ui” and “app_server”. If we open app_ui we will see the following in the top part:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>app_ui <span class="ot">&lt;-</span> <span class="cf">function</span>(request) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Leave this function for adding external resources</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">golem_add_external_resources</span>(),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Your application UI logic</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fluidPage</span>(</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>      golem<span class="sc">::</span><span class="fu">golem_welcome_page</span>() <span class="co"># Remove this line to start building your UI</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Here we see the description of the UI - it describes the <code>golem</code> demo page we saw before, with all the golem resources. Standard is <code>shiny::fluidPage</code>, but if you want to use <code>bslib</code> as we discussed in the previous chapter, it is worth upgrading the page type to a one from this package - the equivalent is <code>bslib::page_fluid()</code>. Using the default <code>shiny::fluidPage</code> can cause some unexpected interactions with <code>bslib elements</code>.</p>
+<p>In this case, we like the <code>golem</code> page, but we want to make a page of our own. We will turn it into a page with a navigation bar, and add our new module. We replace <code>fluidPage</code> with <code>bslib::page_navbar()</code>, and wrap the <code>golem_welcome_page()</code> in <code>bslib::nav_panel()</code>, telling shiny that we want it to be displayed as a panel in the navigation bar. We also give a title for the tab.</p>
+<p>Then we copy the text from the golem module (<code>mod_overview_ui("overview_1")</code>) into another <code>nav_panel()</code> instance, and gives it a title.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>app_ui <span class="ot">&lt;-</span> <span class="cf">function</span>(request) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Leave this function for adding external resources</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">golem_add_external_resources</span>(),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Your application UI logic</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    bslib<span class="sc">::</span><span class="fu">page_navbar</span>(</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>      bslib<span class="sc">::</span><span class="fu">nav_panel</span>(</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"golem welcome page"</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        golem<span class="sc">::</span><span class="fu">golem_welcome_page</span>()</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      bslib<span class="sc">::</span><span class="fu">nav_panel</span>(</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Our awesome penguin app"</span>,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mod_overview_ui</span>(<span class="st">"overview_1"</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Next, we open the app_server script. We see it is currently empty - the welcome page is apparantly all UI and no server. We want to add a server of our own, and copy the server script from our module file (<code>mod_overview_server("overview_1")</code>)</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>app_server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Your application server logic</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mod_overview_server</span>(<span class="st">"overview_1"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>if we run <code>golem::run_dev()</code> we will now get an app with two tabs - the golem page and an empty page. We have made a modularized app! additional modules can be added the same way, and the size of scripts kept to a manageable size. Note that the background is purple, which is being hard set by golem - if we delete the golem welcome page it will go away.</p>
 </section>
-<section id="book-reading-task-title" class="level2" data-number="12.8">
-<h2 data-number="12.8" class="anchored" data-anchor-id="book-reading-task-title"><span class="header-section-number">12.8</span> :book: Reading task: Title</h2>
-<p><strong>Time: ~Num minutes.</strong></p>
-<p>Text</p>
+<section id="reading-activity-03_deploy.r" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="reading-activity-03_deploy.r"><span class="header-section-number">12.8</span> Reading activity: 03_deploy.R</h2>
+<p><strong>Time: \5 minutes.</strong></p>
+<p>In our dev folder we had a final file - 03_deploy.R. This one contains helper functions for when your app is ready to be shared with the world. it helps you build functions from your app into a package (and helps you check if it is good enough to be added to CRAN, where we download our packages from), and it contains a number of options to help prepare your app to be hosted on platforms such as posit connect or other platforms. Deploying is beyond the scope of this workshop, but this file will give you a number of options you can look up and find a solution that works for you. If you want an easy way to share apps, I encourage you to check out posit connect - they have free plans if your app is small, and once your account is connected, it requires few steps to upload and update apps.</p>
 {{&lt; text_snippet sticky_up &gt;}}
 </section>
 <section id="summary" class="level2" data-number="12.9">
 <h2 data-number="12.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">12.9</span> Summary</h2>
+<p>You have now learned</p>
 <ul>
-<li>TODO: List of summary items</li>
+<li><p>How to build an app with golem</p></li>
+<li><p>How the dev files work</p></li>
+<li><p>How modularization works</p></li>
+<li><p>Where you can find information about how to share your app with the world</p></li>
 </ul>
-</section>
-<section id="survey" class="level2" data-number="12.10">
-<h2 data-number="12.10" class="anchored" data-anchor-id="survey"><span class="header-section-number">12.10</span> Survey</h2>
-<p><a href="TODO" class="btn btn-primary" role="button">Feedback survey! :tada:</a></p>
 
 
 </section>
