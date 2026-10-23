@@ -1,14 +1,13 @@
 # Overview {#sec-pre-workshop}
 
 In order to participate in this workshop, you must complete everything
-in this section and finish with **completing the [survey](survey.qmd)
-(@sec-survey)** at the end. These tasks are meant to provide everyone
-with the necessary setup and a shared foundation for the workshop.
+in this section. These tasks are meant to provide everyone with the
+necessary setup and a shared foundation for the workshop.
 
-Depending on your prior knowledge and skills, these tasks could take
-between **TIME hrs to finish**, so we suggest planning some time to
-complete them. While many of the tasks are mostly readings, they are
-important in making sure you get the most out of the workshop.
+It is suggested to plan some time to complete the tasks, as duration may
+vary depending on your skill and prior experience. While many of the
+tasks are mostly readings, they are important in making sure you get the
+most out of the workshop.
 
 ## How to read this website
 
@@ -36,7 +35,7 @@ includes:
     packages.
 2.  Install necessary R packages.
 3.  Read the syllabus (@sec-syllabus).
-4.  Read the [Code of Conduct](/code-of-conduct.qmd)
+4.  Read the [Code of Conduct](/pre-workshop/code-of-conduct.qmd)
     (@sec-code-of-conduct).
 
 Check each section for exact details on completing these tasks.

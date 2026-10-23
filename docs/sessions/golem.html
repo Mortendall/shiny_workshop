@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>10&nbsp; Golem: a structured way to build and modularize your app</title>
+<title>9&nbsp; Golem: a structured way to build and modularize your app</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -127,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/introduction.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/golem.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/shinyapps.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/golem.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -216,32 +216,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sessions/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to workshop</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../sessions/shinyapps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Shiny apps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Shiny apps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sessions/golem.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sessions/build_app.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Building our app</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Building our app</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sessions/conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">What next</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">What next</span></span></a>
   </div>
 </li>
       </ul>
@@ -289,21 +283,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">10.1</span> Learning objectives</a></li>
-  <li><a href="#starting-a-golem" id="toc-starting-a-golem" class="nav-link" data-scroll-target="#starting-a-golem"><span class="header-section-number">10.2</span> Starting a golem</a></li>
-  <li><a href="#discussion-activity-01_start.r" id="toc-discussion-activity-01_start.r" class="nav-link" data-scroll-target="#discussion-activity-01_start.r"><span class="header-section-number">10.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: 01_start.R</a></li>
-  <li><a href="#exercise-activity-description" id="toc-exercise-activity-description" class="nav-link" data-scroll-target="#exercise-activity-description"><span class="header-section-number">10.4</span> <span class="emoji" data-emoji="technologist">🧑‍💻</span> Exercise activity: DESCRIPTION</a></li>
-  <li><a href="#development-and-modularization" id="toc-development-and-modularization" class="nav-link" data-scroll-target="#development-and-modularization"><span class="header-section-number">10.5</span> Development and modularization</a></li>
-  <li><a href="#discussion-activity-add_module" id="toc-discussion-activity-add_module" class="nav-link" data-scroll-target="#discussion-activity-add_module"><span class="header-section-number">10.6</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: add_module</a></li>
-  <li><a href="#making-our-first-module" id="toc-making-our-first-module" class="nav-link" data-scroll-target="#making-our-first-module"><span class="header-section-number">10.7</span> Making our first module</a></li>
-  <li><a href="#reading-activity-03_deploy.r" id="toc-reading-activity-03_deploy.r" class="nav-link" data-scroll-target="#reading-activity-03_deploy.r"><span class="header-section-number">10.8</span> Reading activity: 03_deploy.R</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">10.9</span> Summary</a></li>
+<li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">9.1</span> Learning objectives</a></li>
+  <li><a href="#starting-a-golem" id="toc-starting-a-golem" class="nav-link" data-scroll-target="#starting-a-golem"><span class="header-section-number">9.2</span> Starting a golem</a></li>
+  <li><a href="#discussion-activity-01_start.r" id="toc-discussion-activity-01_start.r" class="nav-link" data-scroll-target="#discussion-activity-01_start.r"><span class="header-section-number">9.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: 01_start.R</a></li>
+  <li><a href="#exercise-activity-description" id="toc-exercise-activity-description" class="nav-link" data-scroll-target="#exercise-activity-description"><span class="header-section-number">9.4</span> <span class="emoji" data-emoji="technologist">🧑‍💻</span> Exercise activity: DESCRIPTION</a></li>
+  <li><a href="#development-and-modularization" id="toc-development-and-modularization" class="nav-link" data-scroll-target="#development-and-modularization"><span class="header-section-number">9.5</span> Development and modularization</a></li>
+  <li><a href="#discussion-activity-add_module" id="toc-discussion-activity-add_module" class="nav-link" data-scroll-target="#discussion-activity-add_module"><span class="header-section-number">9.6</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: add_module</a></li>
+  <li><a href="#making-our-first-module" id="toc-making-our-first-module" class="nav-link" data-scroll-target="#making-our-first-module"><span class="header-section-number">9.7</span> Making our first module</a></li>
+  <li><a href="#reading-activity-03_deploy.r" id="toc-reading-activity-03_deploy.r" class="nav-link" data-scroll-target="#reading-activity-03_deploy.r"><span class="header-section-number">9.8</span> Reading activity: 03_deploy.R</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">9.9</span> Summary</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/mortendall/shiny_workshop/edit/main/sessions/golem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mortendall/shiny_workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mortendall/shiny_workshop/blob/main/sessions/golem.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/introduction.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/golem.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/shinyapps.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/golem.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span>
+<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span>
 </h1>
 </div>
 
@@ -319,8 +313,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </header><p>So far we have only run our app locally in the console. It is time to build an actual Shiny app! There are multiple ways to do this, but we will use the package called golem.</p>
-<section id="learning-objectives" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="learning-objectives">
-<span class="header-section-number">10.1</span> Learning objectives</h2>
+<section id="learning-objectives" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="learning-objectives">
+<span class="header-section-number">9.1</span> Learning objectives</h2>
 <p>The learning objectives for this session are:</p>
 <ol type="1">
 <li>Introduce participants to the golem module</li>
@@ -343,8 +337,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Is <code>golem</code> overkill for what we are doing here? Certainly! But I want to introduce it to you already so you know it, and once you start developing more complex apps, you know where to go.</p>
 </div>
 </div>
-</section><section id="starting-a-golem" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="starting-a-golem">
-<span class="header-section-number">10.2</span> Starting a golem</h2>
+</section><section id="starting-a-golem" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="starting-a-golem">
+<span class="header-section-number">9.2</span> Starting a golem</h2>
 <p>If we want to make a new app and we have golem installed, we can open the menu and select <code>new project</code> (like we did above) and pick <code>Package for shiny app using golem</code>. If we want to do this from the console.</p>
 <p>Lets make an app about something fun - penguins. We will call it “penguin app” (or “penguinapp” in R writing)</p>
 <div class="cell">
@@ -357,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <img src="../images/golem_files.png" class="img-fluid figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shiny_ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.1: Overview of the files created by golem
+Figure&nbsp;9.1: Overview of the files created by golem
 </figcaption></figure>
 </div>
 <p>This is actually a functional Shiny app, though at this stage it works a bit differently. We can run it with the command <code><a href="https://thinkr-open.github.io/golem/reference/run_dev.html">golem::run_dev()</a></code>. Running this command will take us to a golem welcome page with resources and information. This is very similar to the example in our shiny project above.</p>
@@ -368,8 +362,8 @@ Figure&nbsp;10.1: Overview of the files created by golem
 <li>03_deploy.R</li>
 </ul>
 <p>These three files contains a step by step guide to how you build and deploy a shiny app. You don’t have to do it all (or in the order you are asked to), but <code>golem</code> gives a suggested path through the development process, starting right after we create our app.</p>
-</section><section id="discussion-activity-01_start.r" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="discussion-activity-01_start.r">
-<span class="header-section-number">10.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: 01_start.R</h2>
+</section><section id="discussion-activity-01_start.r" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="discussion-activity-01_start.r">
+<span class="header-section-number">9.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: 01_start.R</h2>
 <p><strong>Time: ~5 minutes.</strong></p>
 <p>We don’t have time to go too much into detail this session with what you do in 01_start - but take a few minutes to open the file, and discuss the content with the person next to you. What kind of information does <code>golem</code> suggest you setup? Do you recognize any terms in this file?</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
@@ -404,8 +398,8 @@ Figure&nbsp;10.1: Overview of the files created by golem
 <span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>A DESCRIPTION file is also where you note what packages are required to run your app. This can be done by using the function <code>usethis::use_package(PACKAGE NAME)</code> Normally it is sufficient to call the package on it’s own, with a notable exception being the <code>tidyverse</code> package - here you should add the following: <code>usethis::use_package("tidyverse", type = "suggests")</code> because <code>tidyverse</code> is a collection. Adding used packages to the DESCRIPTION file makes it easier to deploy the app, because it makes it clear what packages need to be installed on your remote server.</p>
-</section><section id="exercise-activity-description" class="level2" data-number="10.4"><h2 data-number="10.4" class="anchored" data-anchor-id="exercise-activity-description">
-<span class="header-section-number">10.4</span> <span class="emoji" data-emoji="technologist">🧑‍💻</span> Exercise activity: DESCRIPTION</h2>
+</section><section id="exercise-activity-description" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="exercise-activity-description">
+<span class="header-section-number">9.4</span> <span class="emoji" data-emoji="technologist">🧑‍💻</span> Exercise activity: DESCRIPTION</h2>
 <p><strong>Time: ~5 minutes.</strong></p>
 <p>Fill out the information for the description file and run the code in the penguinapp folder. Add relevant packages we have used (or you expect we will use) using <code>usethis</code>.Think about <code>tidyverse</code> packages - what tools from that collection do we actually use?</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
@@ -421,8 +415,8 @@ Figure&nbsp;10.1: Overview of the files created by golem
 <p>When you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher <span class="emoji" data-emoji="womans_hat">👒</span> <span class="emoji" data-emoji="tophat">🎩</span></p>
 </div>
 </div>
-</section><section id="development-and-modularization" class="level2" data-number="10.5"><h2 data-number="10.5" class="anchored" data-anchor-id="development-and-modularization">
-<span class="header-section-number">10.5</span> Development and modularization</h2>
+</section><section id="development-and-modularization" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="development-and-modularization">
+<span class="header-section-number">9.5</span> Development and modularization</h2>
 <p>We will in this workshop be bad examples and start development on our penguin app before doing any of the housekeeping. if we are leading by example, this is a poor example indeed! But jokes aside, our second file 02_dev.R contains the scripts we need to build our app.</p>
 <p>There are many different functions in this file and we do not need all of them - a lot of these functions are advanced edge cases in case you want to implement specific programs or programming languages. It does contain some helpful functions:</p>
 <ul>
@@ -431,12 +425,12 @@ Figure&nbsp;10.1: Overview of the files created by golem
 <li>golem::add_utils(“helpers”, with_test = TRUE) creates a script for making helper functions, in case you develop your own functions to be used in the app</li>
 </ul>
 <p>The rest of the functions are beyond the scope of this workshop, except one: <code><a href="https://thinkr-open.github.io/golem/reference/add_module.html">golem::add_module()</a></code></p>
-</section><section id="discussion-activity-add_module" class="level2" data-number="10.6"><h2 data-number="10.6" class="anchored" data-anchor-id="discussion-activity-add_module">
-<span class="header-section-number">10.6</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: add_module</h2>
+</section><section id="discussion-activity-add_module" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="discussion-activity-add_module">
+<span class="header-section-number">9.6</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: add_module</h2>
 <p><strong>Time: ~5 minutes.</strong></p>
 <p>Open the add_module() function. Discuss with the person next to you what it does, and why this could be useful</p>
-</section><section id="making-our-first-module" class="level2" data-number="10.7"><h2 data-number="10.7" class="anchored" data-anchor-id="making-our-first-module">
-<span class="header-section-number">10.7</span> Making our first module</h2>
+</section><section id="making-our-first-module" class="level2" data-number="9.7"><h2 data-number="9.7" class="anchored" data-anchor-id="making-our-first-module">
+<span class="header-section-number">9.7</span> Making our first module</h2>
 <p>We want to make an app about the <code>penguins</code> dataset. In general, it is considered good design form to consider what the app should look like before we start coding. Lets take a look at the data and see what we can do with it:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span><span class="va">penguins</span>,n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -532,8 +526,8 @@ Figure&nbsp;10.1: Overview of the files created by golem
 <span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>if we run <code><a href="https://thinkr-open.github.io/golem/reference/run_dev.html">golem::run_dev()</a></code> we will now get an app with two tabs - the golem page and an empty page. We have made a modularized app! additional modules can be added the same way, and the size of scripts kept to a manageable size. Note that the background is purple, which is being hard set by golem - if we delete the golem welcome page it will go away.</p>
-</section><section id="reading-activity-03_deploy.r" class="level2" data-number="10.8"><h2 data-number="10.8" class="anchored" data-anchor-id="reading-activity-03_deploy.r">
-<span class="header-section-number">10.8</span> Reading activity: 03_deploy.R</h2>
+</section><section id="reading-activity-03_deploy.r" class="level2" data-number="9.8"><h2 data-number="9.8" class="anchored" data-anchor-id="reading-activity-03_deploy.r">
+<span class="header-section-number">9.8</span> Reading activity: 03_deploy.R</h2>
 <p><strong>Time: \5 minutes.</strong></p>
 <p>In our dev folder we had a final file - 03_deploy.R. This one contains helper functions for when your app is ready to be shared with the world. it helps you build functions from your app into a package (and helps you check if it is good enough to be added to CRAN, where we download our packages from), and it contains a number of options to help prepare your app to be hosted on platforms such as posit connect or other platforms. Deploying is beyond the scope of this workshop, but this file will give you a number of options you can look up and find a solution that works for you. If you want an easy way to share apps, I encourage you to check out posit connect - they have free plans if your app is small, and once your account is connected, it requires few steps to upload and update apps.</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
@@ -549,8 +543,8 @@ Figure&nbsp;10.1: Overview of the files created by golem
 <p>When you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher <span class="emoji" data-emoji="womans_hat">👒</span> <span class="emoji" data-emoji="tophat">🎩</span></p>
 </div>
 </div>
-</section><section id="summary" class="level2" data-number="10.9"><h2 data-number="10.9" class="anchored" data-anchor-id="summary">
-<span class="header-section-number">10.9</span> Summary</h2>
+</section><section id="summary" class="level2" data-number="9.9"><h2 data-number="9.9" class="anchored" data-anchor-id="summary">
+<span class="header-section-number">9.9</span> Summary</h2>
 <p>You have now learned</p>
 <ul>
 <li><p>How to build an app with golem</p></li>
@@ -961,12 +955,12 @@ Figure&nbsp;10.1: Overview of the files created by golem
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../sessions/shinyapps.html" class="pagination-link" aria-label="Shiny apps">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Shiny apps</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Shiny apps</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../sessions/build_app.html" class="pagination-link" aria-label="Building our app">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Building our app</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Building our app</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
