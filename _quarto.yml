@@ -1,5 +1,5 @@
 project:
-  type: book
+  type: rostools-theme
   output-dir: docs
 
   # TODO: Uncomment if you want to use slides.
@@ -28,7 +28,6 @@ book:
       chapters:
         - overview/syllabus.qmd
         - overview/is-this-for-you.qmd
-        - overview/schedule.qmd
         - overview/learning-design.qmd
     - part: "Pre-workshop"
       chapters:
@@ -36,7 +35,6 @@ book:
         - pre-workshop/installing-programs-r.qmd
         - pre-workshop/installing-r-packages.qmd
         - pre-workshop/code-of-conduct.qmd
-        - pre-workshop/survey.qmd
     - part: "Sessions"
       chapters:
         - sessions/introduction.qmd
@@ -57,13 +55,7 @@ book:
       - text: "Code of Conduct"
         href: "pre-workshop/code-of-conduct.qmd"
 
-format:
-  html: default
-  typst:
-    papersize: a4
-    margin:
-      x: 2cm
-      y: 2cm
+format: rostools-theme-html
 
 metadata-files:
   - _metadata.yml

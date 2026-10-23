@@ -84,8 +84,21 @@ The workshop material is created using [Quarto](https://quarto.org) to
 write the material and create the book format,
 [GitHub](https://github.com/) to host the [Git](https://git-scm.com/)
 repository of the material, and [GitHub
-Actions](https://github.com/features/actions) with
-[Netlify](https://www.netlify.com/) to build and host the website. The
-original source material for this workshop is found on the
-[`{{< meta gh.repo >}}`]({{< meta links.github >}}) GitHub repository.
+Actions](https://github.com/features/actions) with github pages to build
+and host the website. The original source material for this workshop is
+found on the [`{{< meta gh.repo >}}`]({{< meta links.github >}}) GitHub
+repository. The book and was made using the [Rostools workshop
+template](https://template-workshop.rostools.org/).
 
+## Acknowledgement
+
+This workshop is dedicated to [Luke W.
+Johnston](https://github.com/lwjohnst86) who is the driving force behind
+the [rostools course portfolio](https://github.com/rostools) and the
+[workshop template](https://template-workshop.rostools.org/). Luke is a
+great teacher and friend, who makes R programming accessible to many
+people. This workshop would not have been possible without him.
+
+Many of the concepts and packages used were originally taught at the
+workshops at posit::conf(2023) and posit::conf(2024), so the author
+wishes to acknowledge the teachers from these workshops as well.

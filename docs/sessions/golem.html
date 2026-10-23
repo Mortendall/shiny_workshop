@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>12&nbsp; Golem: a structured way to build and modularize your app</title>
+<title>10&nbsp; Golem: a structured way to build and modularize your app</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -63,31 +60,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sessions/conclusion.html" rel="next">
+<link href="../sessions/build_app.html" rel="next">
 <link href="../sessions/shinyapps.html" rel="prev">
+<link href="..\site_libs\quarto-contrib\quarto-project\rostools\rostools-theme\favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-f2f3720d61c840f4a81557a72cafc3fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b3a0ae3d575e4a0a28d8790bf29525bf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-f2f3720d61c840f4a81557a72cafc3fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c574c73dd0d0ff61020859ffc61752ee.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+<link href="../site_libs/bootstrap/bootstrap-8d79dd6f56de9b851f58c289edee8f5f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-7810eb57f272d89dd88639a1dea324b7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8d79dd6f56de9b851f58c289edee8f5f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
+  "panel-placement": "end",
   "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
@@ -95,7 +94,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -110,44 +108,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/introduction.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/golem.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-        <div class="sidebar-tools-collapse">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="..\site_libs\quarto-contrib\quarto-project\rostools\rostools-theme\favicon-white.ico" alt="Logo of a capitalised R with two curved arrows circling it." class="navbar-logo light-content"><img src="..\site_libs\quarto-contrib\quarto-project\rostools\rostools-theme\favicon-white.ico" alt="Logo of a capitalised R with two curved arrows circling it." class="navbar-logo dark-content"></a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
     <a href="https://github.com/mortendall/shiny_workshop" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <a href="../shiny_workshop.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
-    <div class="sidebar-menu-container"> 
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/introduction.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/golem.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
@@ -161,8 +149,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../overview/syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Syllabus</span></span></a>
@@ -176,18 +164,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../overview/schedule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Schedule</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../overview/learning-design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Learning design</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Learning design</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -196,39 +178,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pre-workshop/overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pre-workshop/installing-programs-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Installing the programs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Installing the programs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pre-workshop/installing-r-packages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Installing R Packages</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Installing R Packages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pre-workshop/code-of-conduct.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code of conduct</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pre-workshop/survey.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Survey</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Code of conduct</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
@@ -237,33 +213,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sessions/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to workshop</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to workshop</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sessions/shinyapps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Shiny apps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Shiny apps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sessions/golem.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sessions/build_app.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Building our app</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sessions/conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">What next</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">What next</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
@@ -272,8 +254,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendix/for-teachers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">For teachers</span></span></a>
@@ -298,35 +280,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">12.1</span> Learning objectives</a></li>
-  <li><a href="#starting-a-golem" id="toc-starting-a-golem" class="nav-link" data-scroll-target="#starting-a-golem"><span class="header-section-number">12.2</span> Starting a golem</a></li>
-  <li><a href="#speech_balloon-discussion-activity-01_start.r" id="toc-speech_balloon-discussion-activity-01_start.r" class="nav-link" data-scroll-target="#speech_balloon-discussion-activity-01_start.r"><span class="header-section-number">12.3</span> :speech_balloon: Discussion activity: 01_start.R</a></li>
-  <li><a href="#technologist-exercise-activity-description" id="toc-technologist-exercise-activity-description" class="nav-link" data-scroll-target="#technologist-exercise-activity-description"><span class="header-section-number">12.4</span> :technologist: Exercise activity: DESCRIPTION</a></li>
-  <li><a href="#development-and-modularization" id="toc-development-and-modularization" class="nav-link" data-scroll-target="#development-and-modularization"><span class="header-section-number">12.5</span> Development and modularization</a></li>
-  <li><a href="#speech_balloon-discussion-activity-add_module" id="toc-speech_balloon-discussion-activity-add_module" class="nav-link" data-scroll-target="#speech_balloon-discussion-activity-add_module"><span class="header-section-number">12.6</span> :speech_balloon: Discussion activity: add_module</a></li>
-  <li><a href="#making-our-first-module" id="toc-making-our-first-module" class="nav-link" data-scroll-target="#making-our-first-module"><span class="header-section-number">12.7</span> Making our first module</a></li>
-  <li><a href="#reading-activity-03_deploy.r" id="toc-reading-activity-03_deploy.r" class="nav-link" data-scroll-target="#reading-activity-03_deploy.r"><span class="header-section-number">12.8</span> Reading activity: 03_deploy.R</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">12.9</span> Summary</a></li>
-  </ul>
-</nav>
+<li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">10.1</span> Learning objectives</a></li>
+  <li><a href="#starting-a-golem" id="toc-starting-a-golem" class="nav-link" data-scroll-target="#starting-a-golem"><span class="header-section-number">10.2</span> Starting a golem</a></li>
+  <li><a href="#discussion-activity-01_start.r" id="toc-discussion-activity-01_start.r" class="nav-link" data-scroll-target="#discussion-activity-01_start.r"><span class="header-section-number">10.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: 01_start.R</a></li>
+  <li><a href="#exercise-activity-description" id="toc-exercise-activity-description" class="nav-link" data-scroll-target="#exercise-activity-description"><span class="header-section-number">10.4</span> <span class="emoji" data-emoji="technologist">🧑‍💻</span> Exercise activity: DESCRIPTION</a></li>
+  <li><a href="#development-and-modularization" id="toc-development-and-modularization" class="nav-link" data-scroll-target="#development-and-modularization"><span class="header-section-number">10.5</span> Development and modularization</a></li>
+  <li><a href="#discussion-activity-add_module" id="toc-discussion-activity-add_module" class="nav-link" data-scroll-target="#discussion-activity-add_module"><span class="header-section-number">10.6</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: add_module</a></li>
+  <li><a href="#making-our-first-module" id="toc-making-our-first-module" class="nav-link" data-scroll-target="#making-our-first-module"><span class="header-section-number">10.7</span> Making our first module</a></li>
+  <li><a href="#reading-activity-03_deploy.r" id="toc-reading-activity-03_deploy.r" class="nav-link" data-scroll-target="#reading-activity-03_deploy.r"><span class="header-section-number">10.8</span> Reading activity: 03_deploy.R</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">10.9</span> Summary</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/mortendall/shiny_workshop/edit/main/sessions/golem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mortendall/shiny_workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mortendall/shiny_workshop/blob/main/sessions/golem.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/introduction.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/golem.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sessions/introduction.html">Sessions</a></li><li class="breadcrumb-item"><a href="../sessions/golem.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Golem: a structured way to build and modularize your app</span>
+</h1>
 </div>
 
 
@@ -340,12 +318,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<p>So far we have only run our app locally in the console. It is time to build an actual Shiny app! There are multiple ways to do this, but we will use the package called golem.</p>
-<section id="learning-objectives" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">12.1</span> Learning objectives</h2>
+</header><p>So far we have only run our app locally in the console. It is time to build an actual Shiny app! There are multiple ways to do this, but we will use the package called golem.</p>
+<section id="learning-objectives" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="learning-objectives">
+<span class="header-section-number">10.1</span> Learning objectives</h2>
 <p>The learning objectives for this session are:</p>
 <ol type="1">
 <li>Introduce participants to the golem module</li>
@@ -368,27 +343,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Is <code>golem</code> overkill for what we are doing here? Certainly! But I want to introduce it to you already so you know it, and once you start developing more complex apps, you know where to go.</p>
 </div>
 </div>
-</section>
-<section id="starting-a-golem" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="starting-a-golem"><span class="header-section-number">12.2</span> Starting a golem</h2>
+</section><section id="starting-a-golem" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="starting-a-golem">
+<span class="header-section-number">10.2</span> Starting a golem</h2>
 <p>If we want to make a new app and we have golem installed, we can open the menu and select <code>new project</code> (like we did above) and pick <code>Package for shiny app using golem</code>. If we want to do this from the console.</p>
 <p>Lets make an app about something fun - penguins. We will call it “penguin app” (or “penguinapp” in R writing)</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">create_golem</span>(<span class="at">path =</span> <span class="st">"C:/Your_R_projects_destination/penguinapp"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">golem</span><span class="fu">::</span><span class="fu"><a href="https://thinkr-open.github.io/golem/reference/create_golem.html">create_golem</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"C:/Your_R_projects_destination/penguinapp"</span></span>
+<span>                    <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Running this command (with a package name of your choice) creates a new R project called penguinapp. We will see this has quite a few more files than our standard Shiny project.</p>
 <div id="fig-shiny_ui" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-shiny_ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-shiny_ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/golem_files.png" class="img-fluid figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shiny_ui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.1: Overview of the files created by golem
-</figcaption>
-</figure>
+Figure&nbsp;10.1: Overview of the files created by golem
+</figcaption></figure>
 </div>
-<p>This is actually a functional Shiny app, though at this stage it works a bit differently. We can run it with the command <code>golem::run_dev()</code>. Running this command will take us to a golem welcome page with resources and information. This is very similar to the example in our shiny project above.</p>
+<p>This is actually a functional Shiny app, though at this stage it works a bit differently. We can run it with the command <code><a href="https://thinkr-open.github.io/golem/reference/run_dev.html">golem::run_dev()</a></code>. Running this command will take us to a golem welcome page with resources and information. This is very similar to the example in our shiny project above.</p>
 <p>To understand what golem really offers, it is beneficial to look at the dev folder. In this folder we will see three documents:</p>
 <ul>
 <li>01_start.R</li>
@@ -396,40 +368,61 @@ Figure&nbsp;12.1: Overview of the files created by golem
 <li>03_deploy.R</li>
 </ul>
 <p>These three files contains a step by step guide to how you build and deploy a shiny app. You don’t have to do it all (or in the order you are asked to), but <code>golem</code> gives a suggested path through the development process, starting right after we create our app.</p>
-</section>
-<section id="speech_balloon-discussion-activity-01_start.r" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="speech_balloon-discussion-activity-01_start.r"><span class="header-section-number">12.3</span> :speech_balloon: Discussion activity: 01_start.R</h2>
+</section><section id="discussion-activity-01_start.r" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="discussion-activity-01_start.r">
+<span class="header-section-number">10.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: 01_start.R</h2>
 <p><strong>Time: ~5 minutes.</strong></p>
 <p>We don’t have time to go too much into detail this session with what you do in 01_start - but take a few minutes to open the file, and discuss the content with the person next to you. What kind of information does <code>golem</code> suggest you setup? Do you recognize any terms in this file?</p>
-{{&lt; text_snippet sticky_up &gt;}}
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Sticky/hat up!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher <span class="emoji" data-emoji="womans_hat">👒</span> <span class="emoji" data-emoji="tophat">🎩</span></p>
+</div>
+</div>
 <p><code>golem</code> helps you with a lot of housekeeping you usually end up doing last minutes, including making a DESCRIPTION file (which contains a lot of input about required packages, info on the author, and whether you have coined a specific license to the usage of your package.) It also helps you with a number of other helpful tools for reproducible development such as using git and github. By doing this ahead of time, you do all the legwork before development begins, and you won’t have to do it once your app has grown in size.</p>
 <p>At this point we will limit ourselves to making a DESCRIPTION file by running the following:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">fill_desc</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">pkg_name =</span> <span class="st">"penguinapp"</span>, <span class="co"># The name of the golem package containing the app (typically lowercase, no underscore or periods)</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">pkg_title =</span> <span class="st">"PKG_TITLE"</span>, <span class="co"># What the Package Does (One Line, Title Case, No Period)</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">pkg_description =</span> <span class="st">"PKG_DESC."</span>, <span class="co"># What the package does (one paragraph).</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">authors =</span> <span class="fu">person</span>(</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">given =</span> <span class="st">"AUTHOR_FIRST"</span>, <span class="co"># Your First Name</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">family =</span> <span class="st">"AUTHOR_LAST"</span>, <span class="co"># Your Last Name</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">email =</span> <span class="st">"AUTHOR@MAIL.COM"</span>, <span class="co"># Your email</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">role =</span> <span class="fu">c</span>(<span class="st">"aut"</span>, <span class="st">"cre"</span>) <span class="co"># Your role (here author/creator)</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">repo_url =</span> <span class="cn">NULL</span>, <span class="co"># The URL of the GitHub repo (optional),</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">pkg_version =</span> <span class="st">"0.0.0.9000"</span>, <span class="co"># The version of the package containing the app</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">set_options =</span> <span class="cn">TRUE</span> <span class="co"># Set the global golem options</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">golem</span><span class="fu">::</span><span class="fu"><a href="https://thinkr-open.github.io/golem/reference/fill_desc.html">fill_desc</a></span><span class="op">(</span></span>
+<span>  pkg_name <span class="op">=</span> <span class="st">"penguinapp"</span>, <span class="co"># The name of the golem package containing the app (typically lowercase, no underscore or periods)</span></span>
+<span>  pkg_title <span class="op">=</span> <span class="st">"PKG_TITLE"</span>, <span class="co"># What the Package Does (One Line, Title Case, No Period)</span></span>
+<span>  pkg_description <span class="op">=</span> <span class="st">"PKG_DESC."</span>, <span class="co"># What the package does (one paragraph).</span></span>
+<span>  authors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/utils/person.html">person</a></span><span class="op">(</span></span>
+<span>    given <span class="op">=</span> <span class="st">"AUTHOR_FIRST"</span>, <span class="co"># Your First Name</span></span>
+<span>    family <span class="op">=</span> <span class="st">"AUTHOR_LAST"</span>, <span class="co"># Your Last Name</span></span>
+<span>    email <span class="op">=</span> <span class="st">"AUTHOR@MAIL.COM"</span>, <span class="co"># Your email</span></span>
+<span>    role <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"aut"</span>, <span class="st">"cre"</span><span class="op">)</span> <span class="co"># Your role (here author/creator)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  repo_url <span class="op">=</span> <span class="cn">NULL</span>, <span class="co"># The URL of the GitHub repo (optional),</span></span>
+<span>  pkg_version <span class="op">=</span> <span class="st">"0.0.0.9000"</span>, <span class="co"># The version of the package containing the app</span></span>
+<span>  set_options <span class="op">=</span> <span class="cn">TRUE</span> <span class="co"># Set the global golem options</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>A DESCRIPTION file is also where you note what packages are required to run your app. This can be done by using the function <code>usethis::use_package(PACKAGE NAME)</code> Normally it is sufficient to call the package on it’s own, with a notable exception being the <code>tidyverse</code> package - here you should add the following: <code>usethis::use_package("tidyverse", type = "suggests")</code> because <code>tidyverse</code> is a collection. Adding used packages to the DESCRIPTION file makes it easier to deploy the app, because it makes it clear what packages need to be installed on your remote server.</p>
-</section>
-<section id="technologist-exercise-activity-description" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="technologist-exercise-activity-description"><span class="header-section-number">12.4</span> :technologist: Exercise activity: DESCRIPTION</h2>
+</section><section id="exercise-activity-description" class="level2" data-number="10.4"><h2 data-number="10.4" class="anchored" data-anchor-id="exercise-activity-description">
+<span class="header-section-number">10.4</span> <span class="emoji" data-emoji="technologist">🧑‍💻</span> Exercise activity: DESCRIPTION</h2>
 <p><strong>Time: ~5 minutes.</strong></p>
 <p>Fill out the information for the description file and run the code in the penguinapp folder. Add relevant packages we have used (or you expect we will use) using <code>usethis</code>.Think about <code>tidyverse</code> packages - what tools from that collection do we actually use?</p>
-{{&lt; text_snippet sticky_up &gt;}}
-</section>
-<section id="development-and-modularization" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="development-and-modularization"><span class="header-section-number">12.5</span> Development and modularization</h2>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Sticky/hat up!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher <span class="emoji" data-emoji="womans_hat">👒</span> <span class="emoji" data-emoji="tophat">🎩</span></p>
+</div>
+</div>
+</section><section id="development-and-modularization" class="level2" data-number="10.5"><h2 data-number="10.5" class="anchored" data-anchor-id="development-and-modularization">
+<span class="header-section-number">10.5</span> Development and modularization</h2>
 <p>We will in this workshop be bad examples and start development on our penguin app before doing any of the housekeeping. if we are leading by example, this is a poor example indeed! But jokes aside, our second file 02_dev.R contains the scripts we need to build our app.</p>
 <p>There are many different functions in this file and we do not need all of them - a lot of these functions are advanced edge cases in case you want to implement specific programs or programming languages. It does contain some helpful functions:</p>
 <ul>
@@ -437,117 +430,127 @@ Figure&nbsp;12.1: Overview of the files created by golem
 <li>usethis::use_data_raw() is helpful if you want to use data in your app</li>
 <li>golem::add_utils(“helpers”, with_test = TRUE) creates a script for making helper functions, in case you develop your own functions to be used in the app</li>
 </ul>
-<p>The rest of the functions are beyond the scope of this workshop, except one: <code>golem::add_module()</code></p>
-</section>
-<section id="speech_balloon-discussion-activity-add_module" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="speech_balloon-discussion-activity-add_module"><span class="header-section-number">12.6</span> :speech_balloon: Discussion activity: add_module</h2>
+<p>The rest of the functions are beyond the scope of this workshop, except one: <code><a href="https://thinkr-open.github.io/golem/reference/add_module.html">golem::add_module()</a></code></p>
+</section><section id="discussion-activity-add_module" class="level2" data-number="10.6"><h2 data-number="10.6" class="anchored" data-anchor-id="discussion-activity-add_module">
+<span class="header-section-number">10.6</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: add_module</h2>
 <p><strong>Time: ~5 minutes.</strong></p>
 <p>Open the add_module() function. Discuss with the person next to you what it does, and why this could be useful</p>
-</section>
-<section id="making-our-first-module" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="making-our-first-module"><span class="header-section-number">12.7</span> Making our first module</h2>
+</section><section id="making-our-first-module" class="level2" data-number="10.7"><h2 data-number="10.7" class="anchored" data-anchor-id="making-our-first-module">
+<span class="header-section-number">10.7</span> Making our first module</h2>
 <p>We want to make an app about the <code>penguins</code> dataset. In general, it is considered good design form to consider what the app should look like before we start coding. Lets take a look at the data and see what we can do with it:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">slice_head</span>(penguins,<span class="at">n =</span> <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span><span class="va">penguins</span>,n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   species    island bill_len bill_dep flipper_len body_mass    sex year
-1   Adelie Torgersen     39.1     18.7         181      3750   male 2007
-2   Adelie Torgersen     39.5     17.4         186      3800 female 2007
-3   Adelie Torgersen     40.3     18.0         195      3250 female 2007
-4   Adelie Torgersen       NA       NA          NA        NA   &lt;NA&gt; 2007
-5   Adelie Torgersen     36.7     19.3         193      3450 female 2007
-6   Adelie Torgersen     39.3     20.6         190      3650   male 2007
-7   Adelie Torgersen     38.9     17.8         181      3625 female 2007
-8   Adelie Torgersen     39.2     19.6         195      4675   male 2007
-9   Adelie Torgersen     34.1     18.1         193      3475   &lt;NA&gt; 2007
-10  Adelie Torgersen     42.0     20.2         190      4250   &lt;NA&gt; 2007</code></pre>
+<pre><code># A tibble: 10 × 8
+   species island    bill_len bill_dep flipper_len body_mass sex    year
+   &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;     &lt;int&gt; &lt;fct&gt; &lt;int&gt;
+ 1 Adelie  Torgersen     39.1     18.7         181      3750 male   2007
+ 2 Adelie  Torgersen     39.5     17.4         186      3800 fema…  2007
+ 3 Adelie  Torgersen     40.3     18           195      3250 fema…  2007
+ 4 Adelie  Torgersen     NA       NA            NA        NA &lt;NA&gt;   2007
+ 5 Adelie  Torgersen     36.7     19.3         193      3450 fema…  2007
+ 6 Adelie  Torgersen     39.3     20.6         190      3650 male   2007
+ 7 Adelie  Torgersen     38.9     17.8         181      3625 fema…  2007
+ 8 Adelie  Torgersen     39.2     19.6         195      4675 male   2007
+ 9 Adelie  Torgersen     34.1     18.1         193      3475 &lt;NA&gt;   2007
+10 Adelie  Torgersen     42       20.2         190      4250 &lt;NA&gt;   2007</code></pre>
 </div>
 </div>
 <p>We see we have eight different columns with data about the penguins - species, island, bill length, etc. Lets make a module called “overview” where we will make a an explorative plot in the next chapter. For now, we build the module:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">add_module</span>(<span class="at">name =</span> <span class="st">"overview"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">golem</span><span class="fu">::</span><span class="fu"><a href="https://thinkr-open.github.io/golem/reference/add_module.html">add_module</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"overview"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>you will notice the standard golem output includes an argument stating <code>with_test=TRUE</code>. This is not necessary for our app, and truth being told I have yet to grasp the potential and utility in the tests offered by golem. Know they are there, and you can look for information if this is of interest to you.</p>
 <p>If we run this command, we should now get a new file - we get a console output stating <code>File created at R/mod_overview.R</code>. Looking in our R folder we see there now is a script called mod_overview.R. The script contains several chunks - lets go through them in turn</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mod_overview_ui <span class="ot">&lt;-</span> <span class="cf">function</span>(id) {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  ns <span class="ot">&lt;-</span> <span class="fu">NS</span>(id)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mod_overview_ui</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">id</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">ns</span> <span class="op">&lt;-</span> <span class="fu">NS</span><span class="op">(</span><span class="va">id</span><span class="op">)</span></span>
+<span>  <span class="fu">tagList</span><span class="op">(</span></span>
+<span> </span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>This first chunk is the UI component. In the function called <code>tagList</code> (from shiny) we can add all the UI components we desire - cards, pages, you name it.</p>
 <p>Next thing we see is the server:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mod_overview_server <span class="ot">&lt;-</span> <span class="cf">function</span>(id){</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">moduleServer</span>(id, <span class="cf">function</span>(input, output, session){</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    ns <span class="ot">&lt;-</span> session<span class="sc">$</span>ns</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mod_overview_server</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">id</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu">moduleServer</span><span class="op">(</span><span class="va">id</span>, <span class="kw">function</span><span class="op">(</span><span class="va">input</span>, <span class="va">output</span>, <span class="va">session</span><span class="op">)</span><span class="op">{</span></span>
+<span>    <span class="va">ns</span> <span class="op">&lt;-</span> <span class="va">session</span><span class="op">$</span><span class="va">ns</span></span>
+<span> </span>
+<span>  <span class="op">}</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>In this, we put the server component in. So far, this is very similar to our initial example. The next part is commented out (with #) but is quite interesting:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## To be copied in the UI</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mod_overview_ui("overview_1")</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="do">## To be copied in the server</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># mod_overview_server("overview_1")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## To be copied in the UI</span></span>
+<span><span class="co"># mod_overview_ui("overview_1")</span></span>
+<span>    </span>
+<span><span class="co">## To be copied in the server</span></span>
+<span><span class="co"># mod_overview_server("overview_1")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>golem</code> gives us to two functions we can paste into our UI and server script. These are also found in the /R folder and are called “app_ui” and “app_server”. If we open app_ui we will see the following in the top part:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>app_ui <span class="ot">&lt;-</span> <span class="cf">function</span>(request) {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Leave this function for adding external resources</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">golem_add_external_resources</span>(),</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Your application UI logic</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fluidPage</span>(</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>      golem<span class="sc">::</span><span class="fu">golem_welcome_page</span>() <span class="co"># Remove this line to start building your UI</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">app_ui</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">request</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">tagList</span><span class="op">(</span></span>
+<span>    <span class="co"># Leave this function for adding external resources</span></span>
+<span>    <span class="fu">golem_add_external_resources</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    <span class="co"># Your application UI logic</span></span>
+<span>    <span class="fu">fluidPage</span><span class="op">(</span></span>
+<span>      <span class="fu">golem</span><span class="fu">::</span><span class="fu"><a href="https://thinkr-open.github.io/golem/reference/golem_welcome_page.html">golem_welcome_page</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># Remove this line to start building your UI</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Here we see the description of the UI - it describes the <code>golem</code> demo page we saw before, with all the golem resources. Standard is <code>shiny::fluidPage</code>, but if you want to use <code>bslib</code> as we discussed in the previous chapter, it is worth upgrading the page type to a one from this package - the equivalent is <code>bslib::page_fluid()</code>. Using the default <code>shiny::fluidPage</code> can cause some unexpected interactions with <code>bslib elements</code>.</p>
-<p>In this case, we like the <code>golem</code> page, but we want to make a page of our own. We will turn it into a page with a navigation bar, and add our new module. We replace <code>fluidPage</code> with <code>bslib::page_navbar()</code>, and wrap the <code>golem_welcome_page()</code> in <code>bslib::nav_panel()</code>, telling shiny that we want it to be displayed as a panel in the navigation bar. We also give a title for the tab.</p>
+<p>Here we see the description of the UI - it describes the <code>golem</code> demo page we saw before, with all the golem resources. Standard is <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">shiny::fluidPage</a></code>, but if you want to use <code>bslib</code> as we discussed in the previous chapter, it is worth upgrading the page type to a one from this package - the equivalent is <code><a href="https://rstudio.github.io/bslib/reference/page.html">bslib::page_fluid()</a></code>. Using the default <code><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">shiny::fluidPage</a></code> can cause some unexpected interactions with <code>bslib elements</code>.</p>
+<p>In this case, we like the <code>golem</code> page, but we want to make a page of our own. We will turn it into a page with a navigation bar, and add our new module. We replace <code>fluidPage</code> with <code><a href="https://rstudio.github.io/bslib/reference/page_navbar.html">bslib::page_navbar()</a></code>, and wrap the <code>golem_welcome_page()</code> in <code><a href="https://rstudio.github.io/bslib/reference/nav-items.html">bslib::nav_panel()</a></code>, telling shiny that we want it to be displayed as a panel in the navigation bar. We also give a title for the tab.</p>
 <p>Then we copy the text from the golem module (<code>mod_overview_ui("overview_1")</code>) into another <code>nav_panel()</code> instance, and gives it a title.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>app_ui <span class="ot">&lt;-</span> <span class="cf">function</span>(request) {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Leave this function for adding external resources</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">golem_add_external_resources</span>(),</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Your application UI logic</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    bslib<span class="sc">::</span><span class="fu">page_navbar</span>(</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>      bslib<span class="sc">::</span><span class="fu">nav_panel</span>(</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"golem welcome page"</span>,</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        golem<span class="sc">::</span><span class="fu">golem_welcome_page</span>()</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      ),</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      bslib<span class="sc">::</span><span class="fu">nav_panel</span>(</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Our awesome penguin app"</span>,</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mod_overview_ui</span>(<span class="st">"overview_1"</span>)</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>       </span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">app_ui</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">request</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">tagList</span><span class="op">(</span></span>
+<span>    <span class="co"># Leave this function for adding external resources</span></span>
+<span>    <span class="fu">golem_add_external_resources</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    <span class="co"># Your application UI logic</span></span>
+<span>    <span class="fu">bslib</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/bslib/reference/page_navbar.html">page_navbar</a></span><span class="op">(</span></span>
+<span>      <span class="fu">bslib</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/bslib/reference/nav-items.html">nav_panel</a></span><span class="op">(</span></span>
+<span>        title <span class="op">=</span> <span class="st">"golem welcome page"</span>,</span>
+<span>        <span class="fu">golem</span><span class="fu">::</span><span class="fu"><a href="https://thinkr-open.github.io/golem/reference/golem_welcome_page.html">golem_welcome_page</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>      <span class="op">)</span>,</span>
+<span>      <span class="fu">bslib</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/bslib/reference/nav-items.html">nav_panel</a></span><span class="op">(</span></span>
+<span>        title <span class="op">=</span> <span class="st">"Our awesome penguin app"</span>,</span>
+<span>        <span class="fu">mod_overview_ui</span><span class="op">(</span><span class="st">"overview_1"</span><span class="op">)</span></span>
+<span>      <span class="op">)</span></span>
+<span>       </span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, we open the app_server script. We see it is currently empty - the welcome page is apparantly all UI and no server. We want to add a server of our own, and copy the server script from our module file (<code>mod_overview_server("overview_1")</code>)</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>app_server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Your application server logic</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mod_overview_server</span>(<span class="st">"overview_1"</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">app_server</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">input</span>, <span class="va">output</span>, <span class="va">session</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="co"># Your application server logic</span></span>
+<span>  <span class="fu">mod_overview_server</span><span class="op">(</span><span class="st">"overview_1"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>if we run <code>golem::run_dev()</code> we will now get an app with two tabs - the golem page and an empty page. We have made a modularized app! additional modules can be added the same way, and the size of scripts kept to a manageable size. Note that the background is purple, which is being hard set by golem - if we delete the golem welcome page it will go away.</p>
-</section>
-<section id="reading-activity-03_deploy.r" class="level2" data-number="12.8">
-<h2 data-number="12.8" class="anchored" data-anchor-id="reading-activity-03_deploy.r"><span class="header-section-number">12.8</span> Reading activity: 03_deploy.R</h2>
+<p>if we run <code><a href="https://thinkr-open.github.io/golem/reference/run_dev.html">golem::run_dev()</a></code> we will now get an app with two tabs - the golem page and an empty page. We have made a modularized app! additional modules can be added the same way, and the size of scripts kept to a manageable size. Note that the background is purple, which is being hard set by golem - if we delete the golem welcome page it will go away.</p>
+</section><section id="reading-activity-03_deploy.r" class="level2" data-number="10.8"><h2 data-number="10.8" class="anchored" data-anchor-id="reading-activity-03_deploy.r">
+<span class="header-section-number">10.8</span> Reading activity: 03_deploy.R</h2>
 <p><strong>Time: \5 minutes.</strong></p>
 <p>In our dev folder we had a final file - 03_deploy.R. This one contains helper functions for when your app is ready to be shared with the world. it helps you build functions from your app into a package (and helps you check if it is good enough to be added to CRAN, where we download our packages from), and it contains a number of options to help prepare your app to be hosted on platforms such as posit connect or other platforms. Deploying is beyond the scope of this workshop, but this file will give you a number of options you can look up and find a solution that works for you. If you want an easy way to share apps, I encourage you to check out posit connect - they have free plans if your app is small, and once your account is connected, it requires few steps to upload and update apps.</p>
-{{&lt; text_snippet sticky_up &gt;}}
-</section>
-<section id="summary" class="level2" data-number="12.9">
-<h2 data-number="12.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">12.9</span> Summary</h2>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Sticky/hat up!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher <span class="emoji" data-emoji="womans_hat">👒</span> <span class="emoji" data-emoji="tophat">🎩</span></p>
+</div>
+</div>
+</section><section id="summary" class="level2" data-number="10.9"><h2 data-number="10.9" class="anchored" data-anchor-id="summary">
+<span class="header-section-number">10.9</span> Summary</h2>
 <p>You have now learned</p>
 <ul>
 <li><p>How to build an app with golem</p></li>
@@ -557,10 +560,7 @@ Figure&nbsp;12.1: Overview of the files created by golem
 </ul>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -959,28 +959,25 @@ Figure&nbsp;12.1: Overview of the files created by golem
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../sessions/shinyapps.html" class="pagination-link" aria-label="Shiny apps">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Shiny apps</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Shiny apps</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sessions/conclusion.html" class="pagination-link" aria-label="What next">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">What next</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../sessions/build_app.html" class="pagination-link" aria-label="Building our app">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Building our app</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link active" href="../LICENSE.html" aria-current="page">
 <p>License: CC BY 4.0</p>
 </a>
@@ -991,14 +988,12 @@ Figure&nbsp;12.1: Overview of the files created by golem
 </a>
   </li>  
 </ul>
-    </div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mortendall/shiny_workshop/edit/main/sessions/golem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mortendall/shiny_workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mortendall/shiny_workshop/blob/main/sessions/golem.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

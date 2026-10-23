@@ -14,7 +14,7 @@
     "href": "index.html#target-audiences",
     "title": "Welcome",
     "section": "Target audiences",
-    "text": "Target audiences\nThis website and its content are targeted to three groups:\n\nFor the learners to use during the workshop, both to follow along and also to use as a reference after the workshop ends. A more detailed description of who the learner is can be found in Is this for you?\nFor the teachers to use as a guide for when they do the type-along sessions.\nFor those who are interested in teaching, who may not have much experience or may not know where to start, to use this website as a guide to running and teaching their own workshops.",
+    "text": "Target audiences\nThis website and its content are targeted to three groups:\n\nFor the learners to use during the workshop, both to follow along and also to use as a reference after the workshop ends. A more detailed description of who the learner is can be found in Is this for you?\n\nFor the teachers to use as a guide for when they do the type-along sessions.\nFor those who are interested in teaching, who may not have much experience or may not know where to start, to use this website as a guide to running and teaching their own workshops.",
     "crumbs": [
       "Welcome"
     ]
@@ -44,7 +44,17 @@
     "href": "index.html#how-the-website-is-made",
     "title": "Welcome",
     "section": "How the website is made",
-    "text": "How the website is made\nThe workshop material is created using Quarto to write the material and create the book format, GitHub to host the Git repository of the material, and GitHub Actions with Netlify to build and host the website. The original source material for this workshop is found on the shiny_workshop GitHub repository.",
+    "text": "How the website is made\nThe workshop material is created using Quarto to write the material and create the book format, GitHub to host the Git repository of the material, and GitHub Actions with github pages to build and host the website. The original source material for this workshop is found on the shiny_workshop GitHub repository. The book and was made using the Rostools workshop template.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgement",
+    "href": "index.html#acknowledgement",
+    "title": "Welcome",
+    "section": "Acknowledgement",
+    "text": "Acknowledgement\nThis workshop is dedicated to Luke W. Johnston who is the driving force behind the rostools course portfolio and the workshop template. Luke is a great teacher and friend, who makes R programming accessible to many people. This workshop would not have been possible without him.\nMany of the concepts and packages used were originally taught at the workshops at posit::conf(2023) and posit::conf(2024), so the author wishes to acknowledge the teachers from these workshops as well.",
     "crumbs": [
       "Welcome"
     ]
@@ -54,7 +64,7 @@
     "href": "overview/syllabus.html",
     "title": "1  Syllabus",
     "section": "",
-    "text": "1.1 Learning outcome and objectives\nTODO: Include description and overall introduction of workshop\nThis workshop lasts TODO: Time and is split into the following sessions, listed in the schedule, which will be covered in order:\nThe overall aim of this workshop is to enable you to:\nBroken down into specific objectives for each session, we’ve designed the workshop to enable you to do the following:\nTODO: Session title\nTangibly, during the workshop you will:",
+    "text": "1.1 Learning outcome and objectives\nTODO: Include description and overall introduction of workshop\nThis workshop lasts 2 hours and is split into the following sessions, , which will be covered in order:\nThe overall aim of this workshop is to enable you to:\nBroken down into specific objectives for each session, the workshop has been designed to enable you to do the following:\nShiny apps\nGolem\nBuilding our app\nTangibly, during the workshop you will:",
     "crumbs": [
       "Overview",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Syllabus</span>"
@@ -65,7 +75,7 @@
     "href": "overview/syllabus.html#learning-outcome-and-objectives",
     "title": "1  Syllabus",
     "section": "",
-    "text": "Aim one\n\n\n\n\nObjective one\n\n\n\nLearn what a Shiny app is\nCreate one with the golem package\nBuild a dashboard using the palmerpenguins dataset\nStore files as parquet\nMake graphs interactive using plotly",
+    "text": "Understand how a shiny app works and how you build it\nShow you how to modularize it\nTeach you how you can improve performance of loading- and processing times\nMake interactive plots that respond to user input\n\n\n\n\nUnderstand how a shinyapp works\nIntroduce the ui and server terms\nIntroduce the package bslib and show how to use it to build a UI\n\n\n\nIntroduce participants to the golem module\nBuild our golem app\nLook over golems step-by-step creation process\n\n\n\nRead in data rapidly\nBuild interactive graphs with plotly\nSubset data and change graphs accordingly\n\n\n\nLearn about the role of the UI and the server\nCreate a modularized app with the golem package\nLearn about the parquet data format and duckplyr\nBuild a plotly graph using the penguins dataset\nMake graphs interactive using plotly",
     "crumbs": [
       "Overview",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Syllabus</span>"
@@ -83,454 +93,531 @@
     ]
   },
   {
-    "objectID": "overview/schedule.html",
-    "href": "overview/schedule.html",
-    "title": "3  Schedule",
-    "section": "",
-    "text": "The workshop is structured as a series of participatory live-coding sessions interspersed with hands-on exercises and group work, using either a practice dataset or some other real-world dataset. There are some lectures given, mainly at the start and end of the workshop. The general schedule outline is shown in the below table. This is not a fixed schedule of the timings of each session—some may be shorter and others may be longer. Instead, it is meant to be an approximate guide and overview.\n\nDay 1\n\n\n\n\n\nTime\nSession topic",
-    "crumbs": [
-      "Overview",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Schedule</span>"
-    ]
-  },
-  {
     "objectID": "overview/learning-design.html",
     "href": "overview/learning-design.html",
-    "title": "4  Learning design",
+    "title": "3  Learning design",
     "section": "",
-    "text": "4.1 Clear learning goals and a strong narrative\nThis workshop is designed using the science of learning. Learning is when new content gets incorporated into long-term storage in the brain in a way that it can be later retrieved. Some of the best ways to enable learning is to do “active learning” by engaging with the material, practicing retrieving what was just covered, repeatedly being exposed to the content, linking the new information with what you already know, and explaining it to someone else.\nWe use a variety of activities to target the different “pathways” of learning. A big part of learning is being engaged in the process of learning, not just learning the content itself. So to help you be engaged in your own learning, we want to involve you in the reasons why we do the things we do during this workshop.\nThroughout the workshop, we use these practices to support learning.\nThe learning goals and the narrative are tightly connected in this workshop. Learning is easier when you have a better idea of where you are going, where you are relative to the end goal, and what to expect along the way.",
+    "text": "3.1 Clear learning goals and a strong narrative\nThis workshop is designed using the science of learning. Learning is when new content gets incorporated into long-term storage in the brain in a way that it can be later retrieved. Some of the best ways to enable learning is to do “active learning” by engaging with the material, practicing retrieving what was just covered, repeatedly being exposed to the content, linking the new information with what you already know, and explaining it to someone else.\nWe use a variety of activities to target the different “pathways” of learning. A big part of learning is being engaged in the process of learning, not just learning the content itself. So to help you be engaged in your own learning, we want to involve you in the reasons why we do the things we do during this workshop.\nThroughout the workshop, we use these practices to support learning.\nThe learning goals and the narrative are tightly connected in this workshop. Learning is easier when you have a better idea of where you are going, where you are relative to the end goal, and what to expect along the way.",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#code-alongs-as-the-main-activity",
     "href": "overview/learning-design.html#code-alongs-as-the-main-activity",
-    "title": "4  Learning design",
-    "section": "4.2 “Code-alongs” as the main activity",
-    "text": "4.2 “Code-alongs” as the main activity\n“Code-alongs” is when the teacher types on their computer that is on the projector and explains what it means as you also type along with them. The connection between using the hands and doing something tangible helps reinforce learning. It also helps the teachers to go slower as we have to both explain and type things out. This helps you learn better. “Less is more” works very well with learning.",
+    "title": "3  Learning design",
+    "section": "3.2 “Code-alongs” as the main activity",
+    "text": "3.2 “Code-alongs” as the main activity\n“Code-alongs” is when the teacher types on their computer that is on the projector and explains what it means as you also type along with them. The connection between using the hands and doing something tangible helps reinforce learning. It also helps the teachers to go slower as we have to both explain and type things out. This helps you learn better. “Less is more” works very well with learning.",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#retrieval-practice-with-hands-on-exercises",
     "href": "overview/learning-design.html#retrieval-practice-with-hands-on-exercises",
-    "title": "4  Learning design",
-    "section": "4.3 Retrieval practice with hands-on exercises",
-    "text": "4.3 Retrieval practice with hands-on exercises\nHands-on exercises reinforce what was just taught through retrieval practice and repetition. It gives you a chance to engage with the material and the space to try it out on your own. This helps you form a better sense of how to do it yourself.",
+    "title": "3  Learning design",
+    "section": "3.3 Retrieval practice with hands-on exercises",
+    "text": "3.3 Retrieval practice with hands-on exercises\nHands-on exercises reinforce what was just taught through retrieval practice and repetition. It gives you a chance to engage with the material and the space to try it out on your own. This helps you form a better sense of how to do it yourself.",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#linking-new-information-with-existing-knowledge-with-discussion-activities",
     "href": "overview/learning-design.html#linking-new-information-with-existing-knowledge-with-discussion-activities",
-    "title": "4  Learning design",
-    "section": "4.4 Linking new information with existing knowledge with discussion activities",
-    "text": "4.4 Linking new information with existing knowledge with discussion activities\nDiscussion activities encourage linking what you already know and do in your work with the new information. Because humans are social beings, we also tend to learn better when there is some social aspect to it. For example, explaining something to someone else is one of the best ways to learn, as nicely expressed in the quote “while we teach, we learn” from the Roman philosopher Seneca.",
+    "title": "3  Learning design",
+    "section": "3.4 Linking new information with existing knowledge with discussion activities",
+    "text": "3.4 Linking new information with existing knowledge with discussion activities\nDiscussion activities encourage linking what you already know and do in your work with the new information. Because humans are social beings, we also tend to learn better when there is some social aspect to it. For example, explaining something to someone else is one of the best ways to learn, as nicely expressed in the quote “while we teach, we learn” from the Roman philosopher Seneca.",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#minimal-use-of-lectures",
     "href": "overview/learning-design.html#minimal-use-of-lectures",
-    "title": "4  Learning design",
-    "section": "4.5 Minimal use of lectures",
-    "text": "4.5 Minimal use of lectures\nLectures, while extremely common, are forms of information sharing with the lowest rates of learning. In this workshop, we use reading tasks instead, so you can go at your pace, re-read things you may not understand, and take notes, all of which support learning. To help reinforce what you just read, the teacher will briefly summarise and emphasise key points after reading tasks, to repeat the main points and target another part of the brain (the auditory pathway).",
+    "title": "3  Learning design",
+    "section": "3.5 Minimal use of lectures",
+    "text": "3.5 Minimal use of lectures\nLectures, while extremely common, are forms of information sharing with the lowest rates of learning. In this workshop, we use reading tasks instead, so you can go at your pace, re-read things you may not understand, and take notes, all of which support learning. To help reinforce what you just read, the teacher will briefly summarise and emphasise key points after reading tasks, to repeat the main points and target another part of the brain (the auditory pathway).",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#frequent-breaks-and-variation-in-activities",
     "href": "overview/learning-design.html#frequent-breaks-and-variation-in-activities",
-    "title": "4  Learning design",
-    "section": "4.6 Frequent breaks and variation in activities",
-    "text": "4.6 Frequent breaks and variation in activities\nBreaks are how your brain can recharge and refocus. The brain is only able to effectively focus on one thing at a time in 30-50 minute blocks of time. That’s why we mix together code-alongs, exercises, discussions, and reading to give your brain some variation. Having an explicit break, even 5 minutes, is enough for the brain to better process and store what was covered.",
+    "title": "3  Learning design",
+    "section": "3.6 Frequent breaks and variation in activities",
+    "text": "3.6 Frequent breaks and variation in activities\nBreaks are how your brain can recharge and refocus. The brain is only able to effectively focus on one thing at a time in 30-50 minute blocks of time. That’s why we mix together code-alongs, exercises, discussions, and reading to give your brain some variation. Having an explicit break, even 5 minutes, is enough for the brain to better process and store what was covered.",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#easily-accessible-material-that-is-online-always",
     "href": "overview/learning-design.html#easily-accessible-material-that-is-online-always",
-    "title": "4  Learning design",
-    "section": "4.7 Easily accessible material that is online, always",
-    "text": "4.7 Easily accessible material that is online, always\nAll the material is online on this website, so that it is easy for you to go back to after the workshop. This builds the repetition and retrieval practice part of learning. Our brains also get easily distracted, which is completely normal. So if you get distracted during the workshop, you can simply go to the material and get caught up with where we are. We also make sure to follow the material on the website closely, so that it is easier for you to follow along.",
+    "title": "3  Learning design",
+    "section": "3.7 Easily accessible material that is online, always",
+    "text": "3.7 Easily accessible material that is online, always\nAll the material is online on this website, so that it is easy for you to go back to after the workshop. This builds the repetition and retrieval practice part of learning. Our brains also get easily distracted, which is completely normal. So if you get distracted during the workshop, you can simply go to the material and get caught up with where we are. We also make sure to follow the material on the website closely, so that it is easier for you to follow along.",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#a-safe-and-supportive-environment",
     "href": "overview/learning-design.html#a-safe-and-supportive-environment",
-    "title": "4  Learning design",
-    "section": "4.8 A safe and supportive environment",
-    "text": "4.8 A safe and supportive environment\nMental safety in a supportive environment is critical for effective learning. It puts the brain into a more relaxed state that allows for optimal processing and ultimately learning. That’s why we try to explicitly create that space, for example with the use of our Code of Conduct.",
+    "title": "3  Learning design",
+    "section": "3.8 A safe and supportive environment",
+    "text": "3.8 A safe and supportive environment\nMental safety in a supportive environment is critical for effective learning. It puts the brain into a more relaxed state that allows for optimal processing and ultimately learning. That’s why we try to explicitly create that space, for example with the use of our Code of Conduct.",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#using-origami-hats-to-ask-for-help",
     "href": "overview/learning-design.html#using-origami-hats-to-ask-for-help",
-    "title": "4  Learning design",
-    "section": "4.9 Using origami hats to ask for help",
-    "text": "4.9 Using origami hats to ask for help\nAsking for help can feel difficult, especially when you are learning and are unsure about something. To make it easier and feel safer, we use origami hats (or stickies) to show how everyone is doing. If you need help, you put up the “help” hat (usually orange) and a helper will come to you as soon as possible. If not, you can put up a “all good” hat (usually blue) to let us know you are following along. Since we often have several helpers, you usually won’t wait long. This simple system lets you ask for help without interrupting the teacher or drawing attention, so you can keep following along while you wait. Our goal is to make getting help easier and more comfortable.",
+    "title": "3  Learning design",
+    "section": "3.9 Using origami hats to ask for help",
+    "text": "3.9 Using origami hats to ask for help\nAsking for help can feel difficult, especially when you are learning and are unsure about something. To make it easier and feel safer, we use origami hats (or stickies) to show how everyone is doing. If you need help, you put up the “help” hat (usually orange) and a helper will come to you as soon as possible. If not, you can put up a “all good” hat (usually blue) to let us know you are following along. Since we often have several helpers, you usually won’t wait long. This simple system lets you ask for help without interrupting the teacher or drawing attention, so you can keep following along while you wait. Our goal is to make getting help easier and more comfortable.",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "overview/learning-design.html#being-involved-in-the-learning-process",
     "href": "overview/learning-design.html#being-involved-in-the-learning-process",
-    "title": "4  Learning design",
-    "section": "4.10 Being involved in the learning process",
-    "text": "4.10 Being involved in the learning process\nNow you know a bit more about the thoughts behind how we’ve designed this workshop to really try to support and enable your own learning! :tada: :grin:",
+    "title": "3  Learning design",
+    "section": "3.10 Being involved in the learning process",
+    "text": "3.10 Being involved in the learning process\nNow you know a bit more about the thoughts behind how we’ve designed this workshop to really try to support and enable your own learning! 🎉 😁",
     "crumbs": [
       "Overview",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Learning design</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning design</span>"
     ]
   },
   {
     "objectID": "pre-workshop/overview.html",
     "href": "pre-workshop/overview.html",
-    "title": "5  Overview",
+    "title": "4  Overview",
     "section": "",
-    "text": "5.1 How to read this website\nIn order to participate in this workshop, you must complete everything in this section and finish with completing the survey (Chapter 9) at the end. These tasks are meant to provide everyone with the necessary setup and a shared foundation for the workshop.\nDepending on your prior knowledge and skills, these tasks could take between TIME hrs to finish, so we suggest planning some time to complete them. While many of the tasks are mostly readings, they are important in making sure you get the most out of the workshop.\nWe try to be consistent with the way to present certain information in this website. Specifically, we follow some conventions that you should be aware of:",
+    "text": "4.1 How to read this website\nIn order to participate in this workshop, you must complete everything in this section and finish with completing the survey (?sec-survey) at the end. These tasks are meant to provide everyone with the necessary setup and a shared foundation for the workshop.\nDepending on your prior knowledge and skills, these tasks could take between TIME hrs to finish, so we suggest planning some time to complete them. While many of the tasks are mostly readings, they are important in making sure you get the most out of the workshop.\nWe try to be consistent with the way to present certain information in this website. Specifically, we follow some conventions that you should be aware of:",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Overview</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "pre-workshop/overview.html#how-to-read-this-website",
     "href": "pre-workshop/overview.html#how-to-read-this-website",
-    "title": "5  Overview",
+    "title": "4  Overview",
     "section": "",
     "text": "Folder names always end with /, for example data/ means the data folder.\nFile names always end with their file extension, for example content.md means the file is a Markdown file.\nR variables are always shown as is. For instance, for the code x &lt;- 10, x is a variable because it was assigned with 10.\nFunctions always end with (), for instance mean() or read_csv().\nSometimes functions have their package name appended with :: so that you run the code from the specific package, since we likely haven’t loaded the package with library(). For instance, to install packages from GitHub using the {pak} package we use pak::pak(\"user/package_name\"). You’ll learn about this more later.",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Overview</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "pre-workshop/overview.html#summary-of-tasks",
     "href": "pre-workshop/overview.html#summary-of-tasks",
-    "title": "5  Overview",
-    "section": "5.2 Summary of tasks",
-    "text": "5.2 Summary of tasks\nHere’s a quick overview of the tasks you need to do. Specific details about them are found as you work through the tasks.\nIf you haven’t already, go through the workshop overview section, including the Syllabus, Is this for you?, and Learning design to get an overview of what this workshop contains and the learning design behind the workshop material.\nAfter that, please go through the the pre-workshop tasks designed to establish a shared foundation for the start of the workshop. This includes:\n\nInstall a version of R, RStudio, Quarto, and Git that is as updated as possible in Chapter 6. For some people, depending on their institution, this task can take the longest amount of time because you have to contact your IT to install these packages.\nInstall necessary R packages.\nTODO: Add more tasks\nRead the syllabus (Chapter 1).\nRead the Code of Conduct (Chapter 8).\nComplete the pre-workshop survey (Chapter 9): This survey is pretty quick, maybe ~10 minutes. There will be some bits from the tasks that you will need to paste into this survey.\n\nCheck each section for exact details on completing these tasks.\n\n\n\n\n\n\nTip\n\n\n\nYou will be taken through the pre-workshop tasks in order by clicking the arrow at the bottom of each page :arrow_right:",
+    "title": "4  Overview",
+    "section": "4.2 Summary of tasks",
+    "text": "4.2 Summary of tasks\nHere’s a quick overview of the tasks you need to do. Specific details about them are found as you work through the tasks.\nIf you haven’t already, go through the workshop overview section, including the Syllabus, Is this for you?, and Learning design to get an overview of what this workshop contains and the learning design behind the workshop material.\nAfter that, please go through the the pre-workshop tasks designed to establish a shared foundation for the start of the workshop. This includes:\n\nInstall a version of R, RStudio, Quarto, and Git that is as updated as possible in Chapter 5. For some people, depending on their institution, this task can take the longest amount of time because you have to contact your IT to install these packages.\nInstall necessary R packages.\nRead the syllabus (Chapter 1).\nRead the Code of Conduct (Chapter 7).\n\nCheck each section for exact details on completing these tasks.\n\n\n\n\n\n\nTip\n\n\n\nYou will be taken through the pre-workshop tasks in order by clicking the arrow at the bottom of each page ➡️",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Overview</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "pre-workshop/installing-programs-r.html",
     "href": "pre-workshop/installing-programs-r.html",
-    "title": "6  Installing the programs",
+    "title": "5  Installing the programs",
     "section": "",
     "text": "In order to participate in the workshop, you’ll need to install these programs. You may already have some of them installed and if you did, please make sure that they are at least the minimum versions listed below. If not, you will need to update them.\n\nWindowsMacOSLinux (Ubuntu)\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console.\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”.\nGit: Select the “Click here to download” link. Git is used throughout many sessions in the workshop. When installing, it will ask for a selecting a “Text Editor” and while we won’t be using this in the workshop, Git needs to know this information so choose Notepad.\n\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console. If you use Homebrew (which we strongly recommend installing and using), installing R is as easy as opening a Terminal and running:\nbrew install --cask r\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”. With Homebrew:\nbrew install --cask rstudio\nGit: Git is used throughout many sessions in the workshop. With Homebrew:\nbrew install git\n\n\n\n\nR: Any version above . If you have used R before, you can confirm the version by running R.version.string in the Console.\nsudo apt -y install r-base\nRStudio: Any version above . If you have installed it before, check the current version by going to the menu “Help -&gt; About RStudio”.\nGit: Git is used throughout many sessions in the workshop.\nsudo apt install git\n\n\n\n\nAll these programs are required for the workshop, even Git. Git, which is a software program to formally manage versions of files, is used because of it’s popularity and the amount of documentation available for it. Check out the online book Happy Git with R, especially the “Why Git” section, for an understanding on why we are teaching Git. Windows users tend to have more trouble with installing Git than macOS or Linux users. See the section on Installing Git for Windows for help.\n\n\n\n\n\n\nNote\n\n\n\nSome pictures may show a Git pane in RStudio, but you may not see it. If you haven’t created or opened an RStudio R Project (which is taught in the introductory workshop), the Git pane does not show up. It only shows up in R Projects that use Git to track file changes.\n\n\n\n\n\n\n\n\nNote\n\n\n\nA note to those who have or use work laptops with restrictive administrative privileges: You may encounter problems installing software due to administrative reasons (e.g. you don’t have permission to install things). Even if you have issues installing or updating the latest version of R or RStudio, you will likely be able to continue with the workshop as long as you have the minimum version listed above for R and for RStudio. If you have versions of R and RStudio that are older than that, you may need to ask your IT department to update your software if you can’t do this yourself. Unfortunately, Git is not a commonly used software for some organizations, so you may not have it installed and you will need to ask IT to install it. We require it for the workshop, so please make sure to give IT enough time to be able to install it for you prior to the workshop.\n\n\nOnce R, RStudio, and Git have been installed, open RStudio. If you encounter any troubles during these pre-workshop tasks, try as best as you can to complete the task and then let us know about the issues in the pre-workshop survey. If you continue having problems, indicate on the survey that you need help and we can try to book a quick video call to fix the problem. Otherwise, you can come to the workshop 15-20 minutes earlier to get help.\nIf you’re unable to complete the setup procedure due to unfixable technical issues, you can use Posit Cloud (to use RStudio on the cloud) as a final solution in order to participate in the workshop. For help setting up Posit Cloud for this workshop, refer to the Posit Cloud setup guide.",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Installing the programs</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Installing the programs</span>"
     ]
   },
   {
     "objectID": "pre-workshop/installing-r-packages.html",
     "href": "pre-workshop/installing-r-packages.html",
-    "title": "7  Installing R Packages",
+    "title": "6  Installing R Packages",
     "section": "",
-    "text": "We will be using specific R packages for the workshop, so you will need to install them. To make it easier, we’ve created a custom R package called r3 that will install all the necessary packages for you for this workshop. Run these two functions in the Console by copying and pasting them to install our custom r3 package as well as the {tidyverse} package.\n\n\nConsole\n\ninstall.packages(\"r3\", repos = c(\"https://rostools.r-universe.dev\", \"https://cloud.r-project.org\"))\ninstall.packages(\"tidyverse\")\n\n\n\n\n\n\n\nTip\n\n\n\nInstalling packages is tricky, especially on some work laptops, and doesn’t always work as expected. Here are some other methods to try if you have trouble installing the packages with the code above.\nFor Windows users, you may have to install RTools to use either the {pak} or {remotes} method. The version of RTools you install must match the version of R that you have installed. For example, if you have R version 4.4, you need to install RTools 4.4.\nFirst, try installing the r3 package directly from GitHub with {pak}:\n\n\nConsole\n\ninstall.packages(\"pak\")\npak::pak(\"rostools/r3\")\n\nIf that doesn’t work, try with {remotes}:\n\n\nConsole\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"rostools/r3\")\n\nIf you encounter any errors with either of these functions, try to restart R by going to “Sessions -&gt; Restart R” and re-run them again. If that also doesn’t work, try to complete the other tasks as best you can, complete the survey, and let us know you have a problem in the survey. We’ll email you at least a week before the workshop starts to try to help you get it working.\n\n\n\n\n\n\n\n\nTip\n\n\n\nWhen you see a command like something::something(), for example with pak::pak(), you would “read” this as:\n\nR, can you please use the pak() function from the {pak} package.\n\nThe normal way of doing this would be to load the package with library(pak) and then running the command (pak()). But by using the ::, we tell R to directly use a function from a package, without needing to load the package and all of its other functions too. We use this trick because we only want to use the pak() command from the {pak} package and not have to load all the other functions as well. In this workshop we will be using :: often.",
+    "text": "We will be using specific R packages for the workshop, so you will need to install them. The following packages should be installed\n\n\nConsole\n\n\ninstall.packages(c(\"tidyverse\", \"shiny\", \"golem\", \"plotly\",\"arrow\", \"here\", \"bslib\",\"datasets\"))",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Installing R Packages</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Installing R Packages</span>"
     ]
   },
   {
     "objectID": "pre-workshop/code-of-conduct.html",
     "href": "pre-workshop/code-of-conduct.html",
-    "title": "8  Code of conduct",
+    "title": "7  Code of conduct",
     "section": "",
-    "text": "8.1 Expected behavior\nLearning happens when we feel safe and supported. Since we want you to learn during this workshop, we want you to feel safe and supported. We also want all learners to have an enjoyable and fulfilling experience while participating in this workshop. So we expect all learners to show respect, kindness, and courtesy to other learners throughout the whole workshop and to help create a positive and safe learning environment.\nWhile most people and (sub-)cultures have an implicit, assumed set of practices and expectations for behaviour, we believe strongly in effective and clear communication. This includes making what is normally implicit expectations to instead be explicit expectations.\nTeachers and helpers will uphold and embody this code in all spaces and activities of the workshop, and we expect you as the learner to do the same. In fact, by participating in this workshop, you indicate that you agree to follow these explicit expectations. We have this code of conduct to communicate to you that we really value and want to nurture a space that encourages and enhances learning. Otherwise, why would we have a workshop if you can’t or aren’t able to effectively learn anything from it! :zany_face:\nWe want a welcoming, supportive, safe, and fun environment not only for ourselves as teachers and helpers, but also for all learners, regardless of background and identity. This means that we do not tolerate behaviour that is disrespectful to any of our teachers, helpers, or learners (see below for unacceptable behaviour).\nWe encourage the following kinds of behaviours in all interactions during this workshop that will foster a positive and professional learning environment:",
+    "text": "7.1 Expected behavior\nLearning happens when we feel safe and supported. Since we want you to learn during this workshop, we want you to feel safe and supported. We also want all learners to have an enjoyable and fulfilling experience while participating in this workshop. So we expect all learners to show respect, kindness, and courtesy to other learners throughout the whole workshop and to help create a positive and safe learning environment.\nWhile most people and (sub-)cultures have an implicit, assumed set of practices and expectations for behaviour, we believe strongly in effective and clear communication. This includes making what is normally implicit expectations to instead be explicit expectations.\nTeachers and helpers will uphold and embody this code in all spaces and activities of the workshop, and we expect you as the learner to do the same. In fact, by participating in this workshop, you indicate that you agree to follow these explicit expectations. We have this code of conduct to communicate to you that we really value and want to nurture a space that encourages and enhances learning. Otherwise, why would we have a workshop if you can’t or aren’t able to effectively learn anything from it! 🤪\nWe want a welcoming, supportive, safe, and fun environment not only for ourselves as teachers and helpers, but also for all learners, regardless of background and identity. This means that we do not tolerate behaviour that is disrespectful to any of our teachers, helpers, or learners (see below for unacceptable behaviour).\nWe encourage the following kinds of behaviours in all interactions during this workshop that will foster a positive and professional learning environment:",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code of conduct</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Code of conduct</span>"
     ]
   },
   {
     "objectID": "pre-workshop/code-of-conduct.html#expected-behavior",
     "href": "pre-workshop/code-of-conduct.html#expected-behavior",
-    "title": "8  Code of conduct",
+    "title": "7  Code of conduct",
     "section": "",
     "text": "Show kindness, courtesy, and respect towards other workshop members.\nAll interactions should be professional regardless of platform: either online or in-person.\nBe aware of your words by using welcoming and inclusive language. Words matter, a lot!\nBe respectful to different viewpoints and experiences.\nGracefully accept constructive criticism.\nFocus on what is best for everyone in the workshop.",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code of conduct</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Code of conduct</span>"
     ]
   },
   {
     "objectID": "pre-workshop/code-of-conduct.html#unacceptable-behavior",
     "href": "pre-workshop/code-of-conduct.html#unacceptable-behavior",
-    "title": "8  Code of conduct",
-    "section": "8.2 Unacceptable behavior",
-    "text": "8.2 Unacceptable behavior\nWhile we assume you will not do these behaviours, we want to clearly communicate what unacceptable behaviour is. It is any behaviour, as actions or words, that excludes, intimidates, or causes discomfort to others. We do not tolerate discrimination or harassment based on characteristics that include, though are not limited to, gender identity and expression, sexual orientation, disability, physical appearance, body size, citizenship, nationality, ethnic or social origin, pregnancy, familial status, veteran status, genetic information, religion or belief (or lack thereof), membership of a national minority, property, age, education, socio-economic status, technical choices, and experience level. We of course also don’t tolerate verbally or physically violent behaviour towards others.\nExamples of unacceptable behavior includes:\n\nWritten or verbal comments that exclude people on the basis of membership of any specific group.\nThe display of sexual or violent images.\nUnwelcome sexual attention, advances, and/or physical contact.\nSustained disruption of workshop sessions or communications.\nInsults or put downs.\nSexist, racist, homophobic, transphobic, ableist, or exclusionary jokes.",
+    "title": "7  Code of conduct",
+    "section": "7.2 Unacceptable behavior",
+    "text": "7.2 Unacceptable behavior\nWhile we assume you will not do these behaviours, we want to clearly communicate what unacceptable behaviour is. It is any behaviour, as actions or words, that excludes, intimidates, or causes discomfort to others. We do not tolerate discrimination or harassment based on characteristics that include, though are not limited to, gender identity and expression, sexual orientation, disability, physical appearance, body size, citizenship, nationality, ethnic or social origin, pregnancy, familial status, veteran status, genetic information, religion or belief (or lack thereof), membership of a national minority, property, age, education, socio-economic status, technical choices, and experience level. We of course also don’t tolerate verbally or physically violent behaviour towards others.\nExamples of unacceptable behavior includes:\n\nWritten or verbal comments that exclude people on the basis of membership of any specific group.\nThe display of sexual or violent images.\nUnwelcome sexual attention, advances, and/or physical contact.\nSustained disruption of workshop sessions or communications.\nInsults or put downs.\nSexist, racist, homophobic, transphobic, ableist, or exclusionary jokes.",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code of conduct</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Code of conduct</span>"
     ]
   },
   {
     "objectID": "pre-workshop/code-of-conduct.html#consequences-of-unacceptable-behavior",
     "href": "pre-workshop/code-of-conduct.html#consequences-of-unacceptable-behavior",
-    "title": "8  Code of conduct",
-    "section": "8.3 Consequences of unacceptable behavior",
-    "text": "8.3 Consequences of unacceptable behavior\nLearners who are asked, either in person or online, to stop any inappropriate behavior are expected to comply immediately. If a learners engages in behaviour that violates this code of conduct, the organizers, teachers, or helpers may take any action they deem appropriate, including warning the offender or removing them from the workshop.\nIf you feel in any way unsafe or mistreated, you may contact us privately—all communication is confidential.\nThank you for helping make this a welcoming, friendly workshop for all :smile:\n\n\n\n\n\n\nNote\n\n\n\nAcknowledgements: Large portions of this code of conduct were taken and modified from other codes of conduct, specifically Software Carpentry and UofTCoders.",
+    "title": "7  Code of conduct",
+    "section": "7.3 Consequences of unacceptable behavior",
+    "text": "7.3 Consequences of unacceptable behavior\nLearners who are asked, either in person or online, to stop any inappropriate behavior are expected to comply immediately. If a learners engages in behaviour that violates this code of conduct, the organizers, teachers, or helpers may take any action they deem appropriate, including warning the offender or removing them from the workshop.\nIf you feel in any way unsafe or mistreated, you may contact us privately—all communication is confidential.\nThank you for helping make this a welcoming, friendly workshop for all 😄\n\n\n\n\n\n\nNote\n\n\n\nAcknowledgements: Large portions of this code of conduct were taken and modified from other codes of conduct, specifically Software Carpentry and UofTCoders.",
     "crumbs": [
       "Pre-workshop",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code of conduct</span>"
-    ]
-  },
-  {
-    "objectID": "pre-workshop/survey.html",
-    "href": "pre-workshop/survey.html",
-    "title": "9  Survey",
-    "section": "",
-    "text": "We have a Code of Conduct. If you haven’t read it, read it now. The survey involves a question about Conduct. We want to make sure this workshop is a supportive and safe environment for learning, so this Code of Conduct is quite important.\nIf you haven’t read the sections under “Workshop overview” and “Pre-workshop tasks”, please read them now.\nYou’re almost done. Please fill out the pre-workshop survey to finish this section:\nPre-workshop survey :tada:\nSee you at the workshop! :wave:",
-    "crumbs": [
-      "Pre-workshop",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Survey</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Code of conduct</span>"
     ]
   },
   {
     "objectID": "sessions/introduction.html",
     "href": "sessions/introduction.html",
-    "title": "10  Introduction to workshop",
+    "title": "8  Introduction to workshop",
     "section": "",
-    "text": "10.1 The Big Picture\nTODO: Add text highlighting the bigger picture of why we teach this.",
+    "text": "8.1 The Big Picture\nTODO: Add text highlighting the bigger picture of why we teach this.",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Introduction to workshop</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Introduction to workshop</span>"
     ]
   },
   {
     "objectID": "sessions/shinyapps.html",
     "href": "sessions/shinyapps.html",
-    "title": "11  Shiny apps",
+    "title": "\n9  Shiny apps\n",
     "section": "",
-    "text": "11.1 Learning objectives\nTo build a shiny app we must first understand how it works. A shiny app consists of two core components: a server and a user interface (UI). In this section, we will explain how they are connected and work together to create the shiny app.\nThe learning objectives for this session are:",
+    "text": "9.1 Learning objectives\nTo build a shiny app we must first understand how it works. A shiny app consists of two core components: a server and a user interface (UI). In this section, we will explain how they are connected and work together to create the shiny app.\nThe learning objectives for this session are:",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Shiny apps</span>"
     ]
   },
   {
     "objectID": "sessions/shinyapps.html#learning-objectives",
     "href": "sessions/shinyapps.html#learning-objectives",
-    "title": "11  Shiny apps",
+    "title": "\n9  Shiny apps\n",
     "section": "",
     "text": "Understand how a shinyapp works\nIntroduce the ui and server terms\nIntroduce the package bslib and show how to use it to build a UI",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Shiny apps</span>"
     ]
   },
   {
     "objectID": "sessions/shinyapps.html#the-server-and-the-ui",
     "href": "sessions/shinyapps.html#the-server-and-the-ui",
-    "title": "11  Shiny apps",
-    "section": "11.2 The server and the UI",
-    "text": "11.2 The server and the UI\nA shiny app can take a static dataset and make it available for the user to explore. Depending on how you build the app, you can allow the user to search for specific search terms, compare expression levels, or explore interactive figures to find new genes affected in your dataset.",
+    "title": "\n9  Shiny apps\n",
+    "section": "\n9.2 The server and the UI",
+    "text": "9.2 The server and the UI\nA shiny app can take a static dataset and make it available for the user to explore. Depending on how you build the app, you can allow the user to search for specific search terms, compare expression levels, or explore interactive figures to find new genes affected in your dataset.",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Shiny apps</span>"
     ]
   },
   {
-    "objectID": "sessions/shinyapps.html#speech_balloon-discussion-activity-title",
-    "href": "sessions/shinyapps.html#speech_balloon-discussion-activity-title",
-    "title": "11  Shiny apps",
-    "section": "11.3 :speech_balloon: Discussion activity: Title",
-    "text": "11.3 :speech_balloon: Discussion activity: Title\nTime: \\3 minutes.\nDiscuss with the person next to you - what kind of data do you have that could benefit from being interactive? Do you have an idea for an app you want to make?",
+    "objectID": "sessions/shinyapps.html#discussion-activity-title",
+    "href": "sessions/shinyapps.html#discussion-activity-title",
+    "title": "\n9  Shiny apps\n",
+    "section": "\n9.3 💬 Discussion activity: Title",
+    "text": "9.3 💬 Discussion activity: Title\nTime: \\3 minutes.\nDiscuss with the person next to you - what kind of data do you have that could benefit from being interactive? Do you have an idea for an app you want to make?",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Shiny apps</span>"
     ]
   },
   {
     "objectID": "sessions/shinyapps.html#reading-task-4-minutes",
     "href": "sessions/shinyapps.html#reading-task-4-minutes",
-    "title": "11  Shiny apps",
-    "section": "11.4 Reading task: ~4 minutes",
-    "text": "11.4 Reading task: ~4 minutes\nA shiny app can get incredibly complex and consist of many interconnected scripts. But at it’s simplest, a shiny app consists of two elements that work together.\nAt it’s most simple, a shiny app can be one simple function. The following code will create a shiny app (although an empty one):\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(),\n  server = function(input, output){}\n)\nshiny::runApp(app)\n\nThe UI (short for user interface) is what we see on the screen. The code contains information about what is shown on the page (such as plots, buttons and images) and in what layout (organized in columns, with a navigation bar, etc.).\nThe server contains information about the objects in the UI, and how the app should respond to user input. It contains information about what data is displayed in the plot, what happens when you press a button, and how the app should update when specific events happen.\nA major part of building a shiny app is understanding the interplay between the UI and the server.\n\n\n\n\n\n\nFigure 11.1: A graphical representation of the interplay between the UI and the server. From introduction to data science",
+    "title": "\n9  Shiny apps\n",
+    "section": "\n9.4 Reading task: ~4 minutes",
+    "text": "9.4 Reading task: ~4 minutes\nA shiny app can get incredibly complex and consist of many interconnected scripts. But at it’s simplest, a shiny app consists of two elements that work together.\nAt it’s most simple, a shiny app can be one simple function. The following code will create a shiny app (although an empty one):\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(),\n  server = function(input, output){}\n)\nshiny::runApp(app)\n\nThe UI (short for user interface) is what we see on the screen. The code contains information about what is shown on the page (such as plots, buttons and images) and in what layout (organized in columns, with a navigation bar, etc.).\nThe server contains information about the objects in the UI, and how the app should respond to user input. It contains information about what data is displayed in the plot, what happens when you press a button, and how the app should update when specific events happen.\nA major part of building a shiny app is understanding the interplay between the UI and the server.\n\n\n\n\n\nFigure 9.1: A graphical representation of the interplay between the UI and the server. From introduction to data science",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Shiny apps</span>"
     ]
   },
   {
-    "objectID": "sessions/shinyapps.html#book-adding-elements-to-our-ui",
-    "href": "sessions/shinyapps.html#book-adding-elements-to-our-ui",
-    "title": "11  Shiny apps",
-    "section": "11.5 :book: Adding elements to our UI",
-    "text": "11.5 :book: Adding elements to our UI\nTime: \\6 minutes.\nShiny comes with a lot of options for building a user interface. Often you can add plots directly into a Shiny interface. lets say we want to make a graph from the classical iris data set and add it into our empty app above.\n\niris_plot &lt;- ggplot2::ggplot(iris,\n                             ggplot2::aes(x = Sepal.Length, y = Petal.Length, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot\n\n\n\n\n\n\n\nFigure 11.2: Our classical iris plot\n\n\n\n\n\nTo add this to our app, we need to tell Shiny two things: that we want a page in our page layout, and what we want the plot to contain.\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we take the code above and paste it into the console, we should get an app with the plot. We have now created content for our app!",
+    "objectID": "sessions/shinyapps.html#adding-elements-to-our-ui",
+    "href": "sessions/shinyapps.html#adding-elements-to-our-ui",
+    "title": "\n9  Shiny apps\n",
+    "section": "\n9.5 📖 Adding elements to our UI",
+    "text": "9.5 📖 Adding elements to our UI\nTime: \\6 minutes.\nShiny comes with a lot of options for building a user interface. Often you can add plots directly into a Shiny interface. lets say we want to make a graph from the classical iris data set and add it into our empty app above.\n\niris_plot &lt;- ggplot2::ggplot(iris,\n                             ggplot2::aes(x = Sepal.Length, y = Petal.Length, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot\n\n\n\n\n\n\nFigure 9.2: Our classical iris plot\n\n\n\n\nTo add this to our app, we need to tell Shiny two things: that we want a page in our page layout, and what we want the plot to contain.\n\napp &lt;- shiny::shinyApp(\n  ui = shiny::fluidPage(\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we take the code above and paste it into the console, we should get an app with the plot. We have now created content for our app!",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Shiny apps</span>"
     ]
   },
   {
     "objectID": "sessions/shinyapps.html#bslib",
     "href": "sessions/shinyapps.html#bslib",
-    "title": "11  Shiny apps",
-    "section": "11.6 BSlib",
-    "text": "11.6 BSlib\nIt is entirely possible to build a shiny app out of components from the shiny package itself. However, the “modern” shiny design focuses on a different package called “bslib” which provides access to the highly flexible bootstrap framework. Bslib allows a number of UI components with a high degree of customization, and which renders nicely, even on a small screen such as a phone.\nBslib features both pages (used to define the overall rules for our app page) and the components of the pages (especially as units of UI elements called “cards”). We can take our previous code and modify it to become a navbar page.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we paste this code into our console and runs it (rerunning the code for the iris plot if necessary), we will see we now have a sidebar where we can put something in. Let’s leave it empty for now, and instead focus on the other functionality of bslib we teased before - the cards.\nCards are an effective way to organize plots and other UI components. They are easy to implement - we simply wrap our UI content (in this case the Iris plot) in bslib::card()\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::c(shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIn itself this does not do much. However, cards have some attributes such as headers that can be modified if we for example want to give our plot a header.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nThe true power of cards becomes evident once we start having several of them. Let’s make a few more plots so we can see how bslib behaves once we have multiple:\n\niris_plot_2 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\n  ggplot2::geom_point()\n\n\niris_plot_3 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Petal.Length, y = Petal.Width, color = Species)) +\n  ggplot2::geom_point()\n\niris_plot_2\n\n\n\n\n\n\n\niris_plot_3\n\n\n\n\n\n\n\n\nLets add our two new plots to our layout, copy it to the console, and run it:\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    ),\n    bslib::card(\n      bslib::card_header(\"Another beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot_2\")\n    ),\n    bslib::card(\n      bslib::card_header(\"OKay I think I've had enough flower plots for now\"),\n      shiny::plotOutput(outputId = \"iris_plot_3\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n    output$iris_plot_2 &lt;- shiny::renderPlot(\n      iris_plot_2\n    )\n    output$iris_plot_3 &lt;- shiny::renderPlot(\n      iris_plot_3\n    )\n  }\n)\nshiny::runApp(app)\n\nIt looks nice! if we want to change the order of our cards, we can add another layer from bslib, and define how many columns we want. We wrap all our cards in a function called bslib::layout_column_wrap() and add the argument width  = 1/2 to get 2 columns (if this is indeed what we want). If we instead had written width = 1/3 we would get 3 columns and so forth.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::layout_column_wrap(\n      width = 1/2,\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_2\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_3\")\n      )\n    )\n  ),\n  server = function(input, output) {\n    output$iris_plot &lt;- shiny::renderPlot(iris_plot)\n    output$iris_plot_2 &lt;- shiny::renderPlot(iris_plot_2)\n    output$iris_plot_3 &lt;- shiny::renderPlot(iris_plot_3)\n  }\n)\nshiny::runApp(app)\n\nThere is much more functionality to building a good user interface and there are many resources on bslib. But for now we know how to build a Shiny interface",
+    "title": "\n9  Shiny apps\n",
+    "section": "\n9.6 BSlib",
+    "text": "9.6 BSlib\nIt is entirely possible to build a shiny app out of components from the shiny package itself. However, the “modern” shiny design focuses on a different package called “bslib” which provides access to the highly flexible bootstrap framework. Bslib allows a number of UI components with a high degree of customization, and which renders nicely, even on a small screen such as a phone.\nBslib features both pages (used to define the overall rules for our app page) and the components of the pages (especially as units of UI elements called “cards”). We can take our previous code and modify it to become a navbar page.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    shiny::plotOutput(outputId = \"iris_plot\"\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIf we paste this code into our console and runs it (rerunning the code for the iris plot if necessary), we will see we now have a sidebar where we can put something in. Let’s leave it empty for now, and instead focus on the other functionality of bslib we teased before - the cards.\nCards are an effective way to organize plots and other UI components. They are easy to implement - we simply wrap our UI content (in this case the Iris plot) in bslib::card()\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::c(shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nIn itself this does not do much. However, cards have some attributes such as headers that can be modified if we for example want to give our plot a header.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n  }\n)\nshiny::runApp(app)\n\nThe true power of cards becomes evident once we start having several of them. Let’s make a few more plots so we can see how bslib behaves once we have multiple:\n\niris_plot_2 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Sepal.Length, \n                                            y = Sepal.Width, \n                                            color = Species)) +\n  ggplot2::geom_point()\n\n\niris_plot_3 &lt;- ggplot2::ggplot(iris,\n                               ggplot2::aes(x = Petal.Length, \n                                            y = Petal.Width, \n                                            color = Species)) +\n  ggplot2::geom_point()\n\niris_plot_2\n\n\n\n\n\n\niris_plot_3\n\n\n\n\n\n\n\nLets add our two new plots to our layout, copy it to the console, and run it:\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::card(\n      bslib::card_header(\"A beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot\")\n    ),\n    bslib::card(\n      bslib::card_header(\"Another beautiful plot about flowers\"),\n      shiny::plotOutput(outputId = \"iris_plot_2\")\n    ),\n    bslib::card(\n      bslib::card_header(\"OKay I think I've had enough flower plots for now\"),\n      shiny::plotOutput(outputId = \"iris_plot_3\")\n    )\n  ),\n  server = function(input, output){\n    output$iris_plot &lt;- shiny::renderPlot(\n      iris_plot\n    )\n    output$iris_plot_2 &lt;- shiny::renderPlot(\n      iris_plot_2\n    )\n    output$iris_plot_3 &lt;- shiny::renderPlot(\n      iris_plot_3\n    )\n  }\n)\nshiny::runApp(app)\n\nIt looks nice! if we want to change the order of our cards, we can add another layer from bslib, and define how many columns we want. We wrap all our cards in a function called bslib::layout_column_wrap() and add the argument width  = 1/2 to get 2 columns (if this is indeed what we want). If we instead had written width = 1/3 we would get 3 columns and so forth.\n\napp &lt;- shiny::shinyApp(\n  ui = bslib::page_sidebar(\n    title = \"Our Iris plot\",\n    sidebar = \"here is our sidebar\",\n    bslib::layout_column_wrap(\n      width = 1/2,\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_2\")\n      ),\n      bslib::card(\n        bslib::card_header(\"A beautiful plot about flowers\"),\n        shiny::plotOutput(outputId = \"iris_plot_3\")\n      )\n    )\n  ),\n  server = function(input, output) {\n    output$iris_plot &lt;- shiny::renderPlot(iris_plot)\n    output$iris_plot_2 &lt;- shiny::renderPlot(iris_plot_2)\n    output$iris_plot_3 &lt;- shiny::renderPlot(iris_plot_3)\n  }\n)\nshiny::runApp(app)\n\nThere is much more functionality to building a good user interface and there are many resources on bslib. But for now we know how to build a Shiny interface",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Shiny apps</span>"
     ]
   },
   {
     "objectID": "sessions/shinyapps.html#summary",
     "href": "sessions/shinyapps.html#summary",
-    "title": "11  Shiny apps",
-    "section": "11.7 Summary",
-    "text": "11.7 Summary\nIn this session we:\n\nLearned about UI and server\nExplored the relationship between outputs and render functions\nIntroduced bslib and showed how it can be used to make pages and UI elements\n\nNext session, we will show how we can build a shiny app so we have a place for our UI",
+    "title": "\n9  Shiny apps\n",
+    "section": "\n9.7 Summary",
+    "text": "9.7 Summary\nIn this session we:\n\nLearned about UI and server\nExplored the relationship between outputs and render functions\nIntroduced bslib and showed how it can be used to make pages and UI elements\n\nNext session, we will show how we can build a shiny app so we have a place for our UI",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Shiny apps</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Shiny apps</span>"
     ]
   },
   {
     "objectID": "sessions/golem.html",
     "href": "sessions/golem.html",
-    "title": "12  Golem: a structured way to build and modularize your app",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
     "section": "",
-    "text": "12.1 Learning objectives\nSo far we have only run our app locally in the console. It is time to build an actual Shiny app! There are multiple ways to do this, but we will use the package called golem.\nThe learning objectives for this session are:",
+    "text": "10.1 Learning objectives\nSo far we have only run our app locally in the console. It is time to build an actual Shiny app! There are multiple ways to do this, but we will use the package called golem.\nThe learning objectives for this session are:",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
     "objectID": "sessions/golem.html#learning-objectives",
     "href": "sessions/golem.html#learning-objectives",
-    "title": "12  Golem: a structured way to build and modularize your app",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
     "section": "",
     "text": "Introduce participants to the golem module\nBuild our golem app\nLook over golems step-by-step creation process\n\n\n\n\n\n\n\nNoteReading task: Why golem? ~4 minutes\n\n\n\nThere are many ways we can make a shiny app. If we want to make a very simple app and just run it locally, we can just put the code from our last exercise in a script, source it, and our shiny app will run. Nice and easy. A more structured way to make a one-script app is by making a new shiny app project. If we have shiny installed we can go to file, new project and select shiny application. This creates a one script app, containing the essentials. Running this app is easy, just click the run app button and you are flying. For many apps, this setup is perfectly adequate and you can deploy it to the internet if you have somewhere to host it.\nWhat then, if our apps are more complex? This is where a package like golem becomes handy. golem is a package focused on building a production-ready, robust shiny app. Once initiated it creates a range of files that step by step helps you establishing a lot of groundwork so you don’t have to do it later. It helps you setup a github repository and it can also help you deploy the app to a number of services once you are done.\nOne of the most useful features from golem is that it natively helps you modularizing your app. When you modularize you split your app into smaller components. Suggest you have an app with multiple pages, where each page provides a different range of buttons, sliders and plots. How do you keep track of which button goes where? Scripts can easily get out of hand that way. golem makes one script pr. page, containing info for the UI and server that goes together. So if your app contains a welcome page, a settings page, and a plot page, golem will make three files for you - a welcome file, a settings file and a plot file. Additionally it will make a server file and a ui file, where all your modules are tied together.\nIs golem overkill for what we are doing here? Certainly! But I want to introduce it to you already so you know it, and once you start developing more complex apps, you know where to go.",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
     "objectID": "sessions/golem.html#starting-a-golem",
     "href": "sessions/golem.html#starting-a-golem",
-    "title": "12  Golem: a structured way to build and modularize your app",
-    "section": "12.2 Starting a golem",
-    "text": "12.2 Starting a golem\nIf we want to make a new app and we have golem installed, we can open the menu and select new project (like we did above) and pick Package for shiny app using golem. If we want to do this from the console.\nLets make an app about something fun - penguins. We will call it “penguin app” (or “penguinapp” in R writing)\n\ngolem::create_golem(path = \"C:/Your_R_projects_destination/penguinapp\"\n                    )\n\nRunning this command (with a package name of your choice) creates a new R project called penguinapp. We will see this has quite a few more files than our standard Shiny project.\n\n\n\n\n\n\nFigure 12.1: Overview of the files created by golem\n\n\n\nThis is actually a functional Shiny app, though at this stage it works a bit differently. We can run it with the command golem::run_dev(). Running this command will take us to a golem welcome page with resources and information. This is very similar to the example in our shiny project above.\nTo understand what golem really offers, it is beneficial to look at the dev folder. In this folder we will see three documents:\n\n01_start.R\n02_dev.R\n03_deploy.R\n\nThese three files contains a step by step guide to how you build and deploy a shiny app. You don’t have to do it all (or in the order you are asked to), but golem gives a suggested path through the development process, starting right after we create our app.",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
+    "section": "\n10.2 Starting a golem",
+    "text": "10.2 Starting a golem\nIf we want to make a new app and we have golem installed, we can open the menu and select new project (like we did above) and pick Package for shiny app using golem. If we want to do this from the console.\nLets make an app about something fun - penguins. We will call it “penguin app” (or “penguinapp” in R writing)\n\ngolem::create_golem(path = \"C:/Your_R_projects_destination/penguinapp\"\n                    )\n\nRunning this command (with a package name of your choice) creates a new R project called penguinapp. We will see this has quite a few more files than our standard Shiny project.\n\n\n\n\n\nFigure 10.1: Overview of the files created by golem\n\n\nThis is actually a functional Shiny app, though at this stage it works a bit differently. We can run it with the command golem::run_dev(). Running this command will take us to a golem welcome page with resources and information. This is very similar to the example in our shiny project above.\nTo understand what golem really offers, it is beneficial to look at the dev folder. In this folder we will see three documents:\n\n01_start.R\n02_dev.R\n03_deploy.R\n\nThese three files contains a step by step guide to how you build and deploy a shiny app. You don’t have to do it all (or in the order you are asked to), but golem gives a suggested path through the development process, starting right after we create our app.",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
-    "objectID": "sessions/golem.html#speech_balloon-discussion-activity-01_start.r",
-    "href": "sessions/golem.html#speech_balloon-discussion-activity-01_start.r",
-    "title": "12  Golem: a structured way to build and modularize your app",
-    "section": "12.3 :speech_balloon: Discussion activity: 01_start.R",
-    "text": "12.3 :speech_balloon: Discussion activity: 01_start.R\nTime: ~5 minutes.\nWe don’t have time to go too much into detail this session with what you do in 01_start - but take a few minutes to open the file, and discuss the content with the person next to you. What kind of information does golem suggest you setup? Do you recognize any terms in this file?\n{{&lt; text_snippet sticky_up &gt;}}\ngolem helps you with a lot of housekeeping you usually end up doing last minutes, including making a DESCRIPTION file (which contains a lot of input about required packages, info on the author, and whether you have coined a specific license to the usage of your package.) It also helps you with a number of other helpful tools for reproducible development such as using git and github. By doing this ahead of time, you do all the legwork before development begins, and you won’t have to do it once your app has grown in size.\nAt this point we will limit ourselves to making a DESCRIPTION file by running the following:\n\ngolem::fill_desc(\n  pkg_name = \"penguinapp\", # The name of the golem package containing the app (typically lowercase, no underscore or periods)\n  pkg_title = \"PKG_TITLE\", # What the Package Does (One Line, Title Case, No Period)\n  pkg_description = \"PKG_DESC.\", # What the package does (one paragraph).\n  authors = person(\n    given = \"AUTHOR_FIRST\", # Your First Name\n    family = \"AUTHOR_LAST\", # Your Last Name\n    email = \"AUTHOR@MAIL.COM\", # Your email\n    role = c(\"aut\", \"cre\") # Your role (here author/creator)\n  ),\n  repo_url = NULL, # The URL of the GitHub repo (optional),\n  pkg_version = \"0.0.0.9000\", # The version of the package containing the app\n  set_options = TRUE # Set the global golem options\n)\n\nA DESCRIPTION file is also where you note what packages are required to run your app. This can be done by using the function usethis::use_package(PACKAGE NAME) Normally it is sufficient to call the package on it’s own, with a notable exception being the tidyverse package - here you should add the following: usethis::use_package(\"tidyverse\", type = \"suggests\") because tidyverse is a collection. Adding used packages to the DESCRIPTION file makes it easier to deploy the app, because it makes it clear what packages need to be installed on your remote server.",
+    "objectID": "sessions/golem.html#discussion-activity-01_start.r",
+    "href": "sessions/golem.html#discussion-activity-01_start.r",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
+    "section": "\n10.3 💬 Discussion activity: 01_start.R",
+    "text": "10.3 💬 Discussion activity: 01_start.R\nTime: ~5 minutes.\nWe don’t have time to go too much into detail this session with what you do in 01_start - but take a few minutes to open the file, and discuss the content with the person next to you. What kind of information does golem suggest you setup? Do you recognize any terms in this file?\n\n\n\n\n\n\nCautionSticky/hat up!\n\n\n\nWhen you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher 👒 🎩\n\n\ngolem helps you with a lot of housekeeping you usually end up doing last minutes, including making a DESCRIPTION file (which contains a lot of input about required packages, info on the author, and whether you have coined a specific license to the usage of your package.) It also helps you with a number of other helpful tools for reproducible development such as using git and github. By doing this ahead of time, you do all the legwork before development begins, and you won’t have to do it once your app has grown in size.\nAt this point we will limit ourselves to making a DESCRIPTION file by running the following:\n\ngolem::fill_desc(\n  pkg_name = \"penguinapp\", # The name of the golem package containing the app (typically lowercase, no underscore or periods)\n  pkg_title = \"PKG_TITLE\", # What the Package Does (One Line, Title Case, No Period)\n  pkg_description = \"PKG_DESC.\", # What the package does (one paragraph).\n  authors = person(\n    given = \"AUTHOR_FIRST\", # Your First Name\n    family = \"AUTHOR_LAST\", # Your Last Name\n    email = \"AUTHOR@MAIL.COM\", # Your email\n    role = c(\"aut\", \"cre\") # Your role (here author/creator)\n  ),\n  repo_url = NULL, # The URL of the GitHub repo (optional),\n  pkg_version = \"0.0.0.9000\", # The version of the package containing the app\n  set_options = TRUE # Set the global golem options\n)\n\nA DESCRIPTION file is also where you note what packages are required to run your app. This can be done by using the function usethis::use_package(PACKAGE NAME) Normally it is sufficient to call the package on it’s own, with a notable exception being the tidyverse package - here you should add the following: usethis::use_package(\"tidyverse\", type = \"suggests\") because tidyverse is a collection. Adding used packages to the DESCRIPTION file makes it easier to deploy the app, because it makes it clear what packages need to be installed on your remote server.",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
-    "objectID": "sessions/golem.html#technologist-exercise-activity-description",
-    "href": "sessions/golem.html#technologist-exercise-activity-description",
-    "title": "12  Golem: a structured way to build and modularize your app",
-    "section": "12.4 :technologist: Exercise activity: DESCRIPTION",
-    "text": "12.4 :technologist: Exercise activity: DESCRIPTION\nTime: ~5 minutes.\nFill out the information for the description file and run the code in the penguinapp folder. Add relevant packages we have used (or you expect we will use) using usethis.Think about tidyverse packages - what tools from that collection do we actually use?\n{{&lt; text_snippet sticky_up &gt;}}",
+    "objectID": "sessions/golem.html#exercise-activity-description",
+    "href": "sessions/golem.html#exercise-activity-description",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
+    "section": "\n10.4 🧑‍💻 Exercise activity: DESCRIPTION",
+    "text": "10.4 🧑‍💻 Exercise activity: DESCRIPTION\nTime: ~5 minutes.\nFill out the information for the description file and run the code in the penguinapp folder. Add relevant packages we have used (or you expect we will use) using usethis.Think about tidyverse packages - what tools from that collection do we actually use?\n\n\n\n\n\n\nCautionSticky/hat up!\n\n\n\nWhen you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher 👒 🎩",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
     "objectID": "sessions/golem.html#development-and-modularization",
     "href": "sessions/golem.html#development-and-modularization",
-    "title": "12  Golem: a structured way to build and modularize your app",
-    "section": "12.5 Development and modularization",
-    "text": "12.5 Development and modularization\nWe will in this workshop be bad examples and start development on our penguin app before doing any of the housekeeping. if we are leading by example, this is a poor example indeed! But jokes aside, our second file 02_dev.R contains the scripts we need to build our app.\nThere are many different functions in this file and we do not need all of them - a lot of these functions are advanced edge cases in case you want to implement specific programs or programming languages. It does contain some helpful functions:\n\nusethis::use_github() helps you share your project on github\nusethis::use_data_raw() is helpful if you want to use data in your app\ngolem::add_utils(“helpers”, with_test = TRUE) creates a script for making helper functions, in case you develop your own functions to be used in the app\n\nThe rest of the functions are beyond the scope of this workshop, except one: golem::add_module()",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
+    "section": "\n10.5 Development and modularization",
+    "text": "10.5 Development and modularization\nWe will in this workshop be bad examples and start development on our penguin app before doing any of the housekeeping. if we are leading by example, this is a poor example indeed! But jokes aside, our second file 02_dev.R contains the scripts we need to build our app.\nThere are many different functions in this file and we do not need all of them - a lot of these functions are advanced edge cases in case you want to implement specific programs or programming languages. It does contain some helpful functions:\n\nusethis::use_github() helps you share your project on github\nusethis::use_data_raw() is helpful if you want to use data in your app\ngolem::add_utils(“helpers”, with_test = TRUE) creates a script for making helper functions, in case you develop your own functions to be used in the app\n\nThe rest of the functions are beyond the scope of this workshop, except one: golem::add_module()",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
-    "objectID": "sessions/golem.html#speech_balloon-discussion-activity-add_module",
-    "href": "sessions/golem.html#speech_balloon-discussion-activity-add_module",
-    "title": "12  Golem: a structured way to build and modularize your app",
-    "section": "12.6 :speech_balloon: Discussion activity: add_module",
-    "text": "12.6 :speech_balloon: Discussion activity: add_module\nTime: ~5 minutes.\nOpen the add_module() function. Discuss with the person next to you what it does, and why this could be useful",
+    "objectID": "sessions/golem.html#discussion-activity-add_module",
+    "href": "sessions/golem.html#discussion-activity-add_module",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
+    "section": "\n10.6 💬 Discussion activity: add_module",
+    "text": "10.6 💬 Discussion activity: add_module\nTime: ~5 minutes.\nOpen the add_module() function. Discuss with the person next to you what it does, and why this could be useful",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
     "objectID": "sessions/golem.html#making-our-first-module",
     "href": "sessions/golem.html#making-our-first-module",
-    "title": "12  Golem: a structured way to build and modularize your app",
-    "section": "12.7 Making our first module",
-    "text": "12.7 Making our first module\nWe want to make an app about the penguins dataset. In general, it is considered good design form to consider what the app should look like before we start coding. Lets take a look at the data and see what we can do with it:\n\ndplyr::slice_head(penguins,n = 10)\n\n   species    island bill_len bill_dep flipper_len body_mass    sex year\n1   Adelie Torgersen     39.1     18.7         181      3750   male 2007\n2   Adelie Torgersen     39.5     17.4         186      3800 female 2007\n3   Adelie Torgersen     40.3     18.0         195      3250 female 2007\n4   Adelie Torgersen       NA       NA          NA        NA   &lt;NA&gt; 2007\n5   Adelie Torgersen     36.7     19.3         193      3450 female 2007\n6   Adelie Torgersen     39.3     20.6         190      3650   male 2007\n7   Adelie Torgersen     38.9     17.8         181      3625 female 2007\n8   Adelie Torgersen     39.2     19.6         195      4675   male 2007\n9   Adelie Torgersen     34.1     18.1         193      3475   &lt;NA&gt; 2007\n10  Adelie Torgersen     42.0     20.2         190      4250   &lt;NA&gt; 2007\n\n\nWe see we have eight different columns with data about the penguins - species, island, bill length, etc. Lets make a module called “overview” where we will make a an explorative plot in the next chapter. For now, we build the module:\n\ngolem::add_module(name = \"overview\")\n\nyou will notice the standard golem output includes an argument stating with_test=TRUE. This is not necessary for our app, and truth being told I have yet to grasp the potential and utility in the tests offered by golem. Know they are there, and you can look for information if this is of interest to you.\nIf we run this command, we should now get a new file - we get a console output stating File created at R/mod_overview.R. Looking in our R folder we see there now is a script called mod_overview.R. The script contains several chunks - lets go through them in turn\n\nmod_overview_ui &lt;- function(id) {\n  ns &lt;- NS(id)\n  tagList(\n \n  )\n}\n\nThis first chunk is the UI component. In the function called tagList (from shiny) we can add all the UI components we desire - cards, pages, you name it.\nNext thing we see is the server:\n\nmod_overview_server &lt;- function(id){\n  moduleServer(id, function(input, output, session){\n    ns &lt;- session$ns\n \n  })\n}\n\nIn this, we put the server component in. So far, this is very similar to our initial example. The next part is commented out (with #) but is quite interesting:\n\n## To be copied in the UI\n# mod_overview_ui(\"overview_1\")\n    \n## To be copied in the server\n# mod_overview_server(\"overview_1\")\n\ngolem gives us to two functions we can paste into our UI and server script. These are also found in the /R folder and are called “app_ui” and “app_server”. If we open app_ui we will see the following in the top part:\n\napp_ui &lt;- function(request) {\n  tagList(\n    # Leave this function for adding external resources\n    golem_add_external_resources(),\n    # Your application UI logic\n    fluidPage(\n      golem::golem_welcome_page() # Remove this line to start building your UI\n    )\n  )\n}\n\nHere we see the description of the UI - it describes the golem demo page we saw before, with all the golem resources. Standard is shiny::fluidPage, but if you want to use bslib as we discussed in the previous chapter, it is worth upgrading the page type to a one from this package - the equivalent is bslib::page_fluid(). Using the default shiny::fluidPage can cause some unexpected interactions with bslib elements.\nIn this case, we like the golem page, but we want to make a page of our own. We will turn it into a page with a navigation bar, and add our new module. We replace fluidPage with bslib::page_navbar(), and wrap the golem_welcome_page() in bslib::nav_panel(), telling shiny that we want it to be displayed as a panel in the navigation bar. We also give a title for the tab.\nThen we copy the text from the golem module (mod_overview_ui(\"overview_1\")) into another nav_panel() instance, and gives it a title.\n\napp_ui &lt;- function(request) {\n  tagList(\n    # Leave this function for adding external resources\n    golem_add_external_resources(),\n    # Your application UI logic\n    bslib::page_navbar(\n      bslib::nav_panel(\n        title = \"golem welcome page\",\n        golem::golem_welcome_page()\n      ),\n      bslib::nav_panel(\n        title = \"Our awesome penguin app\",\n        mod_overview_ui(\"overview_1\")\n      )\n       \n    )\n  )\n}\n\nNext, we open the app_server script. We see it is currently empty - the welcome page is apparantly all UI and no server. We want to add a server of our own, and copy the server script from our module file (mod_overview_server(\"overview_1\"))\n\napp_server &lt;- function(input, output, session) {\n  # Your application server logic\n  mod_overview_server(\"overview_1\")\n}\n\nif we run golem::run_dev() we will now get an app with two tabs - the golem page and an empty page. We have made a modularized app! additional modules can be added the same way, and the size of scripts kept to a manageable size. Note that the background is purple, which is being hard set by golem - if we delete the golem welcome page it will go away.",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
+    "section": "\n10.7 Making our first module",
+    "text": "10.7 Making our first module\nWe want to make an app about the penguins dataset. In general, it is considered good design form to consider what the app should look like before we start coding. Lets take a look at the data and see what we can do with it:\n\ndplyr::slice_head(penguins,n = 10)\n\n# A tibble: 10 × 8\n   species island    bill_len bill_dep flipper_len body_mass sex    year\n   &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;     &lt;int&gt; &lt;fct&gt; &lt;int&gt;\n 1 Adelie  Torgersen     39.1     18.7         181      3750 male   2007\n 2 Adelie  Torgersen     39.5     17.4         186      3800 fema…  2007\n 3 Adelie  Torgersen     40.3     18           195      3250 fema…  2007\n 4 Adelie  Torgersen     NA       NA            NA        NA &lt;NA&gt;   2007\n 5 Adelie  Torgersen     36.7     19.3         193      3450 fema…  2007\n 6 Adelie  Torgersen     39.3     20.6         190      3650 male   2007\n 7 Adelie  Torgersen     38.9     17.8         181      3625 fema…  2007\n 8 Adelie  Torgersen     39.2     19.6         195      4675 male   2007\n 9 Adelie  Torgersen     34.1     18.1         193      3475 &lt;NA&gt;   2007\n10 Adelie  Torgersen     42       20.2         190      4250 &lt;NA&gt;   2007\n\n\nWe see we have eight different columns with data about the penguins - species, island, bill length, etc. Lets make a module called “overview” where we will make a an explorative plot in the next chapter. For now, we build the module:\n\ngolem::add_module(name = \"overview\")\n\nyou will notice the standard golem output includes an argument stating with_test=TRUE. This is not necessary for our app, and truth being told I have yet to grasp the potential and utility in the tests offered by golem. Know they are there, and you can look for information if this is of interest to you.\nIf we run this command, we should now get a new file - we get a console output stating File created at R/mod_overview.R. Looking in our R folder we see there now is a script called mod_overview.R. The script contains several chunks - lets go through them in turn\n\nmod_overview_ui &lt;- function(id) {\n  ns &lt;- NS(id)\n  tagList(\n \n  )\n}\n\nThis first chunk is the UI component. In the function called tagList (from shiny) we can add all the UI components we desire - cards, pages, you name it.\nNext thing we see is the server:\n\nmod_overview_server &lt;- function(id){\n  moduleServer(id, function(input, output, session){\n    ns &lt;- session$ns\n \n  })\n}\n\nIn this, we put the server component in. So far, this is very similar to our initial example. The next part is commented out (with #) but is quite interesting:\n\n## To be copied in the UI\n# mod_overview_ui(\"overview_1\")\n    \n## To be copied in the server\n# mod_overview_server(\"overview_1\")\n\ngolem gives us to two functions we can paste into our UI and server script. These are also found in the /R folder and are called “app_ui” and “app_server”. If we open app_ui we will see the following in the top part:\n\napp_ui &lt;- function(request) {\n  tagList(\n    # Leave this function for adding external resources\n    golem_add_external_resources(),\n    # Your application UI logic\n    fluidPage(\n      golem::golem_welcome_page() # Remove this line to start building your UI\n    )\n  )\n}\n\nHere we see the description of the UI - it describes the golem demo page we saw before, with all the golem resources. Standard is shiny::fluidPage, but if you want to use bslib as we discussed in the previous chapter, it is worth upgrading the page type to a one from this package - the equivalent is bslib::page_fluid(). Using the default shiny::fluidPage can cause some unexpected interactions with bslib elements.\nIn this case, we like the golem page, but we want to make a page of our own. We will turn it into a page with a navigation bar, and add our new module. We replace fluidPage with bslib::page_navbar(), and wrap the golem_welcome_page() in bslib::nav_panel(), telling shiny that we want it to be displayed as a panel in the navigation bar. We also give a title for the tab.\nThen we copy the text from the golem module (mod_overview_ui(\"overview_1\")) into another nav_panel() instance, and gives it a title.\n\napp_ui &lt;- function(request) {\n  tagList(\n    # Leave this function for adding external resources\n    golem_add_external_resources(),\n    # Your application UI logic\n    bslib::page_navbar(\n      bslib::nav_panel(\n        title = \"golem welcome page\",\n        golem::golem_welcome_page()\n      ),\n      bslib::nav_panel(\n        title = \"Our awesome penguin app\",\n        mod_overview_ui(\"overview_1\")\n      )\n       \n    )\n  )\n}\n\nNext, we open the app_server script. We see it is currently empty - the welcome page is apparantly all UI and no server. We want to add a server of our own, and copy the server script from our module file (mod_overview_server(\"overview_1\"))\n\napp_server &lt;- function(input, output, session) {\n  # Your application server logic\n  mod_overview_server(\"overview_1\")\n}\n\nif we run golem::run_dev() we will now get an app with two tabs - the golem page and an empty page. We have made a modularized app! additional modules can be added the same way, and the size of scripts kept to a manageable size. Note that the background is purple, which is being hard set by golem - if we delete the golem welcome page it will go away.",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
     "objectID": "sessions/golem.html#reading-activity-03_deploy.r",
     "href": "sessions/golem.html#reading-activity-03_deploy.r",
-    "title": "12  Golem: a structured way to build and modularize your app",
-    "section": "12.8 Reading activity: 03_deploy.R",
-    "text": "12.8 Reading activity: 03_deploy.R\nTime: \\5 minutes.\nIn our dev folder we had a final file - 03_deploy.R. This one contains helper functions for when your app is ready to be shared with the world. it helps you build functions from your app into a package (and helps you check if it is good enough to be added to CRAN, where we download our packages from), and it contains a number of options to help prepare your app to be hosted on platforms such as posit connect or other platforms. Deploying is beyond the scope of this workshop, but this file will give you a number of options you can look up and find a solution that works for you. If you want an easy way to share apps, I encourage you to check out posit connect - they have free plans if your app is small, and once your account is connected, it requires few steps to upload and update apps.\n{{&lt; text_snippet sticky_up &gt;}}",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
+    "section": "\n10.8 Reading activity: 03_deploy.R",
+    "text": "10.8 Reading activity: 03_deploy.R\nTime: \\5 minutes.\nIn our dev folder we had a final file - 03_deploy.R. This one contains helper functions for when your app is ready to be shared with the world. it helps you build functions from your app into a package (and helps you check if it is good enough to be added to CRAN, where we download our packages from), and it contains a number of options to help prepare your app to be hosted on platforms such as posit connect or other platforms. Deploying is beyond the scope of this workshop, but this file will give you a number of options you can look up and find a solution that works for you. If you want an easy way to share apps, I encourage you to check out posit connect - they have free plans if your app is small, and once your account is connected, it requires few steps to upload and update apps.\n\n\n\n\n\n\nCautionSticky/hat up!\n\n\n\nWhen you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher 👒 🎩",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
     ]
   },
   {
     "objectID": "sessions/golem.html#summary",
     "href": "sessions/golem.html#summary",
-    "title": "12  Golem: a structured way to build and modularize your app",
-    "section": "12.9 Summary",
-    "text": "12.9 Summary\nYou have now learned\n\nHow to build an app with golem\nHow the dev files work\nHow modularization works\nWhere you can find information about how to share your app with the world",
+    "title": "\n10  Golem: a structured way to build and modularize your app\n",
+    "section": "\n10.9 Summary",
+    "text": "10.9 Summary\nYou have now learned\n\nHow to build an app with golem\nHow the dev files work\nHow modularization works\nWhere you can find information about how to share your app with the world",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Golem: a structured way to build and modularize your app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html",
+    "href": "sessions/build_app.html",
+    "title": "\n11  Building our app\n",
+    "section": "",
+    "text": "11.1 Learning objectives\nWe have now learned how to setup our app and modularize it so it is easier to navigate the code. Now it’s time to put something in it!\nThe learning objectives for this session are:",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#learning-objectives",
+    "href": "sessions/build_app.html#learning-objectives",
+    "title": "\n11  Building our app\n",
+    "section": "",
+    "text": "Objective one",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#speeding-up-data-handling",
+    "href": "sessions/build_app.html#speeding-up-data-handling",
+    "title": "\n11  Building our app\n",
+    "section": "\n11.2 Speeding up data handling",
+    "text": "11.2 Speeding up data handling\n\n\n\n\n\n\nNoteReading task: ~4 minutes\n\n\n\nBecause our app is an example, speed is not really an issue when loading in data. But imagine you had a large sequencing dataset with thousands of genes from hundreds of samples - suddenly loading speed (and performance) can become an issue. If data can be organized as csv files, this is usually a good option - csv files can be loaded in rapidly using the vroom() function from the package of the same name. But if your dataset is very large and your app feels clunky, there are a few options you can utilize\nIf file size is the issue, consider converting file format to the parquet format. Parquet is similar to csv but structures data in a different way. Generally, the form is optimized for machines rather than humans, as we cannot open and interact with it the way we can with a csv. But for our apps, this does not matter too much.\nYou can convert data to parquet using the arrow package. If you want to save our penguin dataset in a folder called “data-raw”, you use the command\n\n#create the data-raw folder\n\nusethis::use_data_raw()\n\n#save our data as parquet\narrow::write_parquet(x = penguins,\n                     sink = here::here(\"data-raw/penguins.parquet\"))\n\nThen data can be read in using arrow::read_parquet(\"data-raw/penguins.parquet\") If you are interested in how much more efficient parquet is, this blog post provides some indication: for a data set with 11 mio rows, parquet files were 6.8x smaller than csv, and processed 22-60x faster.\nIf loading is not the issue, but data wrangling is (for example filtering steps) then an alternative is to use duckplyr. Duckplyr uses the powerful duckdb engine to compute results faster. duckplyr works as a faster drop-in for dplyr. If you call library(duckplyr) in a normal R script, duckplyr will overwrite dplyr methods. In a shiny app (especially using golem where we modularize things) it can be a bit more tricky - you should explicitely call duckplyr::methods_overwrite() in the run_app.R script just before with_golem_options(). I have not verified this approach yet - but you should be able to get the speed by adding duckplyr::as_duckdb_tibble() in the top of your data wrangling steps:\n\npenguins |&gt; \n  duckplyr::as_duckdb_tibble() |&gt; \n  dplyr::filter(sex == \"female\")\n\n# A tibble: 165 × 8\n   species island    bill_len bill_dep flipper_len body_mass sex    year\n   &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;     &lt;int&gt; &lt;fct&gt; &lt;int&gt;\n 1 Adelie  Torgersen     39.5     17.4         186      3800 fema…  2007\n 2 Adelie  Torgersen     40.3     18           195      3250 fema…  2007\n 3 Adelie  Torgersen     36.7     19.3         193      3450 fema…  2007\n 4 Adelie  Torgersen     38.9     17.8         181      3625 fema…  2007\n 5 Adelie  Torgersen     41.1     17.6         182      3200 fema…  2007\n 6 Adelie  Torgersen     36.6     17.8         185      3700 fema…  2007\n 7 Adelie  Torgersen     38.7     19           195      3450 fema…  2007\n 8 Adelie  Torgersen     34.4     18.4         184      3325 fema…  2007\n 9 Adelie  Biscoe        37.8     18.3         174      3400 fema…  2007\n10 Adelie  Biscoe        35.9     19.2         189      3800 fema…  2007\n# ℹ 155 more rows\n\n\nThese methods work best if you have data that can be stored as a data frame. For some of our omics data (like single cell RNAseq data) this can be notoriously difficult, and objects from for example seurat can take a long time to load into R. This makes it difficult to use the tools above. My best advice here is to delete as much as you can from the Seurat datasets - they often end up being filled with normalizations. Consider checking out he package DietSeurat or setting aspects of the seurat object (such as count and scale.data) to NULL.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#making-interactive-plots",
+    "href": "sessions/build_app.html#making-interactive-plots",
+    "title": "\n11  Building our app\n",
+    "section": "\n11.3 Making interactive plots",
+    "text": "11.3 Making interactive plots\nAfter all this reading, it is time to code some plots. We can start by making a plot exploring the possible relation between bill length and flipper length for different species of penguins.But first, let’s go in and delete the golem welcome page:\n\napp_ui &lt;- function(request) {\n  tagList(\n    # Leave this function for adding external resources\n    golem_add_external_resources(),\n    # Your application UI logic\n    bslib::page_navbar(\n      bslib::nav_panel(\n        title = \"Our awesome penguin app\",\n        mod_overview_ui(\"overview_1\")\n      )\n\n    )\n  )\n}\n\nWe first build the UI code:\n\nmod_overview_ui &lt;- function(id) {\n  ns &lt;- NS(id)\n  tagList(\n    bslib::card(\n      bslib::card_header(\"penguin plot\"),\n      shiny::plotOutput(outputId = \"penguinplot\")\n    )\n  )\n}\n\nThen we need to decide what should be rendered on the server side:\n\nmod_overview_server &lt;- function(id){\n  moduleServer(id, function(input, output, session){\n    ns &lt;- session$ns\n    \n    output$penguinplot &lt;- shiny::renderPlot({\n      ggplot2::ggplot(\n        penguins,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point()+\n        ggplot2::theme_bw()\n    })\n  })\n}\n\nThis should modify our app to render a plot like the following\n\n      ggplot2::ggplot(\n        penguins,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point()+\n        ggplot2::theme_bw()\n\nWarning: Removed 2 rows containing missing values or values outside the scale\nrange (`geom_point()`).\n\n\n\n\n\n\n\n\nBut surprisingly it does not work! Our app is just blank? Where is our beautiful plot? To render it properly, we need to add a small wrapper to our outputId. It should be changed from outputId = \"penguinplot\" to outputId = ns(\"penguinplot)\". You may notice our server code contains a reference to ns in the line ns &lt;- session$ns. What this does is essentially a way for our modularized app to navigate where input and output id’s belong in our various modules. Always add ns(\"\") around input and output IDs!\n\nmod_overview_ui &lt;- function(id) {\n  ns &lt;- NS(id)\n  tagList(\n    bslib::card(\n      bslib::card_header(\"penguin plot\"),\n      shiny::plotOutput(outputId = ns(\"penguinplot\"))\n    )\n  )\n}\n\nIf we now run golem::run_dev() we see our plot. But right now it is static. What if we wanted to make it more interactive? There is a powerful alternative to ggplot called plotly. In this package interactivity is native. But the syntaxt of plotly is different. The equivalent of the above would be\n\nplotly::plot_ly(\n  data = penguins,\n  x =~bill_len,\n  y = ~flipper_len,\n  color = ~species,\n  type = \"scatter\" \n)\n\nWarning: Ignoring 2 observations\n\n\n\n\n\n\nWe see here there are several nice functionalities - we can zoom, we can export and there is a native tooltip - if we hover above individual points, we can get info about them. We can customise the content of these, but it requires some finesse. Luckily there is a way we can convert our ggplot to plotly easily, using the ggplotly function.\n\npenguin_plotly &lt;- ggplot2::ggplot(\n        penguins,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point()+\n        ggplot2::theme_bw()\n\nplotly::ggplotly(penguin_plotly)\n\n\n\n\n\nWe can customize tooltip information in ggplotly. We can for example add information about the sex of the penguin by adding it as a text info in ggplot, and call it in gglotly:\n\npenguin_plotly &lt;- ggplot2::ggplot(\n        penguins,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point(\n          ggplot2::aes(\n            text = sex\n          )\n        )+\n        ggplot2::theme_bw()\n\nWarning in ggplot2::geom_point(ggplot2::aes(text = sex)): Ignoring\nunknown aesthetics: text\n\nplotly::ggplotly(penguin_plotly,\n                 tooltip = \"text\")\n\n\n\n\n\nBefore we try to run it in our app, we have one important thing to do in the UI - we must change our shiny::plotOutput(outputId = ns(\"penguinplot\")) to plotly::plotlyOutput(outputId = ns(\"penguinplot\")) and likewise change\noutput$penguinplot &lt;- shiny::renderPlot({ to output$penguinplot &lt;- plotly::renderPlotly({\nOnce this is done, we should be good to go.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#exercise-add-the-plot-to-our-app",
+    "href": "sessions/build_app.html#exercise-add-the-plot-to-our-app",
+    "title": "\n11  Building our app\n",
+    "section": "\n11.4 🧑‍💻 Exercise: Add the plot to our app",
+    "text": "11.4 🧑‍💻 Exercise: Add the plot to our app\nTime: ~6 minutes.\nAdd the plot above to our app and try to run it\n\n\n\n\n\n\nCautionSticky/hat up!\n\n\n\nWhen you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher 👒 🎩",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#filtering-and-subsetting",
+    "href": "sessions/build_app.html#filtering-and-subsetting",
+    "title": "\n11  Building our app\n",
+    "section": "\n11.5 Filtering and subsetting",
+    "text": "11.5 Filtering and subsetting\nSo far, most of what we have done could be achieved in a static document. But shiny offers a lot more - particularly the ability to respond to our inputs. Lets take our plot above - say we want the ability to filter our plot based on what island the penguins are from.\n\npenguins |&gt; \n  dplyr::distinct(island)\n\n# A tibble: 3 × 1\n  island   \n  &lt;fct&gt;    \n1 Torgersen\n2 Biscoe   \n3 Dream    \n\n\nWe see we have three options - Torgersen, Biscoe and Dream. We can make an input containing these three options in our ui, plus a fourth containing all of them.\n\nmod_overview_ui &lt;- function(id) {\n  ns &lt;- NS(id)\n  tagList(\n    bslib::card(\n      bslib::card_header(\"penguin plot\"),\n      shiny::radioButtons(inputId = ns(\"island\"),\n                          label = \"Select island\",\n                          choices = c(\"all\",\n                                      \"Torgersen\",\n                                      \"Biscoe\",\n                                      \"Dream\"),\n                          selected = \"all\"),\n      plotly::plotlyOutput(outputId = ns(\"penguinplot\"))\n    )\n  )\n}\n\nIf we run golem::run_dev() we will now see a radiobutton with four choices. But they don’t do anything yet. To link the choice to our plot, we must modify the code for our plot. If we just want to filter the data set based on which island has been chosen, we need the name of our input - in this case “island”. we could just do something like the following:\n\npenguin_subset &lt;- penguins |&gt; \n  dplyr::filter(island == input$island)\n\npenguin_plotly &lt;- ggplot2::ggplot(\n        penguin_subset,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point(\n          ggplot2::aes(\n            text = sex\n          )\n        )+\n        ggplot2::theme_bw()\n\nplotly::ggplotly(penguin_plotly,\n                 tooltip = \"text\")\n\nThis will work for chosing the island, but how about if we want the option to show the whole dataset? We can do it with an if/else statement. If we have selected “all” we use the entire penguins dataset - else we will filter for the content of input$island. In R code it looks like this:\n\nif(input$island == \"all\"){\n  penguin_subset &lt;- penguins\n}\nelse {\n  penguin_subset &lt;- penguins |&gt; \n  dplyr::filter(island == input$island)\n}\n\npenguin_plotly &lt;- ggplot2::ggplot(\n        penguin_subset,\n        ggplot2::aes(\n          x = bill_len,\n          y = flipper_len,\n          color = species\n        )\n      )+\n        ggplot2::geom_point(\n          ggplot2::aes(\n            text = sex\n          )\n        )+\n        ggplot2::theme_bw()\n\nplotly::ggplotly(penguin_plotly,\n                 tooltip = \"text\")\n\nWe can now change our plot based on input! This is just one example of reactivity in shiny. There are many ways to change input - for a gallery check this resource",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#exercise-observeevent",
+    "href": "sessions/build_app.html#exercise-observeevent",
+    "title": "\n11  Building our app\n",
+    "section": "\n11.6 🧑‍💻 Exercise: observeEvent",
+    "text": "11.6 🧑‍💻 Exercise: observeEvent\nTime: ~6 minutes.\nAnother helpful function to know is shiny::observeEvent(). this function is coded into the server part and when the condition is triggered, the code is run. Try this out by adding the following:\n\nIn the UI, add an action button shiny::actionButton(inputId = ns(\"test\").\nIn the server add\n\n\nRun the app, press the button and watch the console for the output",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#extra-exercise-develop-the-app",
+    "href": "sessions/build_app.html#extra-exercise-develop-the-app",
+    "title": "\n11  Building our app\n",
+    "section": "\n11.7 🧑‍💻 Extra Exercise: Develop the app",
+    "text": "11.7 🧑‍💻 Extra Exercise: Develop the app\nif you have extra time, you can try making our penguin app nicer.Fix the axis lengths through xlim andylim on the plot or changing the color scheme. Or try adding a different module with a different plot.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
+    ]
+  },
+  {
+    "objectID": "sessions/build_app.html#summary",
+    "href": "sessions/build_app.html#summary",
+    "title": "\n11  Building our app\n",
+    "section": "\n11.8 Summary",
+    "text": "11.8 Summary\n\nWe have now learned how to speed up loading and performance of our app\nWe also know how to make plots interactive\nFinally we have learned how to make Shiny responsive and change the output based on our input.",
+    "crumbs": [
+      "Sessions",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Building our app</span>"
     ]
   },
   {
     "objectID": "sessions/conclusion.html",
     "href": "sessions/conclusion.html",
-    "title": "13  What next",
+    "title": "12  What next",
     "section": "",
     "text": "You have now taken your first step into a much larger world. If you have feedback or questions about Shiny, feel free to shoot an email",
     "crumbs": [
       "Sessions",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>What next</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>What next</span>"
     ]
   },
   {
@@ -549,29 +636,29 @@
     "href": "CONTRIBUTING.html",
     "title": "Appendix B — Contributing",
     "section": "",
-    "text": "B.1 :bug: Issues and bugs\nCheck out the Contributing Guide for more details on how to contribute. For guidelines on how to be a helper or teacher, check out the For teachers page. As always, make sure to adhere to the Code of Conduct.\nThe easiest way to contribute is to report issues or bugs that you might find while using or reading the workshop material. You can do this by creating a new issue on our GitHub repository.",
+    "text": "B.1 🐛 Issues and bugs\nCheck out the Contributing Guide for more details on how to contribute. For guidelines on how to be a helper or teacher, check out the For teachers page. As always, make sure to adhere to the Code of Conduct.\nThe easiest way to contribute is to report issues or bugs that you might find while using or reading the workshop material. You can do this by creating a new issue on our GitHub repository.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Contributing</span>"
     ]
   },
   {
-    "objectID": "CONTRIBUTING.html#pencil2-adding-or-modifying-content",
-    "href": "CONTRIBUTING.html#pencil2-adding-or-modifying-content",
+    "objectID": "CONTRIBUTING.html#adding-or-modifying-content",
+    "href": "CONTRIBUTING.html#adding-or-modifying-content",
     "title": "Appendix B — Contributing",
-    "section": "B.2 :pencil2: Adding or modifying content",
-    "text": "B.2 :pencil2: Adding or modifying content\nTo contribute to the workshop, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and build the workshop website. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to install uv first and then install justfile using uv. Then, to install justfile, run:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our checks by opening a terminal so that the working directory is the root of this workshop’s parent/root folder and running:\njust run-all\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit.",
+    "section": "B.2 ✏️ Adding or modifying content",
+    "text": "B.2 ✏️ Adding or modifying content\nTo contribute to the workshop, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and build the workshop website. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to install uv first and then install justfile using uv. Then, to install justfile, run:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our checks by opening a terminal so that the working directory is the root of this workshop’s parent/root folder and running:\njust run-all\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Contributing</span>"
     ]
   },
   {
-    "objectID": "CONTRIBUTING.html#file_folder-support-and-infrastructure-files",
-    "href": "CONTRIBUTING.html#file_folder-support-and-infrastructure-files",
+    "objectID": "CONTRIBUTING.html#support-and-infrastructure-files",
+    "href": "CONTRIBUTING.html#support-and-infrastructure-files",
     "title": "Appendix B — Contributing",
-    "section": "B.3 :file_folder: Support and infrastructure files",
-    "text": "B.3 :file_folder: Support and infrastructure files\n\n.copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\n\n.zenodo.json: Structured citation metadata for your project when archived on Zenodo. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCONTRIBUTING.md: Guidelines for contributing to the project.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file.",
+    "section": "B.3 📁 Support and infrastructure files",
+    "text": "B.3 📁 Support and infrastructure files\n\n.copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\n\n.zenodo.json: Structured citation metadata for your project when archived on Zenodo. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCONTRIBUTING.md: Guidelines for contributing to the project.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Contributing</span>"

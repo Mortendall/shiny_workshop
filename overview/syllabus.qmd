@@ -2,31 +2,48 @@
 
 TODO: Include description and overall introduction of workshop
 
-This workshop lasts TODO: Time and is split into the following sessions,
-listed in the [schedule](/overview/schedule.qmd), which will be covered
-in order:
+This workshop lasts 2 hours and is split into the following sessions, ,
+which will be covered in order:
 
 - [Introduction to the workshop](/sessions/introduction.qmd)
-- [TODO: Session title](/sessions/session.qmd)
+- [Shiny apps](/sessions/shinyapps.qmd)
+- [Introduction to golem](/sessions/golem.qmd)
+- [Building our app](/sessions/build_app.qmd)
 - [Concluding remarks](/sessions/conclusion.qmd)
 
 ## Learning outcome and objectives
 
 The overall aim of this workshop is to enable you to:
 
-1.  Aim one
+1.  Understand how a shiny app works and how you build it
+2.  Show you how to modularize it
+3.  Teach you how you can improve performance of loading- and processing
+    times
+4.  Make interactive plots that respond to user input
 
-Broken down into specific objectives for each session, we've designed
-the workshop to enable you to do the following:
+Broken down into specific objectives for each session, the workshop has
+been designed to enable you to do the following:
 
-[**TODO: Session title**](/sessions/session.qmd)
+[**Shiny apps**](/sessions/session.qmd)
 
-{{< include /includes/objectives/_session.qmd >}}
+{{< include /includes/objectives/_shinyapps.qmd >}}
+
+[**Golem**](/sessions/session.qmd)
+
+{{< include /includes/objectives/_golem.qmd >}}
+
+[**Building our app**](/sessions/session.qmd)
+
+{{< include /includes/objectives/_build_app.qmd >}}
 
 Tangibly, during the workshop you will:
 
-- Learn what a Shiny app is
-- Create one with the golem package
-- Build a dashboard using the `palmerpenguins` dataset
-- Store files as parquet
+- Learn about the role of the UI and the server
+
+- Create a modularized app with the golem package
+
+- Learn about the parquet data format and duckplyr
+
+- Build a plotly graph using the `penguins` dataset
+
 - Make graphs interactive using plotly

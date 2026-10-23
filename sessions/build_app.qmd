@@ -63,12 +63,14 @@ using golem where we modularize things) it can be a bit more tricky -
 you should explicitely call `duckplyr::methods_overwrite()` in the
 `run_app.R` script just before `with_golem_options()`. I have not
 verified this approach yet - but you should be able to get the speed by
-adding `duckplyr::as_duckplyr_tibble()` in the top of your data
-wrangling steps:
+adding `duckplyr::as_duckdb_tibble()` in the top of your data wrangling
+steps:
 
 ```{r}
+#| message: false
+#| warning: false
 penguins |> 
-  duckplyr::as_duckplyr_tibble() |> 
+  duckplyr::as_duckdb_tibble() |> 
   dplyr::filter(sex == "female")
   
 ```
@@ -198,7 +200,6 @@ interactivity is native. But the syntaxt of plotly is different. The
 equivalent of the above would be
 
 ```{r}
-#| echo: false
 #| message: false
 
 plotly::plot_ly(
