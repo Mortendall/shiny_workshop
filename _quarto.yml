@@ -37,7 +37,6 @@ book:
         - pre-workshop/code-of-conduct.qmd
     - part: "Sessions"
       chapters:
-        - sessions/introduction.qmd
         - sessions/shinyapps.qmd
         - sessions/golem.qmd
         - sessions/build_app.qmd
