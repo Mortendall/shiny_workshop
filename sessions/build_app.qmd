@@ -381,6 +381,9 @@ plotly::ggplotly(penguin_plotly,
                  tooltip = "text")
 ```
 
+Keep in mind this will not work in the console - only in our app, as R
+will have no clue what "input" is outside of a shiny session.
+
 We can now change our plot based on input! This is just one example of
 reactivity in shiny. There are many ways to change input - for a gallery
 check [this
@@ -420,3 +423,4 @@ scheme. Or try adding a different module with a different plot.
 - We also know how to make plots interactive
 - Finally we have learned how to make Shiny responsive and change the
   output based on our input.
+

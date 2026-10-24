@@ -1,7 +1,5 @@
 # Syllabus {#sec-syllabus}
 
-TODO: Include description and overall introduction of workshop
-
 This workshop lasts 2 hours and is split into the following sessions, ,
 which will be covered in order:
 
@@ -24,15 +22,15 @@ The overall aim of this workshop is to enable you to:
 Broken down into specific objectives for each session, the workshop has
 been designed to enable you to do the following:
 
-[**Shiny apps**](/sessions/session.qmd)
+[**Shiny apps**](/sessions/shinyapps.qmd)
 
 {{< include /includes/objectives/_shinyapps.qmd >}}
 
-[**Golem**](/sessions/session.qmd)
+[**Golem**](/sessions/golem.qmd)
 
 {{< include /includes/objectives/_golem.qmd >}}
 
-[**Building our app**](/sessions/session.qmd)
+[**Building our app**](/sessions/build_app.qmd)
 
 {{< include /includes/objectives/_build_app.qmd >}}
 
@@ -40,10 +38,8 @@ Tangibly, during the workshop you will:
 
 - Learn about the role of the UI and the server
 
-- Create a modularized app with the golem package
+- Create a modularized app with the `golem` package
 
-- Learn about the parquet data format and duckplyr
+- Learn about the parquet data format and `duckplyr`
 
-- Build a plotly graph using the `penguins` dataset
-
-- Make graphs interactive using plotly
+- Build an interactive `plotly` graph using the `penguins` dataset

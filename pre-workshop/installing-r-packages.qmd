@@ -13,5 +13,5 @@ to install them. The following packages should be installed
 
 ``` {.r filename="Console"}
 
-install.packages(c("tidyverse", "shiny", "golem", "plotly","arrow", "here", "bslib","datasets"))
+install.packages(c("tidyverse", "shiny", "golem", "plotly","arrow", "here", "bslib","datasets", "duckplyr"))
 ```

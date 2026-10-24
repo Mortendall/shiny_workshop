@@ -153,7 +153,7 @@ app <- shiny::shinyApp(
   ui = bslib::page_sidebar(
     title = "Our Iris plot",
     sidebar = "here is our sidebar",
-    bslib::c(shiny::plotOutput(outputId = "iris_plot")
+    bslib::card(shiny::plotOutput(outputId = "iris_plot")
     )
   ),
   server = function(input, output){
