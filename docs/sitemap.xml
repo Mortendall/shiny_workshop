@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/index.html</loc>
-    <lastmod>2026-10-23T09:35:37.121Z</lastmod>
+    <lastmod>2026-10-24T19:41:50.194Z</lastmod>
   </url>
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/overview/syllabus.html</loc>
-    <lastmod>2026-10-23T09:27:06.907Z</lastmod>
+    <lastmod>2026-10-24T19:27:17.508Z</lastmod>
   </url>
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/overview/is-this-for-you.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/pre-workshop/installing-r-packages.html</loc>
-    <lastmod>2026-10-23T09:25:35.199Z</lastmod>
+    <lastmod>2026-10-24T19:24:52.920Z</lastmod>
   </url>
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/pre-workshop/code-of-conduct.html</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/sessions/shinyapps.html</loc>
-    <lastmod>2026-10-23T09:18:56.706Z</lastmod>
+    <lastmod>2026-10-24T19:28:44.236Z</lastmod>
   </url>
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/sessions/golem.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/sessions/build_app.html</loc>
-    <lastmod>2026-10-23T06:51:53.656Z</lastmod>
+    <lastmod>2026-10-24T19:31:52.331Z</lastmod>
   </url>
   <url>
     <loc>https://mortendall.github.io/shiny_workshop/sessions/conclusion.html</loc>

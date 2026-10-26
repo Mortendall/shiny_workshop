@@ -2,7 +2,7 @@
 
 So far we have only run our app locally in the console. It is time to
 build an actual Shiny app! There are multiple ways to do this, but we
-will use the package called golem.
+will use the package called`golem`.
 
 ## Learning objectives
 
@@ -11,7 +11,7 @@ The learning objectives for this session are:
 {{< include /includes/objectives/_golem.qmd >}}
 
 ::: callout-note
-## Reading task: Why golem? \~4 minutes
+## Reading task: Why golem? \~7 minutes
 
 There are many ways we can make a shiny app. If we want to make a very
 simple app and just run it locally, we can just put the code from our
@@ -20,29 +20,31 @@ and easy. A more structured way to make a one-script app is by making a
 new shiny app project. If we have shiny installed we can go to `file`,
 `new project` and select `shiny application`. This creates a one script
 app, containing the essentials. Running this app is easy, just click the
-`run app` button and you are flying. For many apps, this setup is
-perfectly adequate and you can deploy it to the internet if you have
-somewhere to host it.
+`run app` button that appears in your editor or run `shiny::run_app()`
+and you are flying. For many apps, this setup is perfectly adequate and
+you can deploy it to the internet if you have somewhere to host it.
 
 What then, if our apps are more complex? This is where a package like
 `golem` becomes handy. `golem` is a package focused on building a
 production-ready, robust shiny app. Once initiated it creates a range of
-files that step by step helps you establishing a lot of groundwork so
-you don't have to do it later. It helps you setup a github repository
-and it can also help you deploy the app to a number of services once you
-are done.
+files that step by step helps you setting up a lot of groundwork so you
+don't have to do it later. It helps you setup a github repository and it
+can also help you deploy the app to a number of services once you are
+done.
 
 One of the most useful features from `golem` is that it natively helps
 you modularizing your app. When you modularize you split your app into
 smaller components. Suggest you have an app with multiple pages, where
 each page provides a different range of buttons, sliders and plots. How
-do you keep track of which button goes where? Scripts can easily get out
-of hand that way. `golem` makes one script pr. page, containing info for
-the UI and server that goes together. So if your app contains a welcome
-page, a settings page, and a plot page, `golem` will make three files
-for you - a welcome file, a settings file and a plot file. Additionally
-it will make a server file and a ui file, where all your modules are
-tied together.
+do you keep track of which button leads where? Or what code underlies
+which plot? Scripts can easily get out of hand that way, and while we
+always think we will be able to understand the code later, this is not
+often the case. `golem` makes one script pr. page in your app,
+containing info for the UI and server that goes together. So if your app
+contains a welcome page, a settings page, and a plot page, `golem` will
+make three files for you - a welcome file, a settings file and a plot
+file. Additionally it will make a server file and a ui file, where all
+your modules are tied together.
 
 Is `golem` overkill for what we are doing here? Certainly! But I want to
 introduce it to you already so you know it, and once you start
@@ -54,7 +56,7 @@ developing more complex apps, you know where to go.
 If we want to make a new app and we have golem installed, we can open
 the menu and select `new project` (like we did above) and pick
 `Package for shiny app using golem`. If we want to do this from the
-console.
+console, this is also an option, and we will see how this is done below.
 
 Lets make an app about something fun - penguins. We will call it
 "penguin app" (or "penguinapp" in R writing)
@@ -69,9 +71,8 @@ golem::create_golem(path = "C:/Your_R_projects_destination/penguinapp"
 
 ```
 
-Running this command (with a package name of your choice) creates a new
-R project called penguinapp. We will see this has quite a few more files
-than our standard Shiny project.
+Running this command creates a new R project called penguinapp. We will
+see this has quite a few more files than our standard Shiny project.
 
 ![Overview of the files created by
 golem](/images/golem_files.png){#fig-shiny_ui width="90%"}
@@ -79,8 +80,7 @@ golem](/images/golem_files.png){#fig-shiny_ui width="90%"}
 This is actually a functional Shiny app, though at this stage it works a
 bit differently. We can run it with the command `golem::run_dev()`.
 Running this command will take us to a golem welcome page with resources
-and information. This is very similar to the example in our shiny
-project above.
+and information.
 
 To understand what golem really offers, it is beneficial to look at the
 dev folder. In this folder we will see three documents:
@@ -138,7 +138,7 @@ golem::fill_desc(
 
 A DESCRIPTION file is also where you note what packages are required to
 run your app. This can be done by using the function
-`usethis::use_package(PACKAGE NAME)` Normally it is sufficient to call
+`usethis::use_package("PACKAGE NAME")` Normally it is sufficient to call
 the package on it's own, with a notable exception being the `tidyverse`
 package - here you should add the following:
 `usethis::use_package("tidyverse", type = "suggests")` because
@@ -150,10 +150,11 @@ packages need to be installed on your remote server.
 
 **Time: \~5 minutes.**
 
-Fill out the information for the description file and run the code in
-the penguinapp folder. Add relevant packages we have used (or you expect
-we will use) using `usethis`.Think about `tidyverse` packages - what
-tools from that collection do we actually use?
+Fill out the information for the description file and run the
+`golem::fill_desc()` function for the penguinapp. Add relevant packages
+we have used (or you expect we will use) using `usethis`.Think about
+`tidyverse` packages - what tools from that collection do we actually
+use?
 
 {{< text_snippet sticky_up >}}
 
@@ -170,27 +171,32 @@ want to implement specific programs or programming languages. It does
 contain some helpful functions:
 
 - usethis::use_github() helps you share your project on github
-- usethis::use_data_raw() is helpful if you want to use data in your app
+- usethis::use_data_raw() creates a folder for storing data, and is
+  helpful if you want to use data in your app
 - golem::add_utils("helpers", with_test = TRUE) creates a script for
   making helper functions, in case you develop your own functions to be
   used in the app
 
-The rest of the functions are beyond the scope of this workshop, except
-one: `golem::add_module()`
+For an in-depth resource about golem see the [following
+book](https://engineering-shiny.org/golem.html). Most functionalities
+are beyond the scope of this workshop, but we will focus on one:
+`golem::add_module()`.
 
 ## :speech_balloon: Discussion activity: add_module
 
 **Time: \~5 minutes.**
 
-Open the add_module() function. Discuss with the person next to you what
-it does, and why this could be useful
+Open the help page for the add_module() function, using
+`?golem::add_module` in the console. Discuss with the person next to you
+what it does, and why this could be useful
 
 ## Making our first module
 
 We want to make an app about the `penguins` dataset. In general, it is
 considered good design form to consider what the app should look like
-before we start coding. Lets take a look at the data and see what we can
-do with it:
+before we start coding. It can often be beneficial to start drawing the
+UI on a pice of paper. However, we do not have the time for this today.
+Lets take a look at the data and see what we can do with it:
 
 ```{r}
 dplyr::slice_head(penguins,n = 10)
@@ -232,7 +238,9 @@ mod_overview_ui <- function(id) {
 
 This first chunk is the UI component. In the function called `tagList`
 (from shiny) we can add all the UI components we desire - cards, pages,
-you name it.
+you name it. As a general rule, whenever you have more than one element,
+it is a good idea to add them in the `tagList` function. For now, the UI
+is empty.
 
 Next thing we see is the server:
 
@@ -248,8 +256,8 @@ mod_overview_server <- function(id){
 ```
 
 In this, we put the server component in. So far, this is very similar to
-our initial example. The next part is commented out (with #) but is
-quite interesting:
+our initial example of a Shiny app. The next part is commented out (with
+#) but is quite interesting:
 
 ```{r}
 #| eval: false
@@ -263,8 +271,8 @@ quite interesting:
 ```
 
 `golem` gives us to two functions we can paste into our UI and server
-script. These are also found in the /R folder and are called "app_ui"
-and "app_server". If we open app_ui we will see the following in the top
+script. These are found in the /R folder and are called "app_ui" and
+"app_server". If we open app_ui we will see the following in the top
 part:
 
 ```{r}
@@ -342,13 +350,13 @@ app_server <- function(input, output, session) {
 
 if we run `golem::run_dev()` we will now get an app with two tabs - the
 golem page and an empty page. We have made a modularized app! additional
-modules can be added the same way, and the size of scripts kept to a
-manageable size. Note that the background is purple, which is being hard
-set by golem - if we delete the golem welcome page it will go away.
+modules can be added the same way, and the scripts kept to a manageable
+size. Note that the background is purple, which is being hard set by the
+golem welcome page - if we delete that page it will go away.
 
 ## Reading activity: 03_deploy.R
 
-**Time: \\5 minutes.**
+**Time: \\3 minutes.**
 
 In our dev folder we had a final file - 03_deploy.R. This one contains
 helper functions for when your app is ready to be shared with the world.
@@ -359,9 +367,9 @@ app to be hosted on platforms such as posit connect or other platforms.
 Deploying is beyond the scope of this workshop, but this file will give
 you a number of options you can look up and find a solution that works
 for you. If you want an easy way to share apps, I encourage you to check
-out posit connect - they have free plans if your app is small, and once
-your account is connected, it requires few steps to upload and update
-apps.
+out [posit connect cloud](https://connect.posit.cloud/) - they have free
+plans if your app is small, and once your account is connected, it
+requires few steps to upload and update apps.
 
 {{< text_snippet sticky_up >}}
 

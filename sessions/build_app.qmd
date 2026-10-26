@@ -12,10 +12,10 @@ The learning objectives for this session are:
 ## Speeding up data handling
 
 ::: callout-note
-## Reading task: \~4 minutes
+## Reading task: \~7 minutes
 
 Because our app is an example, speed is not really an issue when loading
-in data. But imagine you had a large sequencing dataset with thousands
+in data. But imagine you had a large sequencing data set with thousands
 of genes from hundreds of samples - suddenly loading speed (and
 performance) can become an issue. If data can be organized as csv files,
 this is usually a good option - csv files can be loaded in rapidly using
@@ -78,10 +78,10 @@ penguins |>
 These methods work best if you have data that can be stored as a data
 frame. For some of our omics data (like single cell RNAseq data) this
 can be notoriously difficult, and objects from for example `seurat` can
-take a long time to load into R. This makes it difficult to use the
+take a long time to load into shiny. This makes it difficult to use the
 tools above. My best advice here is to delete as much as you can from
 the Seurat datasets - they often end up being filled with
-normalizations. Consider checking out he package
+normalizations. Consider checking out the package
 [DietSeurat](https://rdrr.io/cran/Seurat/man/DietSeurat.html) or setting
 aspects of the seurat object (such as count and scale.data) to NULL.
 :::
@@ -90,7 +90,7 @@ aspects of the seurat object (such as count and scale.data) to NULL.
 
 After all this reading, it is time to code some plots. We can start by
 making a plot exploring the possible relation between bill length and
-flipper length for different species of penguins.But first, let's go in
+flipper length for different species of penguins. But first, let's go in
 and delete the golem welcome page:
 
 ```{r}
@@ -176,7 +176,7 @@ our outputId. It should be changed from `outputId = "penguinplot"` to
 `outputId = ns("penguinplot)"`. You may notice our server code contains
 a reference to ns in the line `ns <- session$ns`. What this does is
 essentially a way for our modularized app to navigate where input and
-output id's belong in our various modules. Always add `ns("")` around
+output id belong in our various modules. Always add `ns("")` around
 input and output IDs!
 
 ```{r}
@@ -214,9 +214,10 @@ plotly::plot_ly(
 
 We see here there are several nice functionalities - we can zoom, we can
 export and there is a native tooltip - if we hover above individual
-points, we can get info about them. We can customise the content of
-these, but it requires some finesse. Luckily there is a way we can
-convert our ggplot to plotly easily, using the `ggplotly` function.
+points, we can get info about them. This would be nice to have - but
+plotly syntaxt can get quite tricky to navigate. Luckily there is a way
+we can convert our ggplot to plotly easily, using the `ggplotly`
+function.
 
 ```{r}
 penguin_plotly <- ggplot2::ggplot(

@@ -102,3 +102,14 @@ people. This workshop would not have been possible without him.
 Many of the concepts and packages used were originally taught at the
 workshops at posit::conf(2023) and posit::conf(2024), so the author
 wishes to acknowledge the teachers from these workshops as well.
+
+## AI disclaimer
+
+This text was mostly written by a human - the only AI involvement was
+for the section on how to use duckplyr in a shiny app, where external
+advice was needed on how to use this package in the context of shiny.
+This disclaimer may seem banal, and we soon may be using AI through
+every aspect of design. It is the hope of this author that this
+disclaimer may serve as an example to others to be transparent about
+their use of AI.
+
