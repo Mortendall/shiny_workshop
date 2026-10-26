@@ -284,10 +284,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">8.1</span> Learning objectives</a></li>
-  <li><a href="#the-server-and-the-ui" id="toc-the-server-and-the-ui" class="nav-link" data-scroll-target="#the-server-and-the-ui"><span class="header-section-number">8.2</span> The server and the UI</a></li>
-  <li><a href="#discussion-activity-title" id="toc-discussion-activity-title" class="nav-link" data-scroll-target="#discussion-activity-title"><span class="header-section-number">8.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: Title</a></li>
-  <li><a href="#reading-task-4-minutes" id="toc-reading-task-4-minutes" class="nav-link" data-scroll-target="#reading-task-4-minutes"><span class="header-section-number">8.4</span> Reading task: ~4 minutes</a></li>
-  <li><a href="#adding-elements-to-our-ui" id="toc-adding-elements-to-our-ui" class="nav-link" data-scroll-target="#adding-elements-to-our-ui"><span class="header-section-number">8.5</span> <span class="emoji" data-emoji="book">📖</span> Adding elements to our UI</a></li>
+  <li><a href="#why-shiny" id="toc-why-shiny" class="nav-link" data-scroll-target="#why-shiny"><span class="header-section-number">8.2</span> Why shiny?</a></li>
+  <li><a href="#discussion-activity-shiny-projects" id="toc-discussion-activity-shiny-projects" class="nav-link" data-scroll-target="#discussion-activity-shiny-projects"><span class="header-section-number">8.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: Shiny projects</a></li>
+  <li><a href="#reading-activity-ui-and-server" id="toc-reading-activity-ui-and-server" class="nav-link" data-scroll-target="#reading-activity-ui-and-server"><span class="header-section-number">8.4</span> <span class="emoji" data-emoji="book">📖</span> Reading activity: UI and server</a></li>
+  <li><a href="#adding-elements-to-our-ui" id="toc-adding-elements-to-our-ui" class="nav-link" data-scroll-target="#adding-elements-to-our-ui"><span class="header-section-number">8.5</span> Adding elements to our UI</a></li>
   <li><a href="#bslib" id="toc-bslib" class="nav-link" data-scroll-target="#bslib"><span class="header-section-number">8.6</span> BSlib</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.7</span> Summary</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/mortendall/shiny_workshop/edit/main/sessions/shinyapps.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mortendall/shiny_workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/mortendall/shiny_workshop/blob/main/sessions/shinyapps.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -310,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>To build a shiny app we must first understand how it works. A shiny app consists of two core components: a server and a user interface (UI). In this section, we will explain how they are connected and work together to create the shiny app.</p>
+</header><p>Shiny apps can be highly complex, but with knowledge about how an app works, a simple app can be build with little effort. As is common in data science, data wrangling is a key component in preparing your data to be shared. So proper data preparation and figure generation are required in order to make a useful app. This is not the focus of this workshop. We will instead focus on packages and features you can use for making data accessible, after having done the analysis.</p>
 <section id="learning-objectives" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="learning-objectives">
 <span class="header-section-number">8.1</span> Learning objectives</h2>
 <p>The learning objectives for this session are:</p>
@@ -318,15 +318,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Understand how a shinyapp works</li>
 <li>Introduce the ui and server terms</li>
 <li>Introduce the package <code>bslib</code> and show how to use it to build a UI</li>
-</ol></section><section id="the-server-and-the-ui" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="the-server-and-the-ui">
-<span class="header-section-number">8.2</span> The server and the UI</h2>
-<p>A shiny app can take a static dataset and make it available for the user to explore. Depending on how you build the app, you can allow the user to search for specific search terms, compare expression levels, or explore interactive figures to find new genes affected in your dataset.</p>
-</section><section id="discussion-activity-title" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="discussion-activity-title">
-<span class="header-section-number">8.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: Title</h2>
-<p><strong>Time: \3 minutes.</strong></p>
+</ol></section><section id="why-shiny" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="why-shiny">
+<span class="header-section-number">8.2</span> Why shiny?</h2>
+<p>A shiny app can take a static dataset and make it available for the user to explore. Depending on how you build the app, you can allow the user to search for specific search terms, subset data, compare features in your dataset, or explore interactive figures to find new targets.</p>
+</section><section id="discussion-activity-shiny-projects" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="discussion-activity-shiny-projects">
+<span class="header-section-number">8.3</span> <span class="emoji" data-emoji="speech_balloon">💬</span> Discussion activity: Shiny projects</h2>
+<p><strong>Time: 3 minutes.</strong></p>
 <p>Discuss with the person next to you - what kind of data do you have that could benefit from being interactive? Do you have an idea for an app you want to make?</p>
-</section><section id="reading-task-4-minutes" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="reading-task-4-minutes">
-<span class="header-section-number">8.4</span> Reading task: ~4 minutes</h2>
+<p>To build a shiny app we must first understand how it works. A shiny app consists of two core components: a server and a user interface (UI). In this section, we will explain how they are connected and work together to create the shiny app.</p>
+</section><section id="reading-activity-ui-and-server" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="reading-activity-ui-and-server">
+<span class="header-section-number">8.4</span> <span class="emoji" data-emoji="book">📖</span> Reading activity: UI and server</h2>
+<p><strong>Time: 4 minutes.</strong></p>
 <p>A shiny app can get incredibly complex and consist of many interconnected scripts. But at it’s simplest, a shiny app consists of two elements that work together.</p>
 <p>At it’s most simple, a shiny app can be one simple function. The following code will create a shiny app (although an empty one):</p>
 <div class="cell">
@@ -347,9 +349,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Figure&nbsp;8.1: A graphical representation of the interplay between the UI and the server. From <a href="https://bookdown.org/hneth/i2ds/shiny.html">introduction to data science</a>
 </figcaption></figure>
 </div>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Sticky/hat up!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you’re ready to continue, place the sticky/paper hat on your computer to indicate this to the teacher <span class="emoji" data-emoji="womans_hat">👒</span> <span class="emoji" data-emoji="tophat">🎩</span></p>
+</div>
+</div>
 </section><section id="adding-elements-to-our-ui" class="level2" data-number="8.5"><h2 data-number="8.5" class="anchored" data-anchor-id="adding-elements-to-our-ui">
-<span class="header-section-number">8.5</span> <span class="emoji" data-emoji="book">📖</span> Adding elements to our UI</h2>
-<p><strong>Time: \6 minutes.</strong></p>
+<span class="header-section-number">8.5</span> Adding elements to our UI</h2>
 <p>Shiny comes with a lot of options for building a user interface. Often you can add plots directly into a Shiny interface. lets say we want to make a graph from the classical <code>iris</code> data set and add it into our empty app above.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">iris_plot</span> <span class="op">&lt;-</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris</span>,</span>
@@ -404,14 +418,15 @@ Figure&nbsp;8.2: Our classical iris plot
 <span><span class="op">)</span></span>
 <span><span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/runApp.html">runApp</a></span><span class="op">(</span><span class="va">app</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>If we paste this code into our console and runs it (rerunning the code for the iris plot if necessary), we will see we now have a sidebar where we can put something in. Let’s leave it empty for now, and instead focus on the other functionality of bslib we teased before - the cards.</p>
+<p>If we paste this code into our console and run it (rerunning the code for the iris plot if necessary), we will see we now have a sidebar where we can put something in. Let’s leave it empty for now, and instead focus on the other functionality of bslib we teased before - the cards.</p>
 <p>Cards are an effective way to organize plots and other UI components. They are easy to implement - we simply wrap our UI content (in this case the Iris plot) in <code><a href="https://rstudio.github.io/bslib/reference/card.html">bslib::card()</a></code></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">app</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/shinyApp.html">shinyApp</a></span><span class="op">(</span></span>
 <span>  ui <span class="op">=</span> <span class="fu">bslib</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/bslib/reference/page_sidebar.html">page_sidebar</a></span><span class="op">(</span></span>
 <span>    title <span class="op">=</span> <span class="st">"Our Iris plot"</span>,</span>
 <span>    sidebar <span class="op">=</span> <span class="st">"here is our sidebar"</span>,</span>
-<span>    <span class="fu">bslib</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/bslib/reference/card.html">card</a></span><span class="op">(</span><span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/plotOutput.html">plotOutput</a></span><span class="op">(</span>outputId <span class="op">=</span> <span class="st">"iris_plot"</span><span class="op">)</span></span>
+<span>    <span class="fu">bslib</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/bslib/reference/card.html">card</a></span><span class="op">(</span></span>
+<span>      <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/plotOutput.html">plotOutput</a></span><span class="op">(</span>outputId <span class="op">=</span> <span class="st">"iris_plot"</span><span class="op">)</span></span>
 <span>    <span class="op">)</span></span>
 <span>  <span class="op">)</span>,</span>
 <span>  server <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">input</span>, <span class="va">output</span><span class="op">)</span><span class="op">{</span></span>
